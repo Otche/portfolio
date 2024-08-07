@@ -1,0 +1,15 @@
+@import "./legacy-browser.css" ;
+/* supports(not(display: grid)); */
+
+/* nav ul li {
+    color: var(--clr-primary);
+} */
+
+body {
+     background-color: var(--clr-main-bg) ;
+     color: var( --clr-main-txt );
+}
+
+header h2 {
+    color: var(--clr-primary);
+}
