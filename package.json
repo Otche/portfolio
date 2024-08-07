@@ -1,15 +1,22 @@
 {
-  "name": "portfolio-project",
-  "version": "1.0.0",
-  "description": "",
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "portfolio Amine OUCHIHA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mustache ./html/data.json ./html/index.html > public/output.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/otche/portfolio.git"
+  },
+  "author": "Amine OUCHIHA, Madjid Djerada",
   "license": "ISC",
-  "devDependencies": {
-    "mustache": "^4.2.0"
+  "bugs": {
+    "url": "https://bitbucket.org/otche/portfolio/issues"
+  },
+  "homepage": "https://bitbucket.org/otche/portfolio#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
