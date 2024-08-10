@@ -10,13 +10,9 @@
 }
 
 
- .header--title {
-    margin: 1vh 0;
-    text-align: center;
-    font-size: 8vw;
-}
+ 
 
-.menu .menu--items {
+ .menu--items {
     background-color: var(--clr-primary);
     text-align: center;
     line-height: 5vh;
@@ -24,7 +20,7 @@
    
 }
 
-.menu .menu--items li { 
+.menu--items li { 
     /*  */
     padding: 0 2vw;
     display: inline;
@@ -33,6 +29,76 @@
 
 }
 
+.header--title {
+    margin: 1vh 0;
+    text-align: center;
+    font-size: 8vw;
+}
+
+.header--info {
+    text-align: center;
+    width: 100%;
+    padding: 1vh 0;
+    border-bottom:solid  var(--clr-primary) 1px;
+}
+
+.lang-form {
+    display: inline-block;
+}
+
+
+body {
+    margin: auto;
+    max-width: 1500px;
+}
+
+
+.wrapper-profil-image {
+    width: 90vw;
+    margin: 1vh auto;
+}
+
+.wrapper-profil-image img {
+    max-width: 100%;
+    border: solid  var(--clr-primary) 1px;
+    border-radius: 100%;
+}
+
+
+.pres {
+    text-align: center;
+}
+
+
+.pres--ident strong {
+    font-size: 2rem;
+
+}
+
+.pres--ident strong em{
+    color: var(--clr-primary);
+
+}
+
+.pres--desc {
+    margin-top: 2vh;
+}
+
+.user-links {
+    margin: 2vh auto;
+}
+
+.user-links ul {
+    text-align: center;
+}
+
+.user-links ul li {
+    display: inline-block;
+}
+
+.user-links ul li:has(button) {
+    margin-right: 10vw;
+}
 
 @media screen and (orientation: landscape) and (max-height: 550px) {
 
@@ -44,22 +110,19 @@
     .header {
         border-bottom: 1px solid var(--clr-primary);
     }
+    .header--info {
+        text-align: left;
+    }
+    
 
     .menu  {
         font-size: 3.5vw;
         width: 20vw;
         float: left;
         color: var(--clr-primary);
+        padding-top: 5vh;
        
     } 
-
-    main {
-        border-left: 1px solid var(--clr-primary);
-        float: left;
-        width: 78vw;
-        line-height: 2rem;
-        padding-left: 2vw;
-    }
 
     .menu .menu--items {
         padding-top: 1vh;
@@ -76,6 +139,16 @@
         margin-top: 4vh;   
     }  
 
+
+    main {
+        border-left: 1px solid var(--clr-primary);
+        float: left;
+        width: 78vw;
+        line-height: 2rem;
+        padding-left: 2vw;
+    }
+
+   
  
 
 }

@@ -13,3 +13,24 @@ body {
 header h2 {
     color: var(--clr-primary);
 }
+
+/**
+#32b58a
+#cd2d58
+#ef405e
+**/
+
+
+.button {
+    background: #0000;
+    color: var(--clr-primary);
+    padding: 0.3em 0.5em;
+    border: solid  var(--clr-primary) 1px;
+    border-radius: 5em;
+}
+
+.button.button--active {
+    background-color: var(--clr-secondary);
+    color: var( --clr-main-txt );
+    border: solid  var(--clr-main-txt) 1px;
+}
