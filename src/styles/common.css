@@ -1,16 +1,17 @@
 @import "./legacy-browser.css" ;
 /* supports(not(display: grid)); */
 
-/* nav ul li {
-    color: var(--clr-primary);
-} */
-
+/* set default background color and text color theme*/
 body {
      background-color: var(--clr-main-bg) ;
      color: var( --clr-main-txt );
+     margin: auto;
+     max-width: 1500px;
 }
 
-header h2 {
+
+/* set the color of the header profile Name*/
+.header--title {
     color: var(--clr-primary);
 }
 
@@ -20,8 +21,8 @@ header h2 {
 #ef405e
 **/
 
-
-.button {
+/*  set default button style*/
+.btn {
     background: #0000;
     color: var(--clr-primary);
     padding: 0.3em 0.5em;
@@ -29,8 +30,36 @@ header h2 {
     border-radius: 5em;
 }
 
-.button.button--active {
+/* active button style */
+.btn.btn-active{
     background-color: var(--clr-secondary);
     color: var( --clr-main-txt );
     border: solid  var(--clr-main-txt) 1px;
+}
+
+.btn.icon {
+    display: inline-block;
+    padding: 0.1em 0.2em 0 0.2em; 
+    vertical-align: middle;
+    margin-right: 0.5vw;
+}
+
+.btn.icon::after {
+    content:"";
+    display: inline-block;
+    width: 1.6em;
+    height: 1.6em;
+    background-size: cover;
+}
+
+.btn.linkedin-icon::after {
+    background-image: url("../assets/icons8-linkedin.svg");
+}
+
+.btn.git-icon::after {
+    background-image: url("../assets/icons8-git.svg");
+}
+
+.btn.youtube-icon::after {
+    background-image: url("../assets/icons8-youtube.svg");
 }

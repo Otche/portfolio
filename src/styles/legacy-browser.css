@@ -1,18 +1,18 @@
+/* ===========================================================*/
+/* the styleSheet concene a legacy browser without JS support*/
+/* ===========================================================*/
 
-/***commet css code*/
-.menu {
+/* style for header menu navigation*/
+.header--menu {
     font-size: 6vw;
    
 }
 
-.menu .burger-menu{
+.header--menu--burger{
     display: none;
 }
 
-
- 
-
- .menu--items {
+.header--menu--items {
     background-color: var(--clr-primary);
     text-align: center;
     line-height: 5vh;
@@ -20,26 +20,26 @@
    
 }
 
-.menu--items li { 
-    /*  */
+.header--menu--items li { 
     padding: 0 2vw;
     display: inline;
     text-decoration: underline;
- 
-
 }
 
+/*   */
 .header--title {
     margin: 1vh 0;
     text-align: center;
     font-size: 8vw;
 }
 
+
+/* styling the header information bar like translate*/
 .header--info {
     text-align: center;
     width: 100%;
     padding: 1vh 0;
-    border-bottom:solid  var(--clr-primary) 1px;
+    border-bottom: solid  var(--clr-primary) 1px;
 }
 
 .lang-form {
@@ -47,42 +47,41 @@
 }
 
 
-body {
-    margin: auto;
-    max-width: 1500px;
-}
 
+/*user portfolio styling*/
 
-.wrapper-profil-image {
+.profolio-photo-wrapper{
     width: 90vw;
     margin: 1vh auto;
 }
 
-.wrapper-profil-image img {
+.profolio-photo-wrapper img {
     max-width: 100%;
     border: solid  var(--clr-primary) 1px;
     border-radius: 100%;
 }
 
-
-.pres {
+/*home page presetation article*/
+.presentation {
     text-align: center;
 }
 
 
-.pres--ident strong {
+.presentation--identification strong {
     font-size: 2rem;
 
 }
 
-.pres--ident strong em{
+.presentation--identification strong em{
     color: var(--clr-primary);
 
 }
 
-.pres--desc {
+.presentation--description {
     margin-top: 2vh;
 }
+
+/* user link for dowload and social media*/
 
 .user-links {
     margin: 2vh auto;
@@ -94,28 +93,32 @@ body {
 
 .user-links ul li {
     display: inline-block;
+    line-height: 1em;
 }
 
 .user-links ul li:has(button) {
-    margin-right: 10vw;
+    margin-right: 7vw;
 }
 
+
+
+/* overrides for mobile landscape mode*/
 @media screen and (orientation: landscape) and (max-height: 550px) {
 
-     .header--title {
+    .header--title {
         font-size: 5vw;
     }
     
-
+    
     .header {
         border-bottom: 1px solid var(--clr-primary);
     }
+    
     .header--info {
         text-align: left;
     }
     
-
-    .menu  {
+    .header--menu  {
         font-size: 3.5vw;
         width: 20vw;
         float: left;
@@ -124,7 +127,7 @@ body {
        
     } 
 
-    .menu .menu--items {
+    .header--menu .header--menu--items {
         padding-top: 1vh;
         background-color: unset;
         text-align: start;
@@ -134,11 +137,10 @@ body {
 
     }
 
-     .menu .menu--items li { 
+     .header--menu .header--menu--items li { 
         display: block; 
         margin-top: 4vh;   
     }  
-
 
     main {
         border-left: 1px solid var(--clr-primary);
@@ -147,26 +149,22 @@ body {
         line-height: 2rem;
         padding-left: 2vw;
     }
-
-   
- 
-
 }
 
+
+/* override for laptop and desctop screen*/
 @media screen and (min-width: 500px) {
 
     .header--title {
         font-size: 3rem;
     }
-    .menu {
+    .header--menu {
         font-size: 1.8rem;
     } 
-    .menu .menu--items li { 
+    .header--menu .header--menu--items li { 
         line-height: 3rem;
     }  
     main {
         padding-top: 2rem;
     }
-
-
 }
