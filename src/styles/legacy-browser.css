@@ -23,9 +23,12 @@
 .header--menu--items li { 
     padding: 0 2vw;
     display: inline;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 
+.header--menu--items li a {
+    color: var(--clr-main-txt);
+}
 /*   */
 .header--title {
     margin: 1vh 0;
@@ -51,8 +54,8 @@
 /*user portfolio styling*/
 
 .profolio-photo-wrapper{
-    width: 90vw;
-    margin: 1vh auto;
+    width: 50vw;
+    margin: 2vh auto;
 }
 
 .profolio-photo-wrapper img {
@@ -63,18 +66,22 @@
 
 /*home page presetation article*/
 .presentation {
+    margin-bottom: 5vh;
+}
+
+.presentation > * {
     text-align: center;
+    margin-bottom: 2vh;
 }
 
 
-.presentation--identification strong {
+.presentation--identification {
     font-size: 2rem;
-
 }
 
-.presentation--identification strong em{
+.presentation--identification em{
     color: var(--clr-primary);
-
+    font-weight: bolder;
 }
 
 .presentation--description {
@@ -83,9 +90,9 @@
 
 /* user link for dowload and social media*/
 
-.user-links {
-    margin: 2vh auto;
-}
+/* .user-links {
+    
+} */
 
 .user-links ul {
     text-align: center;
@@ -100,6 +107,30 @@
     margin-right: 7vw;
 }
 
+.experience-summary ul {
+    width: max-content;
+    list-style: none;
+    max-width: 85vw;
+    margin-left: 15vw;
+}
+
+.experience-summary ul li {
+    display: inline-block;
+    min-width: 49%;
+}
+
+
+.experience-summary ul li span  {
+    display: inline-block;
+    width: 8ch;
+
+}
+
+.experience-summary ul li b  {
+    font-size: 3rem;
+}
+
+
 
 
 /* overrides for mobile landscape mode*/
@@ -107,10 +138,6 @@
 
     .header--title {
         font-size: 5vw;
-    }
-    
-    
-    .header {
         border-bottom: 1px solid var(--clr-primary);
     }
     
@@ -123,7 +150,7 @@
         width: 20vw;
         float: left;
         color: var(--clr-primary);
-        padding-top: 5vh;
+        padding-top: 10vh;
        
     } 
 
@@ -153,7 +180,7 @@
 
 
 /* override for laptop and desctop screen*/
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) and (min-height: 550px) {
 
     .header--title {
         font-size: 3rem;
@@ -167,4 +194,83 @@
     main {
         padding-top: 2rem;
     }
+
+    .experience-summary ul {
+        max-width: 80vw;
+        margin-left: 20vw;
+    }
 }
+
+/* override for laptop and desctop screen*/
+@media screen and (min-width: 600px) and (min-height: 550px) {
+    .experience-summary ul {
+        width: max-content;
+        min-width: unset;
+        max-width: unset;
+        list-style: none;
+        margin: 0 auto;
+    }
+
+    .experience-summary ul li {
+   
+        min-width: unset;
+        padding-left:7vw;
+
+    }
+
+    .experience-summary ul li:nth-child(1) {
+
+        padding-left:0px;
+
+    }
+
+ 
+
+}
+
+/*@media screen and (min-width: 800px) and (min-height: 550px) {
+    .profolio-photo-wrapper{
+        float: right;
+        width: 40%;
+    }
+
+    .presentation {
+        float: left;
+        width: 55%;
+    }
+    .experience-summary, .header .header--info {
+        clear: both;
+    }
+
+    .presentation > * , .user-links ul{
+        text-align: left;
+    }
+
+    .header .header--title  {
+        float: left;
+        margin: 0;
+    }
+
+    .experience-summary ul {
+        margin: 0px;
+    }
+
+    .header .header--menu{
+        float: right;
+    }
+
+    .header--menu--items {
+        background-color: unset;
+    }
+
+    .header--menu--items a {
+        text-decoration: none;
+    }
+    .header--info {
+        border: unset;
+        text-align: right;
+    }
+
+    
+
+}*/

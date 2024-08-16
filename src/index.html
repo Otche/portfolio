@@ -4,29 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Amine OUCHIHA</title>
+    <title>Développeur Amine OUCHIHA</title>
+    <meta name="keywords" content="Amine OUCHIHA, développeur FullStack, Node.js, React.js">
+    <meta name="description" content="portfolio de Amine OUCHIHA, développeur FullStack Node.js et React.js">
+    <meta name="author" content="Amine OUCHIHA">
+    <meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png" />
+    <meta property="og:description" content=" desciption de Amine OUCHIHA" />
+    <meta property="og:title" content="Mozilla Developer Network" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
-
     <link rel="stylesheet" href="styles/initial.css">
     <link rel="stylesheet" href="styles/common.css">
 </head>
 
 <body>
-    <heade class="header">
+    <header class="header">
         <h2 class="header--title">Amine</h2>
 
         <nav class="header--menu">
-            <div class="header--menu--burger">
+            <!-- <div class="header--menu--burger">
                 <img src="./assets/icons8-menu.svg">
-            </div>
-            <ul class="header--menu--items">
-                <li aria-label="Work"><a>Work</a></li>
-                <li aria-label="Serive"><a>Serive</a></li>
-                <li aria-label="Resume"><a>Resume</a></li>
-                <li aria-label="Contact"><a>Contact</a></li>
-                <li aria-label="Home"><a>Home</a></li>
-                <li aria-label="Bloc"><a>Blog</a></li>
-            </ul>
+            </div> -->
+            <menu class="header--menu--items">
+                <li aria-label="Work"><a href="#">Work</a></li>
+                <li aria-label="Serive"><a  href="#">Serive</a></li>
+                <li aria-label="Resume"><a  href="#">Resume</a></li>
+                <li aria-label="Contact"><a  href="#">Contact</a></li>
+                <li aria-label="Home"><a href="#">Home</a></li>
+                <li aria-label="Bloc"><a  href="www.google.com">Blog</a></li>
+            </menu>
         </nav>
 
         <aside class="header--info">
@@ -37,21 +43,22 @@
         </aside>
     </header>
     <main>
-
         <figure class="profolio-photo-wrapper">
-            <img src="./assets/user-avatar.png " alt="the image of the user presented in this portfolio">
+            <img src="./assets/user-avatar.png " alt="the image of the user presented in this portfolio"
+                title="Photo de Amine OUCHIA">
         </figure>
 
-        <section>
-            <article class="presentation">
+        <section class="presentation">
+            <article>
                 <h4>Développeur Full stack</h4>
                 <p class="presentation--identification">
-                    <strong>
-                        Bonjour Je m'appelle <em role="heading">Amine OUCHIHA</em>
-                    </strong>
+                    <b>
+                        Bonjour Je m'appelle
+                    </b>
+                    <em role="heading">Amine OUCHIHA</em>
                 </p>
                 <p class="presentation--description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quas perspiciatis quasi nesciunt accusantium, cumque velit!
                 </p>
 
@@ -60,13 +67,21 @@
             <aside class="user-links">
                 <ul>
                     <li> <button class="btn"> Télécharger CV</button></li>
-                    <li> <a class="btn icon linkedin-icon">  </a></li>
-                    <li> <a class="btn icon git-icon">  </a></li>
+                    <li> <a class="btn icon linkedin-icon"> </a></li>
+                    <li> <a class="btn icon git-icon"> </a></li>
                     <li> <a class="btn icon youtube-icon"> </a></li>
-                    <li> <a class="btn icon">  </a></li>
+                    <li> <a class="btn icon"> </a></li>
                 </ul>
 
             </aside>
+        </section>
+        <section class="experience-summary">
+            <ul>
+                <li><b>12</b> <span>Années d'expériences</span></li>
+                <li><b>26</b> <span>Projets réalisés</span></li>
+                <li><b>8</b> <span>Technologies maitrisées</span></li>
+                <li><b>500</b> <span>Codes commits</span></li>
+            </ul>
         </section>
 
     </main>
