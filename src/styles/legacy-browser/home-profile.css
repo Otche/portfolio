@@ -1,0 +1,137 @@
+
+.profolio-photo-wrapper{
+    width: 50vw;
+    margin: 2vh auto;
+}
+
+.profolio-photo-wrapper img {
+    max-width: 100%;
+    border: solid  var(--clr-primary) 1px;
+    border-radius: 100%;
+}
+
+/*home page presetation article*/
+.presentation {
+    margin-bottom: 5vh;
+}
+
+.presentation > * {
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+
+.presentation--identification {
+    font-size: 2rem;
+}
+
+.presentation--identification em{
+    color: var(--clr-primary);
+    font-weight: bolder;
+}
+
+.presentation--description {
+    margin-top: 2vh;
+}
+
+/* user link for dowload and social media*/
+
+.user-links ul {
+    text-align: center;
+}
+
+.user-links ul li {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.user-links ul li:has(button) {
+    margin-right: 7vw;
+}
+
+
+/* experience count */
+.experience-summary ul {
+    width: max-content;
+    list-style: none;
+    max-width: 85vw;
+    margin-left: 15vw;
+}
+
+.experience-summary ul li {
+    display: inline-block;
+    min-width: 49%;
+}
+
+
+.experience-summary ul li span  {
+    display: inline-block;
+    width: 8ch;
+}
+
+.experience-summary ul li b  {
+    font-size: 3rem;
+}
+
+/* override for laptop and desctop screen*/
+@media screen and (min-width: 500px) and (min-height: 550px) {
+    .experience-summary ul {
+        max-width: 80vw;
+        margin-left: 20vw;
+    }
+}
+
+/* override for laptop and desctop screen*/
+@media screen and (min-width: 600px) and (min-height: 550px) {
+    
+    .experience-summary ul {
+        width: max-content;
+        min-width: unset;
+        max-width: unset;
+        list-style: none;
+        margin: 0 auto;
+    }
+
+    .experience-summary ul li {
+        min-width: unset;
+        padding-left:7vw;
+    }
+
+    .experience-summary ul li:nth-child(1) {
+        padding-left:0px;
+    }
+}
+
+@media screen and (min-width: 800px) and (min-height: 550px) {
+
+    .profolio-photo-wrapper{
+        float: right;
+        width: 40%;
+    }
+
+    .presentation {
+        float: left;
+        width: 45%;
+    }
+ 
+    .presentation > * , .user-links ul{
+        text-align: left;
+    }
+
+    .presentation {
+        margin-top: 5vh;
+    }
+
+    .presentation--identification {
+        font-size: 4rem;
+        font-style: normal;
+    }
+
+    .experience-summary ul {
+        margin: 0px;
+    }
+
+    .experience-summary, .header .header--info {
+        clear: both;
+    }
+}

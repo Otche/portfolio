@@ -1,5 +1,7 @@
-@import "./legacy-browser.css" ;
-/* supports(not(display: grid)); */
+@import "./legacy-browser/styles.css" ;
+
+
+/** supports(not(display: grid)); */
 
 /* set default background color and text color theme*/
 body {
@@ -30,6 +32,15 @@ body {
     border-radius: 5em;
 }
 
+.btn:hover {
+    background: var(--clr-primary); 
+    color: var(--clr-main-bg);
+}
+
+.btn.icon:hover {
+    background-color: var(--clr-main-txt);
+}
+
 /* active button style */
 .btn.btn-active{
     background-color: var(--clr-secondary);
@@ -37,8 +48,11 @@ body {
     border: solid  var(--clr-main-txt) 1px;
 }
 
-.btn.icon {
+.btn.icon , .btn.icon::after  {
     display: inline-block;
+}
+
+.btn.icon {
     padding: 0.1em 0.2em 0 0.2em; 
     vertical-align: middle;
     margin-right: 0.5vw;
@@ -46,7 +60,6 @@ body {
 
 .btn.icon::after {
     content:"";
-    display: inline-block;
     width: 1.6em;
     height: 1.6em;
     background-size: cover;
