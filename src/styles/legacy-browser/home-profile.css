@@ -11,26 +11,26 @@
 }
 
 /*home page presetation article*/
-.presentation {
+.profolio-presentation {
     margin-bottom: 5vh;
 }
 
-.presentation > * {
+.profolio-presentation > * {
     text-align: center;
     margin-bottom: 2vh;
 }
 
 
-.presentation--identification {
+.profolio-presentation__identification {
     font-size: 2rem;
 }
 
-.presentation--identification em{
+.profolio-presentation__identification em{
     color: var(--clr-primary);
     font-weight: bolder;
 }
 
-.presentation--description {
+.profolio-presentation__description {
     margin-top: 2vh;
 }
 
@@ -109,20 +109,18 @@
         width: 40%;
     }
 
-    .presentation {
+    .profolio-presentation {
         float: left;
         width: 45%;
+        margin-top: 5vh;
     }
  
-    .presentation > * , .user-links ul{
+    .profolio-presentation > * , .user-links ul{
         text-align: left;
     }
 
-    .presentation {
-        margin-top: 5vh;
-    }
 
-    .presentation--identification {
+    .profolio-presentation__identification {
         font-size: 4rem;
         font-style: normal;
     }
