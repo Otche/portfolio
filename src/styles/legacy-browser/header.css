@@ -1,28 +1,30 @@
 /*================= style for header menu navigation bar ===================*/
-.header--menu {
+
+.portfolio-navigation {
     font-size: 6vw;  
 }
 
-.header--menu--burger{
+/* .header--menu--burger{
     display: none;
-}
+} */
 
-.header--menu--items {
+.portfolio-navigation__items {
     background-color: var(--clr-primary);
     text-align: center;
     line-height: 5vh;
+    list-style: none;
 }
 
-.header--menu--items li { 
+.portfolio-navigation__items li { 
     padding: 0 2vw;
     display: inline;
 }
 
-.header--menu--items li a {
+.portfolio-navigation__items li a {
     color: var(--clr-main-txt);
 }
 
-.header--title {
+.portfolio-title {
     margin: 1vh 0;
     text-align: center;
     font-size: 8vw;
@@ -30,18 +32,18 @@
 
 
 /* styling the header information bar like translate*/
-.header--info {
+.activity-bar{
     text-align: center;
     width: 100%;
     padding: 1vh 0;
     border-bottom: solid  var(--clr-primary) 1px;
 }
 
-.header--menu--items a:hover {
+.portfolio-navigation__items a:hover {
     text-decoration: none;
 }
 
-.header--menu--items li.active a {
+.portfolio-navigation__items li.active a {
     color: var(--clr-main-bg);
 }
 
@@ -49,16 +51,16 @@
 /* overrides for mobile landscape mode*/
 @media screen and (orientation: landscape) and (max-height: 550px) {
 
-    .header--title {
+    .portfolio-title {
         font-size: 5vw;
         border-bottom: 1px solid var(--clr-primary);
     }
     
-    .header--info {
+    .activity-bar{
         text-align: left;
     }
     
-    .header--menu  {
+    .portfolio-navigation  {
         font-size: 3.5vw;
         width: 20vw;
         float: left;
@@ -66,7 +68,7 @@
         padding-top: 10vh;
     } 
 
-    .header--menu .header--menu--items {
+    .portfolio-navigation__items {
         padding-top: 1vh;
         background-color: unset;
         text-align: start;
@@ -75,12 +77,12 @@
         list-style: none;
     }
 
-    .header--menu .header--menu--items li { 
+    .portfolio-navigation__items li { 
         display: block; 
         margin-top: 4vh;   
     } 
     
-    .header--menu--items li.active a {
+    .portfolio-navigation__items li.active a {
         color: var(--clr-primary);
     }
 }
@@ -89,15 +91,15 @@
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 500px) and (min-height: 550px) {
 
-    .header--title {
+    .portfolio-title {
         font-size: 3rem;
     }
 
-    .header--menu {
+    .portfolio-navigation {
         font-size: 1.8rem;
     }
 
-    .header--menu .header--menu--items li { 
+    .portfolio-navigation__items li { 
         line-height: 3rem;
     }  
 }
