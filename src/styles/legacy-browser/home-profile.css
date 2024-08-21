@@ -36,16 +36,16 @@
 
 /* user link for dowload and social media*/
 
-.user-links ul {
+.user-links__items {
     text-align: center;
 }
 
-.user-links ul li {
+.user-links__items li {
     display: inline-block;
     line-height: 1em;
 }
 
-.user-links ul li:has(button) {
+.user-links__items li:has(button) {
     margin-right: 7vw;
 }
 
@@ -115,7 +115,7 @@
         margin-top: 5vh;
     }
  
-    .profolio-presentation > * , .user-links ul{
+    .profolio-presentation > * , .user-links__items{
         text-align: left;
     }
 
