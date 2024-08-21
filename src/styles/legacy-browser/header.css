@@ -103,3 +103,9 @@
         line-height: 3rem;
     }  
 }
+
+@media screen and (min-width: 800px) and (min-height: 550px) {    
+    .activity-bar {
+        clear: both;
+    }
+}

@@ -51,31 +51,31 @@
 
 
 /* experience count */
-.experience-summary ul {
+.experience-summary__items {
     width: max-content;
     list-style: none;
     max-width: 85vw;
     margin-left: 15vw;
 }
 
-.experience-summary ul li {
+.experience-summary__items li {
     display: inline-block;
     min-width: 49%;
 }
 
 
-.experience-summary ul li span  {
+.experience-summary__items li span  {
     display: inline-block;
     width: 8ch;
 }
 
-.experience-summary ul li b  {
+.experience-summary__items li b  {
     font-size: 3rem;
 }
 
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 500px) and (min-height: 550px) {
-    .experience-summary ul {
+    .experience-summary__items {
         max-width: 80vw;
         margin-left: 20vw;
     }
@@ -84,7 +84,7 @@
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 600px) and (min-height: 550px) {
     
-    .experience-summary ul {
+    .experience-summary__items {
         width: max-content;
         min-width: unset;
         max-width: unset;
@@ -92,12 +92,12 @@
         margin: 0 auto;
     }
 
-    .experience-summary ul li {
+    .experience-summary__items li {
         min-width: unset;
         padding-left:7vw;
     }
 
-    .experience-summary ul li:nth-child(1) {
+    .experience-summary__items li:nth-child(1) {
         padding-left:0px;
     }
 }
@@ -125,7 +125,7 @@
         font-style: normal;
     }
 
-    .experience-summary ul {
+    .experience-summary__items {
         margin: 0px;
     }
 

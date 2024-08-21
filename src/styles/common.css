@@ -15,7 +15,7 @@ menu {
 }
 
 /* set the color of the header profile Name*/
-.header--title {
+.portfolio-title {
     color: var(--clr-primary);
 }
 
