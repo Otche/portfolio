@@ -4,6 +4,9 @@
     --clr-main-txt : white;
     --clr-primary :  #12B4E4;
     --clr-secondary : #6495ed;
+    --clr-secondary-bg : #232229;
+    --border-radius-btn : 5px;
+    --border-radius-card : 10px;
 }
 
 /* reset border size calculate*/

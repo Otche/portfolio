@@ -10,7 +10,9 @@ body {
      margin: auto;
      max-width: 1500px;
 }
-
+menu {
+    list-style: none;
+}
 
 /* set the color of the header profile Name*/
 .header--title {
@@ -23,13 +25,15 @@ body {
 #ef405e
 **/
 
-/*  set default button style*/
+/*  set default button styles*/
 .btn {
     background: #0000;
+    /* the inline display can cause a issues whith parent sizing hieght adaptation*/
+    display: inline-block;
     color: var(--clr-primary);
     padding: 0.3em 0.5em;
     border: solid  var(--clr-primary) 1px;
-    border-radius: 5em;
+    border-radius: var(--border-radius-btn);
 }
 
 .btn:hover {
@@ -56,6 +60,7 @@ body {
     padding: 0.1em 0.2em 0 0.2em; 
     vertical-align: middle;
     margin-right: 0.5vw;
+    border-radius: 100%;
 }
 
 .btn.icon::after {

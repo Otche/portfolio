@@ -7,25 +7,73 @@
 
 /* overrides for mobile landscape mode*/
 @media screen and (orientation: landscape) and (max-height: 550px) {
-    main {
-        border-left: 1px solid var(--clr-primary);
-        float: left;
-        width: 78vw;
-        line-height: 2rem;
-        padding-left: 2vw;
-    }
+  main {
+    border-left: 1px solid var(--clr-primary);
+    float: left;
+    width: 78vw;
+    line-height: 2rem;
+    padding-left: 2vw;
+  }
 }
-
 
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 500px) and (min-height: 550px) {
-    main {
-        padding-top: 2rem;
-    }
+  main {
+    padding-top: 2rem;
+  }
 }
 
 @media screen and (min-width: 800px) and (min-height: 550px) {
-    main {
-        margin: 0 1rem;
-    }
+  main {
+    margin: 0 1rem;
+  }
 }
+
+/* card styles */
+.card {
+  width: 90%;
+  margin: 2vh auto;
+  padding: 1em;
+  background-color: var(--clr-secondary-bg);
+  border-radius: var(--border-radius-card);
+  /* box-shadow: -0.1px 0.5px var(--clr-main-txt); */
+}
+.card:hover .card-header {
+    color: var(--clr-primary);
+}
+
+.card-header {
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 650px) {
+  .card {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    width: 30%;
+    margin-right: 3%;
+  }
+}
+
+/* carrer nav styles*/
+
+.carrer-nav {
+    padding: 5px;
+    position: sticky;
+    background-color: var(--clr-main-bg); 
+    top :0;
+}
+
+.carrer-nav--menu{
+    text-align: center;
+}
+
+.carrer-nav--menu li{
+    display: inline-block;
+} 
