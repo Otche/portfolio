@@ -38,11 +38,11 @@
   border-radius: var(--border-radius-card);
   /* box-shadow: -0.1px 0.5px var(--clr-main-txt); */
 }
-.card:hover .card-header {
+.card:hover .card__header {
     color: var(--clr-primary);
 }
 
-.card-header {
+.card__header {
   margin-bottom: 1em;
 }
 
