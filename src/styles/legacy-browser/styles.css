@@ -30,7 +30,7 @@
 }
 
 /* card styles */
-.card {
+.card  {
   width: 90%;
   margin: 2vh auto;
   padding: 1em;
@@ -38,6 +38,8 @@
   border-radius: var(--border-radius-card);
   /* box-shadow: -0.1px 0.5px var(--clr-main-txt); */
 }
+
+.card
 .card:hover .card__header {
     color: var(--clr-primary);
 }

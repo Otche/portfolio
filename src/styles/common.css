@@ -41,43 +41,43 @@ menu {
     color: var(--clr-main-bg);
 }
 
-.btn.icon:hover {
+.btn_icon:hover {
     background-color: var(--clr-main-txt);
 }
 
 /* active button style */
-.btn.btn-active{
+.btn_active{
     background-color: var(--clr-secondary);
     color: var( --clr-main-txt );
     border: solid  var(--clr-main-txt) 1px;
 }
 
-.btn.icon , .btn.icon::after  {
+.btn_icon , .btn_icon::after  {
     display: inline-block;
 }
 
-.btn.icon {
+.btn_icon {
     padding: 0.1em 0.2em 0 0.2em; 
     vertical-align: middle;
     margin-right: 0.5vw;
     border-radius: 100%;
 }
 
-.btn.icon::after {
+.btn_icon::after {
     content:"";
     width: 1.6em;
     height: 1.6em;
     background-size: cover;
 }
 
-.btn.linkedin-icon::after {
+.btn_icon_linkedin::after {
     background-image: url("../assets/icons8-linkedin.svg");
 }
 
-.btn.git-icon::after {
+.btn_icon_git::after {
     background-image: url("../assets/icons8-git.svg");
 }
 
-.btn.youtube-icon::after {
+.btn_icon_youtube::after {
     background-image: url("../assets/icons8-youtube.svg");
 }
