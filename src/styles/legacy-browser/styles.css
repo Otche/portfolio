@@ -1,5 +1,6 @@
 @import "./header.css";
-@import "./home-profile.css";
+@import "./home-page.css";
+@import "./carrer-page.css";
 
 /* =============================================================================================================*/
 /* the styleSheet concene a legacy browser or browser without JS support*/
@@ -19,7 +20,7 @@
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 500px) and (min-height: 550px) {
   main {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 }
 
@@ -30,7 +31,7 @@
 }
 
 /* card styles */
-.card  {
+.card {
   width: 90%;
   margin: 2vh auto;
   padding: 1em;
@@ -38,9 +39,7 @@
   border-radius: var(--border-radius-card);
   /* box-shadow: -0.1px 0.5px var(--clr-main-txt); */
 }
-
-.card
-.card:hover .card__header {
+.card:hover .card__header_hover-primary {
     color: var(--clr-primary);
 }
 
@@ -50,32 +49,31 @@
 
 @media screen and (min-width: 650px) {
   .card {
-    width: 48%;
+    width: 46%;
+    min-height: 20vh;
     float: left;
     margin-right: 2%;
+
   }
 }
+
+@media screen and (min-width: 650px) and (max-width: 1000px) {
+  .card:nth-child(odd){
+    clear: both;
+  } 
+}
+
+
 
 @media screen and (min-width: 1000px) {
   .card {
     width: 30%;
     margin-right: 3%;
   }
+
+  .card:nth-child(3n+1){
+    clear: both;
+  }
 }
 
-/* carrer nav styles*/
 
-.carrer-nav {
-    padding: 5px;
-    position: sticky;
-    background-color: var(--clr-main-bg); 
-    top :0;
-}
-
-.carrer-nav--menu{
-    text-align: center;
-}
-
-.carrer-nav--menu li{
-    display: inline-block;
-} 

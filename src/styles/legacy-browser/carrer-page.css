@@ -1,0 +1,44 @@
+/* carrer nav styles*/
+
+.carrer-nav {
+    position: sticky;
+    background-color: var(--clr-main-bg); 
+    top :-1px;
+}
+
+.carrer-nav__menu{
+    text-align: center;
+}
+
+.carrer-nav__menu li{
+    display: inline-block;
+    margin-top: 1vh;
+} 
+
+.carreer-tab-container__cards-wrapper {
+  /* border: red 2px solid; */
+  max-height: 40vh;
+  overflow-y: scroll;
+  scrollbar-color: var(--clr-primary) var(--clr-main-bg);
+  scrollbar-width: 1px;
+  margin-top: 3vh;
+  
+}
+.carreer-tab-container{
+  scroll-margin-top: 13vh;
+  text-align: justify;
+  margin-top: 5vh;
+  
+}
+
+.carreer-tab-container > p, .carreer-tab-container > h2 {
+  margin: 1vh 4vw;
+}
+
+
+@media screen and (min-width: 650px) { 
+    .carreer-tab-container > p, .carreer-tab-container > h2 , .carreer-tab-container section {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+} 
