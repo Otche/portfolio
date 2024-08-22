@@ -1,23 +1,38 @@
 /* init css vars*/
 :root {
-    --clr-main-bg : #1C1B22;
-    --clr-main-txt : white;
-    --clr-primary :  #12B4E4;
-    --clr-secondary : #6495ed;
-    --clr-secondary-bg : #232229;
-    --border-radius-btn : 5px;
-    --border-radius-card : 10px;
+  --clr-main-bg: #1c1b22;
+  --clr-main-txt: white;
+  --clr-primary: #12b4e4;
+  --clr-secondary: #6495ed;
+  --clr-secondary-bg: #232229;
+  --clr-ligth-gray: #8b8b8d;
+  --border-radius-btn: 5px;
+  --border-radius-card: 10px;
 }
 
 /* reset border size calculate*/
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
+
 }
 
 /*reset margin for all elements*/
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
+/* reset form styles */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+textarea {
+    overflow: auto;
+  }

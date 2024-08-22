@@ -15,6 +15,14 @@
     margin-top: 1vh;
 } 
 
+.carreer-tab-container{
+    scroll-margin-top: 13vh;
+    text-align: justify;
+    margin-top: 5vh;
+  }
+
+
+
 .carreer-tab-container__cards-wrapper {
   /* border: red 2px solid; */
   max-height: 40vh;
@@ -24,14 +32,14 @@
   margin-top: 3vh;
   
 }
-.carreer-tab-container{
-  scroll-margin-top: 13vh;
-  text-align: justify;
-  margin-top: 5vh;
-  
+
+.carreer-tab-container__title {
+    font-size: 2.5rem;
+    border-bottom: var(--clr-primary) 1px solid;
+    padding-bottom: 10px;
 }
 
-.carreer-tab-container > p, .carreer-tab-container > h2 {
+.carreer-tab-container__description, .carreer-tab-container__title {
   margin: 1vh 4vw;
 }
 
