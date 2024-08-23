@@ -1,6 +1,6 @@
 @import "./header.css";
 @import "./home-page.css";
-@import "./carrer-page.css";
+@import "./career-page.css";
 
 /* =============================================================================================================*/
 /* the styleSheet concene a legacy browser or browser without JS support*/
@@ -17,7 +17,7 @@
   }
 }
 
-/* override for laptop and desctop screen*/
+/* override for laptop and desctop screen the min-heigth is used to have the seme behaviour in landscape and portral for larger screen*/
 @media screen and (min-width: 500px) and (min-height: 550px) {
   main {
     padding-top: 1rem;
@@ -65,25 +65,21 @@
   float: right;
   transform: rotate(-45deg);
   transition: transform 0.8s;
-
- 
 }
 
- .card_link:hover  {
+.card_link:hover {
   transform: rotate(0deg);
   background-color: var(--clr-primary);
-  color: var(--clr-main-txt); ;
- }
-
-.card_link::before {
- content: "➔";
- line-height: 1.3em;
- 
- font-size: 2em;
- margin-left: 0.2em;
-
+  color: var(--clr-main-txt);
 }
 
+.card_link::before {
+  content: "➔";
+  line-height: 1.3em;
+
+  font-size: 2em;
+  margin-left: 0.2em;
+}
 
 .card__sub-header::before {
   content: ".";
@@ -98,10 +94,6 @@
   color: var(--clr-ligth-gray);
   line-height: 1em;
 }
-
-
-
-
 
 @media screen and (min-width: 650px) {
   .card {

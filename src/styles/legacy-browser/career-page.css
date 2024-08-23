@@ -1,21 +1,21 @@
-/* carrer nav styles*/
+/* career nav styles*/
 
-.carrer-nav {
+.career-nav {
     position: sticky;
     background-color: var(--clr-main-bg); 
     top :-1px;
 }
 
-.carrer-nav__menu{
+.career-nav__menu{
     text-align: center;
 }
 
-.carrer-nav__menu li{
+.career-nav__menu li{
     display: inline-block;
     margin-top: 1vh;
 } 
 
-.carreer-tab-container{
+.career-tab-container{
     scroll-margin-top: 13vh;
     text-align: justify;
     margin-top: 5vh;
@@ -23,7 +23,7 @@
 
 
 
-.carreer-tab-container__cards-wrapper {
+.career-tab-container__cards-wrapper {
   /* border: red 2px solid; */
   max-height: 40vh;
   overflow-y: scroll;
@@ -33,19 +33,19 @@
   
 }
 
-.carreer-tab-container__title {
+.career-tab-container__title {
     font-size: 2.5rem;
     border-bottom: var(--clr-primary) 1px solid;
     padding-bottom: 10px;
 }
 
-.carreer-tab-container__description, .carreer-tab-container__title {
+.career-tab-container__description, .career-tab-container__title {
   margin: 1vh 4vw;
 }
 
 
 @media screen and (min-width: 650px) { 
-    .carreer-tab-container > p, .carreer-tab-container > h2 , .carreer-tab-container section {
+    .career-tab-container > p, .career-tab-container > h2 , .career-tab-container section {
         margin-left: 1%;
         margin-right: 1%;
     }
