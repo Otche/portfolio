@@ -1,7 +1,7 @@
 /*================= style for header menu navigation bar ===================*/
 
 .portfolio-navigation {
-    font-size: 6vw;  
+  font-size: 6vw;
 }
 
 /* .header--menu--burger{
@@ -9,103 +9,98 @@
 } */
 
 .portfolio-navigation__items {
-    background-color: var(--clr-primary);
-    text-align: center;
-    line-height: 5vh;
-    list-style: none;
+  background-color: var(--clr-primary);
+  text-align: center;
+  line-height: 5vh;
+  list-style: none;
 }
 
-.portfolio-navigation__items li { 
-    padding: 0 2vw;
-    display: inline;
+.portfolio-navigation__items li {
+  padding: 0 2vw;
+  display: inline;
 }
 
 .portfolio-navigation__items li a {
-    color: var(--clr-main-txt);
+  color: var(--clr-main-txt);
 }
 
 .portfolio-title {
-    margin: 1vh 0;
-    text-align: center;
-    font-size: 8vw;
+  margin: 1vh 0;
+  text-align: center;
+  font-size: 8vw;
 }
 
-
 /* styling the header information bar like translate*/
-.activity-bar{
-    text-align: center;
-    width: 100%;
-    padding: 1vh 0;
-    border-bottom: solid  var(--clr-primary) 1px;
+.activity-bar {
+  text-align: center;
+  width: 100%;
+  padding: 1vh 0;
+  border-bottom: solid var(--clr-primary) 1px;
 }
 
 .portfolio-navigation__items a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .portfolio-navigation__items li.active a {
-    color: var(--clr-main-bg);
+  color: var(--clr-main-bg);
 }
-
 
 /* overrides for mobile landscape mode*/
 @media screen and (orientation: landscape) and (max-height: 550px) {
+  .portfolio-title {
+    font-size: 5vw;
+    border-bottom: 1px solid var(--clr-primary);
+  }
 
-    .portfolio-title {
-        font-size: 5vw;
-        border-bottom: 1px solid var(--clr-primary);
-    }
-    
-    .activity-bar{
-        text-align: left;
-    }
-    
-    .portfolio-navigation  {
-        font-size: 3.5vw;
-        width: 20vw;
-        float: left;
-        color: var(--clr-primary);
-        padding-top: 10vh;
-    } 
+  .activity-bar {
+    text-align: left;
+  }
 
-    .portfolio-navigation__items {
-        padding-top: 1vh;
-        background-color: unset;
-        text-align: start;
-        height: 100vh;
-        line-height: 1.5rem;
-        list-style: none;
-    }
+  .portfolio-navigation {
+    font-size: 3.5vw;
+    width: 20vw;
+    float: left;
+    color: var(--clr-primary);
+    padding-top: 10vh;
+  }
 
-    .portfolio-navigation__items li { 
-        display: block; 
-        margin-top: 4vh;   
-    } 
-    
-    .portfolio-navigation__items li.active a {
-        color: var(--clr-primary);
-    }
+  .portfolio-navigation__items {
+    padding-top: 1vh;
+    background-color: unset;
+    text-align: start;
+    height: 100vh;
+    line-height: 1.5rem;
+    list-style: none;
+  }
+
+  .portfolio-navigation__items li {
+    display: block;
+    margin-top: 4vh;
+  }
+
+  .portfolio-navigation__items li.active a {
+    color: var(--clr-primary);
+  }
 }
-
 
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 500px) and (min-height: 550px) {
+  .portfolio-title {
+    font-size: 3rem;
+  }
 
-    .portfolio-title {
-        font-size: 3rem;
-    }
+  .portfolio-navigation {
+    font-size: 1.8rem;
+  }
 
-    .portfolio-navigation {
-        font-size: 1.8rem;
-    }
-
-    .portfolio-navigation__items li { 
-        line-height: 3rem;
-    }  
+  .portfolio-navigation__items li {
+    line-height: 3rem;
+  }
 }
 
-@media screen and (min-width: 800px) and (min-height: 550px) {    
-    .activity-bar {
-        clear: both;
-    }
+@media screen and (min-width: 800px) and (min-height: 550px) {
+  .activity-bar {
+    clear: both;
+  }
 }

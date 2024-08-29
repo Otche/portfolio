@@ -1,10 +1,20 @@
 @import "./header.css";
 @import "./home-page.css";
 @import "./career-page.css";
+@import "./contact-page.css";
 
 /* =============================================================================================================*/
 /* the styleSheet concene a legacy browser or browser without JS support*/
 /* =============================================================================================================*/
+
+main {
+  min-height: 50vh;
+}
+
+footer {
+  clear: both;
+  border-top: 1px solid var(--clr-primary);
+}
 
 /* overrides for mobile landscape mode*/
 @media screen and (orientation: landscape) and (max-height: 550px) {
@@ -32,12 +42,15 @@
 
 /* card styles */
 .card {
-  width: 90%;
   margin: 2vh auto;
   padding: 1em;
   background-color: var(--clr-secondary-bg);
   border-radius: var(--border-radius-card);
   /* box-shadow: -0.1px 0.5px var(--clr-main-txt); */
+}
+
+.card_summary {
+  width: 90%;
 }
 
 .card:hover .card__header_hover-primary {
@@ -46,6 +59,17 @@
 
 .card__header {
   margin-bottom: 0.5em;
+}
+
+.card__header_level-one {
+  font-size: 2.5rem;
+}
+
+.card__header_primary {
+  color: var(--clr-primary);
+}
+
+.card__header_float {
   float: left;
 }
 
@@ -95,8 +119,65 @@
   line-height: 1em;
 }
 
+/* contact footer style */
+
+.info-list__block {
+  margin-top: 2vh;
+  height: 4rem;
+  clear: both;
+  vertical-align: bottom;
+}
+
+.info-list__block__icon {
+  background-color: var(--clr-secondary-bg);
+  background-size: 2.5rem 2.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3.5rem;
+  height: 3rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+.info-list__block__icon_email {
+  background-image: url("../../assets/svg-ref/mail-svgrepo-com.svg");
+}
+
+.info-list__block__icon_tel {
+  background-image: url("../../assets/svg-ref/phonelegacy-svgrepo-com.svg");
+}
+
+.info-list__block__icon_adress {
+  background-image: url("../../assets/svg-ref/location-svgrepo-com.svg");
+}
+
+.info-list__block__label {
+  display: block;
+  color: var(--clr-ligth-gray);
+}
+
+@media screen and (min-width: 550px) {
+  .info-list__block {
+    margin-left: 10vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .info-list__block {
+    margin-left: 20vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .info-list__block {
+    display: inline-block;
+    margin-left: unset;
+    width: 33%;
+  }
+}
+
 @media screen and (min-width: 650px) {
-  .card {
+  .card_summary {
     width: 46%;
     float: left;
     margin-right: 2%;
@@ -104,18 +185,18 @@
 }
 
 @media screen and (min-width: 650px) and (max-width: 1000px) {
-  .card:nth-child(2n + 1) {
+  .card_summary:nth-child(2n + 1) {
     clear: both;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .card {
+  .card_summary {
     width: 30%;
     margin-right: 3%;
   }
 
-  .card:nth-child(3n + 1) {
+  .card_summary:nth-child(3n + 1) {
     clear: both;
   }
 }

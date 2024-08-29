@@ -1,0 +1,39 @@
+
+.contact-main-desktop .card {
+   padding: 1rem 4rem 3rem 4rem;
+ 
+}
+
+.contact-form input, .contact-form select,  .contact-form textarea {
+    margin-top: 4vh;
+    width: 100%;
+}
+
+.contact-main-desktop .card__header {
+    font-size: 2rem;
+}
+
+
+
+@media screen and (min-width: 800px) and (min-height: 550px) {
+
+    .contact-main-desktop {
+        width: 55%;
+        float: left;
+    }
+
+    .contact-footer-desktop {
+        clear: none;
+       border: none;
+       width: 30%;
+       float: left;
+       margin-left: 5%;
+       /* margin-top: 10vh; */
+    }
+
+    .contact-footer-desktop .info-list__block{
+       width: 100%;
+       display: block;
+      }
+  }
+  

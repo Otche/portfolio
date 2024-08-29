@@ -1,13 +1,14 @@
 /* init css vars*/
 :root {
   --clr-main-bg: #1c1b22;
+  --clr-secondary-bg: #232229;
+  --clr-ligth-gray: #8b8b8d;
   --clr-main-txt: white;
   --clr-primary: #12b4e4;
   --clr-secondary: #6495ed;
-  --clr-secondary-bg: #232229;
-  --clr-ligth-gray: #8b8b8d;
   --border-radius-btn: 5px;
   --border-radius-card: 10px;
+  --gradiant-background: linear-gradient(90deg, #8b8b8d 0%, #8b8b8d 100%);
 }
 
 /* reset border size calculate*/
@@ -15,7 +16,6 @@
 *::after,
 *::before {
   box-sizing: border-box;
-
 }
 
 /*reset margin for all elements*/
@@ -34,5 +34,5 @@ textarea {
 }
 
 textarea {
-    overflow: auto;
-  }
+  overflow: auto;
+}

@@ -1,22 +1,21 @@
-@import "./legacy-browser/styles.css" ;
-
+@import "./legacy-browser/styles.css";
 
 /** supports(not(display: grid)); */
 
 /* set default background color and text color theme*/
 body {
-     background-color: var(--clr-main-bg) ;
-     color: var( --clr-main-txt );
-     margin: auto;
-     max-width: 1500px;
+  background-color: var(--clr-main-bg);
+  color: var(--clr-main-txt);
+  margin: auto;
+  max-width: 1500px;
 }
 menu {
-    list-style: none;
+  list-style: none;
 }
 
 /* set the color of the header profile Name*/
 .portfolio-title {
-    color: var(--clr-primary);
+  color: var(--clr-primary);
 }
 
 /**
@@ -27,57 +26,117 @@ menu {
 
 /*  set default button styles*/
 .btn {
-    background: #0000;
-    /* the inline display can cause a issues whith parent sizing hieght adaptation*/
-    display: inline-block;
-    color: var(--clr-primary);
-    padding: 0.3em 0.5em;
-    border: solid  var(--clr-primary) 1px;
-    border-radius: var(--border-radius-btn);
+  background: #0000;
+  /* the inline display can cause a issues whith parent sizing hieght adaptation*/
+  display: inline-block;
+  color: var(--clr-primary);
+  padding: 0.3em 0.5em;
+  border: solid var(--clr-primary) 1px;
+  border-radius: var(--border-radius-btn);
 }
 
 .btn:hover {
-    background: var(--clr-primary); 
-    color: var(--clr-main-bg);
+  background: var(--clr-primary);
+  color: var(--clr-main-bg);
 }
 
 .btn_icon:hover {
-    background-color: var(--clr-main-txt);
+  background-color: var(--clr-main-txt);
 }
 
 /* active button style */
-.btn_active{
-    background-color: var(--clr-secondary);
-    color: var( --clr-main-txt );
-    border: solid  var(--clr-main-txt) 1px;
+.btn_active {
+  background-color: var(--clr-secondary);
+  color: var(--clr-main-txt);
+  border: solid var(--clr-main-txt) 1px;
 }
 
-.btn_icon , .btn_icon::after  {
-    display: inline-block;
+.btn_icon,
+.btn_icon::after {
+  display: inline-block;
 }
 
 .btn_icon {
-    padding: 0.1em 0.2em 0 0.2em; 
-    vertical-align: middle;
-    margin-right: 0.5vw;
-    border-radius: 100%;
+  padding: 0.1em 0.2em 0 0.2em;
+  vertical-align: middle;
+  margin-right: 0.5vw;
+  border-radius: 100%;
 }
 
 .btn_icon::after {
-    content:"";
-    width: 1.6em;
-    height: 1.6em;
-    background-size: cover;
+  content: "";
+  width: 1.6em;
+  height: 1.6em;
+  background-size: cover;
 }
 
 .btn_icon_linkedin::after {
-    background-image: url("../assets/icons8-linkedin.svg");
+  background-image: url("../assets/icons8-linkedin.svg");
 }
 
 .btn_icon_git::after {
-    background-image: url("../assets/icons8-git.svg");
+  background-image: url("../assets/icons8-git.svg");
 }
 
 .btn_icon_youtube::after {
-    background-image: url("../assets/icons8-youtube.svg");
+  background-image: url("../assets/icons8-youtube.svg");
+}
+
+a {
+  color: var(--clr-main-txt);
+}
+
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--clr-main-bg);
+  border: none;
+  margin: 0.2rem;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+}
+
+input,
+select {
+  line-height: 2.5rem;
+  height: 2.5rem;
+}
+
+input,
+textarea {
+  color: var(--clr-main-txt);
+}
+
+textarea {
+  padding-top: 0.5rem;
+  resize: none;
+}
+
+textarea::placeholder,
+select,
+input::placeholder {
+  color: var(--clr-ligth-gray);
+}
+
+select,
+select option {
+  color: var(--clr-main-txt);
+}
+
+select option:disabled {
+  color: var(--clr-ligth-gray);
+}
+
+select:required:invalid {
+  color: var(--clr-ligth-gray);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: var(--clr-primary) solid 2px;
 }

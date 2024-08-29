@@ -1,135 +1,130 @@
-
-.profolio-photo-wrapper{
-    width: 50vw;
-    margin: 2vh auto;
+.profolio-photo-wrapper {
+  width: 50vw;
+  margin: 2vh auto;
 }
 
 .profolio-photo-wrapper img {
-    max-width: 100%;
-    border: solid  var(--clr-primary) 1px;
-    border-radius: 100%;
+  max-width: 100%;
+  border: solid var(--clr-primary) 1px;
+  border-radius: 100%;
 }
 
 /*home page presetation article*/
 .profolio-presentation {
-    margin-bottom: 5vh;
+  margin-bottom: 5vh;
 }
 
 .profolio-presentation > * {
-    text-align: center;
-    margin-bottom: 2vh;
+  text-align: center;
+  margin-bottom: 2vh;
 }
-
 
 .profolio-presentation__identification {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-.profolio-presentation__identification em{
-    color: var(--clr-primary);
-    font-weight: bolder;
+.profolio-presentation__identification em {
+  color: var(--clr-primary);
+  font-weight: bolder;
 }
 
 .profolio-presentation__description {
-    margin-top: 2vh;
+  margin-top: 2vh;
 }
 
 /* user link for dowload and social media*/
 
 .user-links__items {
-    text-align: center;
+  text-align: center;
 }
 
 .user-links__items li {
-    display: inline-block;
-    line-height: 1em;
+  display: inline-block;
+  line-height: 1em;
 }
 
 .user-links__items li:has(button) {
-    margin-right: 7vw;
+  margin-right: 7vw;
 }
-
 
 /* experience count */
 .experience-summary__items {
-    width: max-content;
-    list-style: none;
-    max-width: 85vw;
-    margin-left: 15vw;
+  width: max-content;
+  list-style: none;
+  max-width: 85vw;
+  margin-left: 15vw;
 }
 
 .experience-summary__items li {
-    display: inline-block;
-    min-width: 49%;
+  display: inline-block;
+  min-width: 49%;
 }
 
-
-.experience-summary__items li span  {
-    display: inline-block;
-    width: 8ch;
+.experience-summary__items li span {
+  display: inline-block;
+  width: 8ch;
 }
 
-.experience-summary__items li b  {
-    font-size: 3rem;
+.experience-summary__items li b {
+  font-size: 3rem;
 }
 
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 500px) and (min-height: 550px) {
-    .experience-summary__items {
-        max-width: 80vw;
-        margin-left: 20vw;
-    }
+  .experience-summary__items {
+    max-width: 80vw;
+    margin-left: 20vw;
+  }
 }
 
 /* override for laptop and desctop screen*/
 @media screen and (min-width: 600px) and (min-height: 550px) {
-    
-    .experience-summary__items {
-        width: max-content;
-        min-width: unset;
-        max-width: unset;
-        list-style: none;
-        margin: 0 auto;
-    }
+  .experience-summary__items {
+    width: max-content;
+    min-width: unset;
+    max-width: unset;
+    list-style: none;
+    margin: 0 auto;
+  }
 
-    .experience-summary__items li {
-        min-width: unset;
-        padding-left:7vw;
-    }
+  .experience-summary__items li {
+    min-width: unset;
+    padding-left: 7vw;
+  }
 
-    .experience-summary__items li:nth-child(1) {
-        padding-left:0px;
-    }
+  .experience-summary__items li:nth-child(1) {
+    padding-left: 0px;
+  }
 }
 
 @media screen and (min-width: 800px) and (min-height: 550px) {
+  .profolio-photo-wrapper {
+    float: right;
+    width: 40%;
+  }
 
-    .profolio-photo-wrapper{
-        float: right;
-        width: 40%;
-    }
+  .profolio-presentation {
+    float: left;
+    width: 45%;
+    margin-top: 5vh;
+  }
 
-    .profolio-presentation {
-        float: left;
-        width: 45%;
-        margin-top: 5vh;
-    }
- 
-    .profolio-presentation > * , .user-links__items{
-        text-align: left;
-    }
+  .profolio-presentation > *,
+  .user-links__items {
+    text-align: left;
+  }
 
+  .profolio-presentation__identification {
+    font-size: 4rem;
+    font-style: normal;
+  }
 
-    .profolio-presentation__identification {
-        font-size: 4rem;
-        font-style: normal;
-    }
+  .experience-summary__items {
+    margin: 0px;
+  }
 
-    .experience-summary__items {
-        margin: 0px;
-    }
-
-    .experience-summary, .header .header--info {
-        clear: both;
-    }
+  .experience-summary,
+  .header .header--info {
+    clear: both;
+  }
 }
