@@ -1,4 +1,4 @@
-/* .contact-main-desktop .card {
+/* .contact-main .card {
    padding: 1rem 4rem 3rem 4rem;
  
 } */
@@ -10,11 +10,11 @@
   width: 100%;
 }
 
-.contact-main-desktop .card__header {
+.contact-main .card__header {
   font-size: 1.8rem;
 }
 
-.contact-main-desktop .card {
+.contact-main .card {
   width: 94%;
   margin: 2vh auto;
 }
@@ -25,12 +25,12 @@
 }
 
 @media screen and (min-width: 800px) and (min-height: 550px) {
-  .contact-main-desktop {
+  .contact-main {
     width: 55%;
     float: left;
   }
 
-  .contact-footer-desktop {
+  .contact-footer {
     clear: none;
     border: none;
     width: 35%;
@@ -40,12 +40,12 @@
     margin-left: 3%;
   }
 
-  .contact-footer-desktop .info-list {
+  .contact-footer .info-list {
     position: absolute;
     top: 25%;
   }
 
-  .contact-footer-desktop .info-list__block {
+  .contact-footer .info-list__item {
     width: 100%;
     display: block;
     margin-top: 4vh;

@@ -120,63 +120,6 @@ footer {
   line-height: 1em;
 }
 
-/* contact footer style */
-
-.info-list__block {
-  margin-top: 2vh;
-  height: 4rem;
-  clear: both;
-  vertical-align: bottom;
-}
-
-.info-list__block__icon {
-  background-color: var(--clr-secondary-bg);
-  background-size: 2.5rem 2.5rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 3.5rem;
-  height: 3rem;
-  float: left;
-  margin-right: 1rem;
-}
-
-.info-list__block__icon_email {
-  background-image: url("../../assets/svg-ref/mail-svgrepo-com.svg");
-}
-
-.info-list__block__icon_tel {
-  background-image: url("../../assets/svg-ref/phonelegacy-svgrepo-com.svg");
-}
-
-.info-list__block__icon_adress {
-  background-image: url("../../assets/svg-ref/location-svgrepo-com.svg");
-}
-
-.info-list__block__label {
-  display: block;
-  color: var(--clr-ligth-gray);
-}
-
-@media screen and (min-width: 550px) {
-  .info-list__block {
-    margin-left: 10vw;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .info-list__block {
-    margin-left: 20vw;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .info-list__block {
-    display: inline-block;
-    margin-left: unset;
-    width: 33%;
-  }
-}
-
 @media screen and (min-width: 650px) {
   .card_summary {
     width: 46%;
@@ -201,3 +144,95 @@ footer {
     clear: both;
   }
 }
+
+
+
+
+
+/* genral info list style */
+
+.info-list__item {
+  /* margin-top: 2vh; */
+   height: 3rem;
+   margin: 1rem 0;  
+  /* clear: both; */
+  /* vertical-align: bottom; */
+}
+
+.info-list__item__icon {
+  background-color: var(--clr-secondary-bg);
+  background-size: 2.5rem 2.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3.5rem;
+  height: 3rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+.info-list__item__icon_email {
+  background-image: url("../../assets/svg-ref/mail-svgrepo-com.svg");
+}
+
+.info-list__item__icon_tel {
+  background-image: url("../../assets/svg-ref/phonelegacy-svgrepo-com.svg");
+}
+
+.info-list__item__icon_adress {
+  background-image: url("../../assets/svg-ref/location-svgrepo-com.svg");
+}
+
+.info-list__item__label {
+  display: block;
+  color: var(--clr-ligth-gray);
+}
+
+
+
+/* adapt info list style for global footer */
+.footer__info-list {
+  margin-left: 10vw;
+}
+
+.footer__info-list .info-list__item {
+  font-size: 0.8rem;
+  
+}
+
+.info-list__item__icon {
+  background-size: 2rem 2rem;
+  width: 3rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+
+@media screen and (min-width: 500px) {
+  .footer__info-list{
+    margin-left: 20vw;
+  }
+} 
+
+@media screen and (min-width: 600px) {
+  .footer__info-list{
+    margin-left: 2%;
+  }
+
+  .footer__info-list .info-list__item {
+    display: inline-block;
+    width: 49%;
+    vertical-align: bottom;
+  }
+} 
+
+
+@media screen and (min-width: 700px) {  
+  .footer__info-list .info-list__item {
+    display: inline-block;
+    margin-left: unset;
+    width: 32%;
+    vertical-align: bottom;
+
+  }
+} 
+
