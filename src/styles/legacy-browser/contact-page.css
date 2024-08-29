@@ -1,39 +1,66 @@
-
-.contact-main-desktop .card {
+/* .contact-main-desktop .card {
    padding: 1rem 4rem 3rem 4rem;
  
-}
+} */
 
-.contact-form input, .contact-form select,  .contact-form textarea {
-    margin-top: 4vh;
-    width: 100%;
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  margin-top: 4vh;
+  width: 100%;
 }
 
 .contact-main-desktop .card__header {
-    font-size: 2rem;
+  font-size: 1.8rem;
 }
 
+.contact-main-desktop .card {
+  width: 94%;
+  margin: 2vh auto;
+}
 
+.contact-form .contact-from__btn {
+  margin: 4vh auto 2vh auto;
+  display: block;
+}
 
 @media screen and (min-width: 800px) and (min-height: 550px) {
-
-    .contact-main-desktop {
-        width: 55%;
-        float: left;
-    }
-
-    .contact-footer-desktop {
-        clear: none;
-       border: none;
-       width: 30%;
-       float: left;
-       margin-left: 5%;
-       /* margin-top: 10vh; */
-    }
-
-    .contact-footer-desktop .info-list__block{
-       width: 100%;
-       display: block;
-      }
+  .contact-main-desktop {
+    width: 55%;
+    float: left;
   }
-  
+
+  .contact-footer-desktop {
+    clear: none;
+    border: none;
+    width: 35%;
+    float: left;
+    position: relative;
+    min-height: 75vh;
+    margin-left: 3%;
+  }
+
+  .contact-footer-desktop .info-list {
+    position: absolute;
+    top: 25%;
+  }
+
+  .contact-footer-desktop .info-list__block {
+    width: 100%;
+    display: block;
+    margin-top: 4vh;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px),
+  (min-width: 800px) and (max-height: 550px),
+  (min-width: 1200px) {
+  .contact-form input {
+    width: 48%;
+  }
+
+  .contact-form select,
+  .contact-form textarea {
+    width: 98%;
+  }
+}
