@@ -35,6 +35,7 @@
 /* user link for dowload and social media*/
 
 .user-links__items {
+  margin-top: 2vh;
   text-align: center;
 }
 
@@ -43,8 +44,8 @@
   line-height: 1em;
 }
 
-.user-links__items li:has(button) {
-  margin-right: 7vw;
+.user-links__items li:nth-child(1) {
+  margin-right: 5%;
 }
 
 /* experience count */
@@ -98,6 +99,10 @@
 }
 
 @media screen and (min-width: 800px) and (min-height: 550px) {
+  .user-links__items {
+    margin-top: 10vh;
+  }
+
   .profolio-photo-wrapper {
     float: right;
     width: 40%;

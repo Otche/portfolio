@@ -4,6 +4,7 @@
   position: sticky;
   background-color: var(--clr-main-bg);
   top: -1px;
+  z-index: 1;
 }
 
 .career-nav__menu {
@@ -22,11 +23,9 @@
 }
 
 .career-tab-container__cards-wrapper {
-  /* border: red 2px solid; */
   max-height: 40vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-color: var(--clr-primary) var(--clr-main-bg);
-  scrollbar-width: 1px;
   margin-top: 3vh;
 }
 
