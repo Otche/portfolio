@@ -1,7 +1,7 @@
-/* .contact-main .card {
-   padding: 1rem 4rem 3rem 4rem;
+.contact-main {
+   margin-bottom: 0px;
  
-} */
+} 
 
 .contact-form input,
 .contact-form select,
@@ -24,13 +24,18 @@
   display: block;
 }
 
+.contact-nav {
+  width: 94%;
+  margin: auto;
+}
+
 @media screen and (min-width: 800px) and (min-height: 550px) {
-  .contact-main {
+  .contact-main .card {
     width: 55%;
     float: left;
   }
 
-  .contact-footer {
+  .contact-nav {
     clear: none;
     border: none;
     width: 35%;
@@ -40,12 +45,12 @@
     margin-left: 3%;
   }
 
-  .contact-footer .info-list {
+  .contact-nav .info-list {
     position: absolute;
     top: 25%;
   }
 
-  .contact-footer .info-list__item {
+  .contact-nav .info-list__item {
     width: 100%;
     display: block;
     margin-top: 4vh;
