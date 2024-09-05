@@ -2,7 +2,7 @@
 
 .career-nav {
   position: sticky;
-  background-color: var(--clr-main-bg);
+  background-color: var(--clr-primary-dark);
   top: -1px;
   z-index: 1;
 }
@@ -25,13 +25,13 @@
 .career-tab-container__cards-wrapper {
   max-height: 40vh;
   overflow-y: auto;
-  scrollbar-color: var(--clr-primary) var(--clr-main-bg);
+  scrollbar-color: var(--clr-primary-sky-blue) var(--clr-primary-dark);
   margin-top: 3vh;
 }
 
 .career-tab-container__title {
   font-size: 2.5rem;
-  border-bottom: var(--clr-primary) 1px solid;
+  border-bottom: var(--clr-primary-sky-blue) 1px solid;
   padding-bottom: 10px;
 }
 

@@ -1,11 +1,11 @@
 /* init css vars*/
 :root {
-  --clr-main-bg: #1c1b22;
-  --clr-secondary-bg: #232229;
-  --clr-ligth-gray: #8b8b8d;
-  --clr-main-txt: white;
-  --clr-primary: #12b4e4;
-  --clr-secondary: #6495ed;
+  --clr-primary-dark: #1c1b22;
+  --clr-secondary-dark: #232229;
+  --clr-secondary-light: #8b8b8d;
+  --clr-primary-light: white;
+  --clr-primary-sky-blue: #12b4e4;
+  --clr-secondary-sky-blue: #6495ed;
   --border-radius-btn: 5px;
   --border-radius-card: 10px;
   --gradiant-background: linear-gradient(90deg, #8b8b8d 0%, #8b8b8d 100%);

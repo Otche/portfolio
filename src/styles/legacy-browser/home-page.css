@@ -5,7 +5,7 @@
 
 .profolio-photo-wrapper img {
   max-width: 100%;
-  border: solid var(--clr-primary) 1px;
+  border: solid var(--clr-primary-sky-blue) 1px;
   border-radius: 100%;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .profolio-presentation__identification em {
-  color: var(--clr-primary);
+  color: var(--clr-primary-sky-blue);
   font-weight: bolder;
 }
 

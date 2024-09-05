@@ -4,18 +4,27 @@
 
 /* set default background color and text color theme*/
 body {
-  background-color: var(--clr-main-bg);
-  color: var(--clr-main-txt);
   margin: auto;
   max-width: 1500px;
 }
+
+.dark-theme {
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-primary-light);
+}
+
+.ligth-theme{
+  background-color: var(--clr-primary-light);
+  color: var(--clr-primary-dark);
+}
+
 menu {
   list-style: none;
 }
 
 /* set the color of the header profile Name*/
 .portfolio-title {
-  color: var(--clr-primary);
+  color: var(--clr-primary-sky-blue);
 }
 
 /**
@@ -29,28 +38,27 @@ menu {
   background: #0000;
   /* the inline display can cause a issues whith parent sizing hieght adaptation*/
   display: inline-block;
-  color: var(--clr-primary);
+  color: var(--clr-primary-sky-blue);
   padding: 0.3em 0.5em;
-  border: solid var(--clr-primary) 1px;
+  border: solid var(--clr-primary-sky-blue) 1px;
   border-radius: var(--border-radius-btn);
   min-width: 12ch;
-
 }
 
 .btn:hover {
-  background: var(--clr-primary);
-  color: var(--clr-main-bg);
+  background: var(--clr-primary-sky-blue);
+  color: var(--clr-primary-dark);
 }
 
 .btn_icon:hover {
-  background-color: var(--clr-main-txt);
+  background-color: var(--clr-primary-light);
 }
 
 /* active button style */
 .btn_active {
-  background-color: var(--clr-secondary);
-  color: var(--clr-main-txt);
-  border: solid var(--clr-main-txt) 1px;
+  background-color: var(--clr-secondary-sky-blue);
+  color: var(--clr-primary-light);
+  border: solid var(--clr-primary-light) 1px;
 }
 
 .btn_icon,
@@ -85,18 +93,24 @@ menu {
   background-image: url("../assets/icons8-youtube.svg");
 }
 
-a {
-  color: var(--clr-main-txt);
+.dark-theme a {
+  color: var(--clr-primary-light);
 }
 
-li {
-  list-style: none;
+
+.ligth-theme a {
+  color: var(--clr-primary-sky-blue);
 }
+
+.ligth-theme a:hover {
+  color: var(--clr-secondary-sky-blue);
+}
+
 
 input,
 textarea,
 select {
-  background-color: var(--clr-main-bg);
+  background-color: var(--clr-primary-dark);
   border: none;
   margin: 0.2rem;
   border-radius: 5px;
@@ -111,7 +125,7 @@ select {
 
 input,
 textarea {
-  color: var(--clr-main-txt);
+  color: var(--clr-primary-light);
 }
 
 textarea {
@@ -122,24 +136,67 @@ textarea {
 textarea::placeholder,
 select,
 input::placeholder {
-  color: var(--clr-ligth-gray);
+  color: var(--clr-secondary-light);
 }
 
 select,
 select option {
-  color: var(--clr-main-txt);
+  color: var(--clr-primary-light);
 }
 
 select option:disabled {
-  color: var(--clr-ligth-gray);
+  color: var(--clr-secondary-light);
 }
 
 select:required:invalid {
-  color: var(--clr-ligth-gray);
+  color: var(--clr-secondary-light);
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  outline: var(--clr-primary) solid 2px;
+  outline: var(--clr-primary-sky-blue) solid 2px;
+}
+
+h1,
+.heading-level-1 {
+  font-size: 3rem;
+}
+
+h2,
+.heading-level-2 {
+  font-size: 2.5rem;
+}
+
+h3,
+.heading-level-3 {
+  font-size: 2.1rem;
+}
+
+h4,
+.heading-level-4 {
+  font-size: 1.8rem;
+}
+
+h5,
+.heading-level-5 {
+  font-size: 1.5rem;
+}
+
+h6,
+.heading-level-6 {
+  font-size: 1.2rem;
+}
+
+summary {
+  /* background-color: var(--clr-secondary-dark); */
+}
+
+summary > * {
+  display: inline-block;
+}
+
+
+ul {
+  padding: 2em;
 }

@@ -9,7 +9,7 @@
 } */
 
 .portfolio-navigation__items {
-  background-color: var(--clr-primary);
+  background-color: var(--clr-primary-sky-blue);
   text-align: center;
   line-height: 5vh;
   list-style: none;
@@ -21,11 +21,10 @@
 }
 
 .portfolio-navigation__items li a {
-  color: var(--clr-main-txt);
+  color: var(--clr-primary-light);
 }
 
 .portfolio-title {
-  margin: 1vh 0;
   text-align: center;
   font-size: 8vw;
 }
@@ -35,7 +34,7 @@
   text-align: center;
   width: 100%;
   padding: 1vh 0;
-  border-bottom: solid var(--clr-primary) 1px;
+  border-bottom: solid var(--clr-primary-sky-blue) 1px;
 }
 
 .portfolio-navigation__items a:hover {
@@ -43,14 +42,14 @@
 }
 
 .portfolio-navigation__items li.active a {
-  color: var(--clr-main-bg);
+  color: var(--clr-primary-dark);
 }
 
 /* overrides for mobile landscape mode*/
 @media screen and (orientation: landscape) and (max-height: 550px) {
   .portfolio-title {
     font-size: 5vw;
-    border-bottom: 1px solid var(--clr-primary);
+    border-bottom: 1px solid var(--clr-primary-sky-blue);
   }
 
   .activity-bar {
@@ -61,7 +60,7 @@
     font-size: 3.5vw;
     width: 20vw;
     float: left;
-    color: var(--clr-primary);
+    color: var(--clr-primary-sky-blue);
     padding-top: 10vh;
   }
 
@@ -80,7 +79,7 @@
   }
 
   .portfolio-navigation__items li.active a {
-    color: var(--clr-primary);
+    color: var(--clr-primary-sky-blue);
   }
 }
 
