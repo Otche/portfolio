@@ -13,7 +13,7 @@ body {
   color: var(--clr-primary-light);
 }
 
-.ligth-theme{
+.ligth-theme {
   background-color: var(--clr-primary-light);
   color: var(--clr-primary-dark);
 }
@@ -82,21 +82,20 @@ menu {
 }
 
 .btn_icon_linkedin::after {
-  background-image: url("../assets/icons8-linkedin.svg");
+  background-image: url("../assets/images/icons8-linkedin.svg");
 }
 
 .btn_icon_git::after {
-  background-image: url("../assets/icons8-git.svg");
+  background-image: url("../assets/images/icons8-git.svg");
 }
 
 .btn_icon_youtube::after {
-  background-image: url("../assets/icons8-youtube.svg");
+  background-image: url("../assets/images/icons8-youtube.svg");
 }
 
 .dark-theme a {
   color: var(--clr-primary-light);
 }
-
 
 .ligth-theme a {
   color: var(--clr-primary-sky-blue);
@@ -105,7 +104,6 @@ menu {
 .ligth-theme a:hover {
   color: var(--clr-secondary-sky-blue);
 }
-
 
 input,
 textarea,
@@ -195,7 +193,6 @@ summary {
 summary > * {
   display: inline-block;
 }
-
 
 ul {
   padding: 2em;
