@@ -1,3 +1,4 @@
+@import "./fonts.css";
 @import "./legacy-browser/styles.css";
 
 /** supports(not(display: grid)); */
@@ -6,6 +7,19 @@
 body {
   margin: auto;
   max-width: 1500px;
+  font-family: var(--main-font);
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+body.content-page main h1,
+body.content-page main h2,
+body.content-page main h3,
+body.content-page main h4,
+body.content-page main h5,
+body.content-page main h6 {
+  font-family: var(--headers-font-content-page);
+  letter-spacing: initial;
 }
 
 .dark-theme {
@@ -13,7 +27,7 @@ body {
   color: var(--clr-primary-light);
 }
 
-.ligth-theme{
+.ligth-theme {
   background-color: var(--clr-primary-light);
   color: var(--clr-primary-dark);
 }
@@ -82,21 +96,20 @@ menu {
 }
 
 .btn_icon_linkedin::after {
-  background-image: url("../assets/icons8-linkedin.svg");
+  background-image: url("../assets/images/icons8-linkedin.svg");
 }
 
 .btn_icon_git::after {
-  background-image: url("../assets/icons8-git.svg");
+  background-image: url("../assets/images/icons8-git.svg");
 }
 
 .btn_icon_youtube::after {
-  background-image: url("../assets/icons8-youtube.svg");
+  background-image: url("../assets/images/icons8-youtube.svg");
 }
 
 .dark-theme a {
   color: var(--clr-primary-light);
 }
-
 
 .ligth-theme a {
   color: var(--clr-primary-sky-blue);
@@ -105,7 +118,6 @@ menu {
 .ligth-theme a:hover {
   color: var(--clr-secondary-sky-blue);
 }
-
 
 input,
 textarea,
@@ -160,42 +172,52 @@ select:focus {
 
 h1,
 .heading-level-1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2,
 .heading-level-2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 h3,
 .heading-level-3 {
-  font-size: 2.1rem;
+  font-size: 1.9rem;
 }
 
 h4,
 .heading-level-4 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 h5,
 .heading-level-5 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 h6,
 .heading-level-6 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-summary {
-  /* background-color: var(--clr-secondary-dark); */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-level-1,
+.heading-level-2,
+.heading-level-3,
+.heading-level-4,
+.heading-level-5,
+.heading-level-6 {
+  font-family: var(--headers-font);
 }
 
 summary > * {
   display: inline-block;
 }
-
 
 ul {
   padding: 2em;

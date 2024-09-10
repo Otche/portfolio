@@ -172,15 +172,15 @@ footer {
 }
 
 .info-list__item__icon_email {
-  background-image: url("../../assets/svg-ref/mail-svgrepo-com.svg");
+  background-image: url("../../assets/images/mail-svgrepo-com.svg");
 }
 
 .info-list__item__icon_tel {
-  background-image: url("../../assets/svg-ref/phonelegacy-svgrepo-com.svg");
+  background-image: url("../../assets/images/phonelegacy-svgrepo-com.svg");
 }
 
 .info-list__item__icon_adress {
-  background-image: url("../../assets/svg-ref/location-svgrepo-com.svg");
+  background-image: url("../../assets/images/location-svgrepo-com.svg");
 }
 
 .info-list__item__label {

@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap"); /* "Reem Kufi Fun" */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"); /* "Dosis" +++ main */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"); /* "Dancing Script" */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"); /* "Exo 2" ++ main */
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"); /* "Teko" */
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"); /* "Signika" ++ headers & main*/
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"); /* "Merienda" +++ headers*/
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"); /* "Saira" */
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"); /* "Unbounded" */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"); /* "Caveat" */
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"); /* "SUSE" */
+
 /* init css vars*/
 :root {
   --clr-primary-dark: #1c1b22;
@@ -9,6 +21,10 @@
   --border-radius-btn: 5px;
   --border-radius-card: 10px;
   --gradiant-background: linear-gradient(90deg, #8b8b8d 0%, #8b8b8d 100%);
+  --headers-font: "Merienda", Arial, Helvetica, sans-serif;
+  --headers-font-content-page: "SUSE", Arial, Helvetica, sans-serif;
+  --main-font: "Dosis", Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS",
+    sans-serif;
 }
 
 /* reset border size calculate*/
