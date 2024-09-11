@@ -21,9 +21,11 @@
   },
   "homepage": "https://bitbucket.org/otche/portfolio#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "@types/ejs": "^3.1.5",
     "@types/express": "^4.17.21",
     "@types/node": "^22.5.4",
     "@typescript-eslint/eslint-plugin": "^8.5.0",
