@@ -26,7 +26,6 @@ export function templatingVars(url: string): TemplateDataType {
     currentUrl: url,
     ...data,
     navPages: data.navPages.map((pn) => {
-      console.log(pn, pn.url)
       return {
         ...pn,
         className: pn.url === url ? 'active' : '',
