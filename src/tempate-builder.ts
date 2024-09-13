@@ -26,6 +26,7 @@ export function templatingVars(url: string): TemplateDataType {
     currentUrl: url,
     ...data,
     navPages: data.navPages.map((pn) => {
+      console.log(pn, pn.url)
       return {
         ...pn,
         className: pn.url === url ? 'active' : '',
@@ -59,7 +60,7 @@ export async function buildSite() {
   const pagesInfo = templates.map((template) => {
     return {
       tempaltePath: path.resolve(`templates/${template}`),
-      url: template.replace('ejs', 'html'),
+      url: '/' + template.replace('ejs', 'html'),
     }
   })
 
