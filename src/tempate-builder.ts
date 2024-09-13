@@ -16,8 +16,12 @@ type TemplateDataType = {
     [k: string]: unknown
   }
 }
-
-export const templatingVars = (url: string): TemplateDataType => {
+/**
+ *
+ * @param url
+ * @returns
+ */
+export function templatingVars(url: string): TemplateDataType {
   return {
     currentUrl: url,
     ...data,
@@ -30,47 +34,60 @@ export const templatingVars = (url: string): TemplateDataType => {
   }
 }
 
-export const buildPage = async (templatePath: string, url: string) => {
+/**
+ *
+ * @param templatePath
+ * @param url
+ * @returns
+ */
+export async function buildPage(templatePath: string, url: string) {
   const templateData = templatingVars(url)
   const ejsOptions = {
     root: [path.resolve('templates/common/')],
   }
-  try {
-    return await ejs.renderFile(templatePath, templateData, ejsOptions)
-  } catch (error) {
-    console.log(error)
-  }
+
+  return await ejs.renderFile(templatePath, templateData, ejsOptions)
 }
 
-export const buildSite = async (): Promise<boolean> => {
+/**
+ *
+ * @returns
+ */
+export async function buildSite() {
   const templates = ['home.ejs', 'career.ejs', 'services.ejs', 'contact.ejs']
-  return templates
-    .map((template) => {
-      return {
-        tempaltePath: path.resolve(`templates/${template}`),
-        url: template.replace('ejs', 'html'),
-      }
-    })
-    .map(({ tempaltePath, url }) => {
-      return { url, buildPromise: buildPage(tempaltePath, url) }
-    })
-    .map(async ({ url, buildPromise }) => {
+
+  const pagesInfo = templates.map((template) => {
+    return {
+      tempaltePath: path.resolve(`templates/${template}`),
+      url: template.replace('ejs', 'html'),
+    }
+  })
+
+  const htmlPagesInfo = await Promise.all(
+    pagesInfo.map(async ({ tempaltePath, url }) => {
       try {
-        const htmlStringPage = await buildPromise
-        if (!htmlStringPage) {
-          console.error(`build template for page ${url} feiled`)
-          return false
+        const htmlStrPage = await buildPage(tempaltePath, url)
+        return {
+          url,
+          htmlStrPage,
         }
-        await fs.mkdir('dist/pages', { recursive: true })
-        await fs.writeFile(path.resolve(`dist/pages/${url}`), htmlStringPage)
-        return true
       } catch (e) {
-        console.error(`build template for page ${url} feiled`, e)
-        return false
+        console.error('Fail to generate tempalte of ', tempaltePath)
+        throw e
       }
     })
-    .reduce(
-      async (acc, check) => (await acc) && (await check),
-      Promise.resolve(true)
-    )
+  )
+
+  await fs.mkdir('dist/pages', { recursive: true })
+
+  return Promise.all(
+    htmlPagesInfo.map(async ({ url, htmlStrPage }) => {
+      try {
+        await fs.writeFile(path.resolve(`dist/pages/${url}`), htmlStrPage)
+      } catch (err) {
+        console.error('Error when creating template of ', url)
+        throw err
+      }
+    })
+  )
 }

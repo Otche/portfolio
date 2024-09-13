@@ -23,17 +23,16 @@ staticFiles.get('*', (req, res) => {
  * root router to intercept .html get request
  */
 app.get('/*.html', async (req, res) => {
-  console.log('====>', req.url)
   return res.sendFile(path.resolve(`dist/pages/${req.url}`))
 })
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`Server listning on port ${PORT}`)
-  buildSite().then((result) => {
-    if (result) {
-      console.log('Tempalte builded sucesss ....')
-      return
-    }
-    console.error('Tempalte builded falied ....')
-  })
+  try {
+    await buildSite()
+    console.log('Page builded with sucess ...')
+  } catch (e) {
+    console.log('Failed when building page ....')
+    throw e
+  }
 })
