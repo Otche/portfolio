@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<%- include('/common/head.ejs') %>
+  <%- include('/head.ejs') %>
 
-<body class="dark-theme">
-    <%- include('/common/header.ejs') %>
-    <h1>Services</h1>
-    <%- include('/common/footer.ejs') %>
-</body>
-
+  <body class="dark-theme">
+    <%- include('/header.ejs') %>
+    <main>
+        <%services.forEach(element => {%>
+            <section class="card card_summary">
+                <h4 class="card__header card__header_hover-primary"><%=element.service%></h4>
+                <p class="card__body"><%=element.description%></p>
+            </section>
+        <%})%>
+    </main>
+    <%- include('/footer.ejs') %>
+  </body>
 </html>

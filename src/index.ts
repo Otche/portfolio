@@ -1,42 +1,18 @@
 import express from 'express'
 import path from 'path'
 import ejs from 'ejs'
+import { templatingVars } from './tempate-builder'
 
 const PORT = process.env.PORT || 3000
 const app = express()
-const staticFile = express()
+const staticFiles = express()
 
-app.use('/public', staticFile)
+app.use('/public', staticFiles)
 
-const templatingVars = (url: string) => {
-  return {
-    currentUrl: url,
-    pages: [
-      {
-        url: './home.html',
-        label: 'Home',
-        className: url === '/home.html' ? 'active' : '',
-      },
-      {
-        url: './services.html',
-        label: 'Serive',
-        className: url === '/services.html' ? 'active' : '',
-      },
-      {
-        url: './career.html',
-        label: 'Carrière',
-        className: url === '/career.html' ? 'active' : '',
-      },
-      {
-        url: './contact.html',
-        label: 'Contact',
-        className: url === '/contact.html' ? 'active' : '',
-      },
-    ],
-  }
-}
-
-staticFile.get('*', (req, res) => {
+/**
+ * subroot /public to expose all  route to get static files
+ */
+staticFiles.get('*', (req, res) => {
   const pagePath =
     req.url === '/normalize.css'
       ? 'node_modules/normalize.css/normalize.css'
@@ -44,19 +20,26 @@ staticFile.get('*', (req, res) => {
   res.status(200).sendFile(path.resolve(pagePath))
 })
 
+/**
+ * root router to intercept .html get request
+ */
 app.get('/*.html', (req, res) => {
   const pageFileToRenderPath = path.resolve(
     `templates${req.url.replace('html', 'ejs')}`
   )
+  const templateData = templatingVars(req.url)
 
   ejs.renderFile(
     pageFileToRenderPath,
-    templatingVars(req.url),
+    templateData,
     {
-      root: [path.resolve('templates')],
+      root: [path.resolve('templates/common/')],
     },
     (err, htmlStringPage) => {
-      if (err) return res.sendStatus(404)
+      if (err) {
+        console.log(err)
+        return res.sendStatus(404)
+      }
       res.status(200).send(htmlStringPage)
     }
   )

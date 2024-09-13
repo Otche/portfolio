@@ -2,8 +2,8 @@
     <h2 class="portfolio-title">AMINE</h2>
     <nav class="portfolio-navigation">
         <menu class="portfolio-navigation__items">
-            <% pages.forEach(function(pg){ %>
-                <li class="<%=pg.className %>"><a  href="<%=pg.url %>"><%=pg.label%> </a></li>
+            <% navPages.forEach(function(navPage){ %>
+                <li class="<%=navPage.className %>"><a  href="<%=navPage.url %>"><%=navPage.label%> </a></li>
               <% }); %>
         </menu>
     </nav>
