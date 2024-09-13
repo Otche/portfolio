@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <%- include('/head.ejs') %>
+
+  <body class="dark-theme">
+    <%- include('/header.ejs', {navPages}) %>
+     <main>
+        <figure class="profolio-photo-wrapper">
+            <img src="<%=home.presentation_image_src%>" alt="the image of the user presented in this portfolio"
+                title="Photo de Amine OUCHIA">
+        </figure>
+
+        <section class="profolio-presentation">
+            <article>
+                <h5><%=home.presentation_header%></h5>
+                <p class="profolio-presentation__identification">
+                    <b>
+                        <%=home.presentation_prefix%>
+                    </b>
+                    <em role="heading">
+                        <%=home.presentation_name%>
+                    </em>
+                </p>
+                <p class="profolio-presentation__description">
+                    <%=home.presentation_description%>
+                </p>
+            </article>
+
+            <aside class="user-links">
+                <ul class="user-links__items">
+                    <li> <a class="btn"><%=home.btn_telechargement_cv%></a></li>
+                    <li> <a title="lien profil linkedin" class="btn btn_icon btn_icon_linkedin"> </a></li>
+                    <li> <a title="lien dépôt git" class="btn btn_icon btn_icon_git"> </a></li>
+                    <li> <a title="lien chaine youtube"class="btn btn_icon btn_icon_youtube"> </a></li>
+                    <li> <a class="btn btn_icon"> </a></li>
+                </ul>
+
+            </aside>
+        </section>
+        <section class="experience-summary">
+            <ul class="experience-summary__items">
+                <%home.experiences_summary.forEach(element => {%>
+                    <li><b><%=element.number%></b> <span><%=element.label%></span></li>
+                    <% })%>
+            </ul>
+        </section>
+    <%- include('/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <%- include('/head.ejs') %>
+
+  <body class="dark-theme">
+    <%- include('/header.ejs') %>
+    <main>
+        <%services.forEach(element => {%>
+            <section class="card card_summary">
+                <h4 class="card__header card__header_hover-primary"><%=element.service%></h4>
+                <p class="card__body"><%=element.description%></p>
+            </section>
+        <%})%>
+    </main>
+    <%- include('/footer.ejs') %>
+  </body>
+</html>
