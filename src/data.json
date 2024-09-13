@@ -1,0 +1,195 @@
+{
+  "navPages": [
+    {
+      "url": "/home.html",
+      "label": "Accueil"
+    },
+    {
+      "url": "/services.html",
+      "label": "Services"
+    },
+    {
+      "url": "/career.html",
+      "label": "Carrière"
+    },
+    {
+      "url": "/contact.html",
+      "label": "Contact"
+    }
+  ],
+  "home": {
+    "presentation_header": "Développeur Full stack",
+    "presentation_prefix": "Bonjour Je m'appelle",
+    "presentation_name": "Amine OUCHIHA",
+    "presentation_image_src": "/public/assets/images/image1.png",
+    "presentation_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perspiciatis quasi nesciunt accusantium, cumque velit!",
+    "btn_telechargement_cv": "Télécharger CV",
+    "experiences_summary": [
+      { "number": 12, "label": "Années d'éxperiences" },
+      { "number": 26, "label": "Prjets réalisés" },
+      { "number": 8, "label": "Technologies maitisées" },
+      { "number": 500, "label": "Codes commits" }
+    ]
+  },
+  "services": [
+    {
+      "service": "Développeur Web",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
+    },
+    {
+      "service": "Développeur Web",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
+    },
+    {
+      "service": "Développeur Web",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
+    },
+    {
+      "service": "Développeur Web",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
+    },
+    {
+      "service": "Développeur Web",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
+    }
+  ],
+  "career": {
+    "nav_menu": [
+      { "label": "Expériences", "htmlHref": "#career-experiences" },
+      { "label": "Education", "htmlHref": "#career-education" },
+      { "label": "Compétences", "htmlHref": "#career-competences" },
+      { "label": "A propos", "htmlHref": "#career-propos" }
+    ],
+    "sections": [
+      {
+        "title": "Mes experiences",
+        "htmlId": "career-experiences",
+        "presentation": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
+        "cards": [
+          {
+            "duration": "2020 - 2023",
+            "label": "Développeur Web",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Développeur Web",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Développeur Web",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Développeur Web",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Développeur Web",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Développeur Web",
+            "entity": "Société général"
+          }
+        ]
+      },
+      {
+        "title": "Ma formation",
+        "htmlId": "career-education",
+        "presentaion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
+        "cards": [
+          {
+            "duration": "2020 - 2023",
+            "label": "Informatique",
+            "entity": "Université de Versaille"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Informatique",
+            "entity": "Université de Versaille"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Informatique",
+            "entity": "Université de Versaille"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Informatique",
+            "entity": "Université de Versaille"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Informatique",
+            "entity": "Université de Versaille"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Informatique",
+            "entity": "Université de Versaille"
+          }
+        ]
+      },
+      {
+        "title": "Mes compétences",
+        "htmlId": "career-competences",
+        "presentaion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
+        "cards": [
+          {
+            "duration": "2020 - 2023",
+            "label": "Java",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Java",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Java",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Java",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Java",
+            "entity": "Société général"
+          },
+          {
+            "duration": "2020 - 2023",
+            "label": "Java",
+            "entity": "Société général"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "form_title": "Travaillons ensemble !",
+    "form_select_option_disableld": "Séléctionnez un service",
+    "form_select_options": [
+      "Développement Web.",
+      "Développement Mobile.",
+      "Développement Mql5."
+    ],
+    "form_btn_submit": "Envoyer",
+    "contact_info": {
+      "email": { "label": "Email", "email": "amineouchiha@gmail.com." },
+      "phone": { "label": "Téléphone", "phone": "+337 81 58 10 21." },
+      "localisation": {
+        "label": "Adrèsse",
+        "address": "180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France."
+      }
+    }
+  }
+}
