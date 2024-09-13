@@ -1,7 +1,6 @@
 import express from 'express'
 import path from 'path'
-import ejs from 'ejs'
-import { templatingVars } from './tempate-builder'
+import { buildSite } from './tempate-builder'
 
 const PORT = process.env.PORT || 3000
 const app = express()
@@ -23,28 +22,18 @@ staticFiles.get('*', (req, res) => {
 /**
  * root router to intercept .html get request
  */
-app.get('/*.html', (req, res) => {
-  const pageFileToRenderPath = path.resolve(
-    `templates${req.url.replace('html', 'ejs')}`
-  )
-  const templateData = templatingVars(req.url)
-
-  ejs.renderFile(
-    pageFileToRenderPath,
-    templateData,
-    {
-      root: [path.resolve('templates/common/')],
-    },
-    (err, htmlStringPage) => {
-      if (err) {
-        console.log(err)
-        return res.sendStatus(404)
-      }
-      res.status(200).send(htmlStringPage)
-    }
-  )
+app.get('/*.html', async (req, res) => {
+  console.log('====>', req.url)
+  return res.sendFile(path.resolve(`dist/pages/${req.url}`))
 })
 
 app.listen(PORT, () => {
   console.log(`Server listning on port ${PORT}`)
+  buildSite().then((result) => {
+    if (result) {
+      console.log('Tempalte builded sucesss ....')
+      return
+    }
+    console.error('Tempalte builded falied ....')
+  })
 })
