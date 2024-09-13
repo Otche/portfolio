@@ -2,6 +2,18 @@
 <html lang="en">
   <%- include('/head.ejs') %>
 
+  <style>
+    .info-list__item__icon[data-name='<%=contact.contact_info.email.name%>'] {
+      background-image: url('<%=contact.contact_info.email.icon%>');
+    }
+    .info-list__item__icon[data-name='<%=contact.contact_info.phone.name%>'] {
+      background-image: url('<%=contact.contact_info.phone.icon%>');
+    }
+    .info-list__item__icon[data-name='<%=contact.contact_info.localisation.name%>'] {
+      background-image: url('<%=contact.contact_info.localisation.icon%>');
+    }
+  </style>
+
   <body class="dark-theme">
     <%- include('/header.ejs') %>
     <main class="contact-main">
@@ -25,19 +37,19 @@
           </form>
       </section>
       <nav class="contact-nav">
-          <ul>
+          <ul class="info-list">
             <li class="info-list__item">
-                  <div class="info-list__item__icon info-list__item__icon_email" role="presentation"></div>
+                  <div class="info-list__item__icon" role="presentation"   data-name="<%=contact.contact_info.email.name%>"></div>
                   <span class="info-list__item__label"><%=contact.contact_info.email.label%> </span>
                   <a class="info-list__item__info" href="mailto:<%=contact.contact_info.email.email%>"><%=contact.contact_info.email.email%></a>
               </li>
               <li class="info-list__item">
-                  <div class="info-list__item__icon info-list__item__icon_tel" role="presentation"></div>
+                  <div class="info-list__item__icon" role="presentation"   data-name="<%=contact.contact_info.phone.name%>"></div>
                   <span class="info-list__item__label"><%=contact.contact_info.phone.label%> </span>
-                  <a class="info-list__item__info" href="tel:<%=contact.contact_info.email.phone%>"><%=contact.contact_info.phone.phone%></a>
+                  <a class="info-list__item__info" href="tel:<%=contact.contact_info.phone.phone%>"><%=contact.contact_info.phone.phone%></a>
               </li>
               <li class="info-list__item">
-                  <div class="info-list__item__icon info-list__item__icon_adress" role="presentation"></div>
+                  <div class="info-list__item__icon" role="presentation"   data-name="<%=contact.contact_info.localisation.name%>"></div>
                   <span class="info-list__item__label"><%=contact.contact_info.localisation.label%></span>
                   <address class="info-list__item__info"><%=contact.contact_info.localisation.address%>
                   </address>

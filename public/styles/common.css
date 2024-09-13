@@ -1,5 +1,5 @@
-@import "./fonts.css";
-@import "./legacy-browser/styles.css";
+@import './fonts.css';
+@import './legacy-browser/styles.css';
 
 /** supports(not(display: grid)); */
 
@@ -89,22 +89,10 @@ menu {
 }
 
 .btn_icon::after {
-  content: "";
+  content: '';
   width: 1.6em;
   height: 1.6em;
   background-size: cover;
-}
-
-.btn_icon_linkedin::after {
-  background-image: url("../assets/images/icons8-linkedin.svg");
-}
-
-.btn_icon_git::after {
-  background-image: url("../assets/images/icons8-git.svg");
-}
-
-.btn_icon_youtube::after {
-  background-image: url("../assets/images/icons8-youtube.svg");
 }
 
 .dark-theme a {

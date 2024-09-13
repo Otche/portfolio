@@ -1,19 +1,57 @@
+<style>
+  .info-list__item__icon[data-name='<%=footerSection.email.name%>'] {
+    background-image: url('<%=footerSection.email.icon%>');
+  }
+  .info-list__item__icon[data-name='<%=footerSection.phone.name%>'] {
+    background-image: url('<%=footerSection.phone.icon%>');
+  }
+  .info-list__item__icon[data-name='<%=footerSection.localisation.name%>'] {
+    background-image: url('<%=footerSection.localisation.icon%>');
+  }
+</style>
+
 <footer>
-    <ul class="info-list footer__info-list">
-        <li class="info-list__item">
-            <div class="info-list__item__icon info-list__item__icon_email" role="presentation"></div>
-            <span class="info-list__item__label">Email </span>
-            <a class="info-list__item__info" href="mailto:amineouchiha@gmail.com">amineouchiha@gmail.com.</a>
-        </li>
-        <li class="info-list__item">
-            <div class="info-list__item__icon info-list__item__icon_tel" role="presentation"></div>
-            <span class="info-list__item__label">Téléphone </span>
-            <a class="info-list__item__info" href="tel:+33781581021">+337 81 58 10 21.</a>
-        </li>
-        <li class="info-list__item">
-            <div class="info-list__item__icon info-list__item__icon_adress" role="presentation"></div>
-            <span class="info-list__item__label">Adresse </span>
-            <address class="info-list__item__info">180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France.</address>
-        </li>
-    </ul>
+  <ul class="info-list footer__info-list">
+    <li class="info-list__item">
+      <div
+        class="info-list__item__icon"
+        data-name="<%=footerSection.email.name%>"
+        role="presentation"
+      ></div>
+      <span class="info-list__item__label"
+        ><%=footerSection.email.label%>
+      </span>
+      <a
+        class="info-list__item__info"
+        href="mailto:<%=footerSection.email.email%>"
+        ><%=footerSection.email.email%></a
+      >
+    </li>
+    <li class="info-list__item">
+      <div
+        class="info-list__item__icon"
+        data-name="<%=footerSection.phone.name%>"
+        role="presentation"
+      ></div>
+      <span class="info-list__item__label"
+        ><%=footerSection.phone.label%>
+      </span>
+      <a class="info-list__item__info" href="tel:<%=footerSection.phone.phone%>"
+        ><%=footerSection.phone.phone%></a
+      >
+    </li>
+    <li class="info-list__item">
+      <div
+        class="info-list__item__icon"
+        data-name="<%=footerSection.localisation.name%>"
+        role="presentation"
+      ></div>
+      <span class="info-list__item__label"
+        ><%=footerSection.localisation.label%></span
+      >
+      <address class="info-list__item__info">
+        <%=footerSection.localisation.address%>
+      </address>
+    </li>
+  </ul>
 </footer>

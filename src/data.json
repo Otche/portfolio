@@ -24,6 +24,26 @@
     "presentation_image_src": "/public/assets/images/image1.png",
     "presentation_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perspiciatis quasi nesciunt accusantium, cumque velit!",
     "btn_telechargement_cv": "Télécharger CV",
+    "social_media": [
+      {
+        "name": "linkedin",
+        "icon": "/public/assets/images/icons8-linkedin.svg",
+        "url": "https://fr.linkedin.com/",
+        "title": "lien profil linkedin"
+      },
+      {
+        "icon": "/public/assets/images/icons8-git.svg",
+        "url": "https://bitbucket.org/otche/workspace/overview/",
+        "name": "git",
+        "title": "lien dépôt git"
+      },
+      {
+        "icon": "/public/assets/images/icons8-youtube.svg",
+        "url": "https://www.youtube.com/",
+        "name": "youtube",
+        "title": "lien chaine youtube"
+      }
+    ],
     "experiences_summary": [
       { "number": 12, "label": "Années d'éxperiences" },
       { "number": 26, "label": "Prjets réalisés" },
@@ -184,12 +204,44 @@
     ],
     "form_btn_submit": "Envoyer",
     "contact_info": {
-      "email": { "label": "Email", "email": "amineouchiha@gmail.com." },
-      "phone": { "label": "Téléphone", "phone": "+337 81 58 10 21." },
+      "email": {
+        "label": "Email",
+        "email": "amineouchiha@gmail.com.",
+        "name": "email",
+        "icon": "/public/assets/images/mail-svgrepo-com.svg"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "phone": "+337 81 58 10 21.",
+        "name": "phone",
+        "icon": "/public/assets/images/phonelegacy-svgrepo-com.svg"
+      },
       "localisation": {
         "label": "Adrèsse",
-        "address": "180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France."
+        "address": "180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France.",
+        "name": "adress",
+        "icon": "/public/assets/images/location-svgrepo-com.svg"
       }
+    }
+  },
+  "footerSection": {
+    "email": {
+      "label": "Email",
+      "email": "amineouchiha@gmail.com.",
+      "name": "email",
+      "icon": "/public/assets/images/mail-svgrepo-com.svg"
+    },
+    "phone": {
+      "label": "Téléphone",
+      "phone": "+337 81 58 10 21.",
+      "name": "phonec",
+      "icon": "/public/assets/images/phonelegacy-svgrepo-com.svg"
+    },
+    "localisation": {
+      "label": "Adrèsse",
+      "address": "180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France.",
+      "name": "adress",
+      "icon": "/public/assets/images/location-svgrepo-com.svg"
     }
   }
 }

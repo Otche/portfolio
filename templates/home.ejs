@@ -3,7 +3,16 @@
   <%- include('/head.ejs') %>
 
   <body class="dark-theme">
-    <%- include('/header.ejs', {navPages}) %>
+    <style>
+        /*<%home.social_media.forEach((media) => {%>*/
+        
+         .btn_icon[data-name="<%=media.name%>"]:after {
+            background-image: url("<%=media.icon%>");
+          }
+       /*<% })%>*/
+    
+    </style>
+    <%- include('/header.ejs') %>
      <main>
         <figure class="profolio-photo-wrapper">
             <img src="<%=home.presentation_image_src%>" alt="the image of the user presented in this portfolio"
@@ -28,11 +37,14 @@
 
             <aside class="user-links">
                 <ul class="user-links__items">
-                    <li> <a class="btn"><%=home.btn_telechargement_cv%></a></li>
-                    <li> <a title="lien profil linkedin" class="btn btn_icon btn_icon_linkedin"> </a></li>
+                    <li> <a class="btn" href="public/assets/cv.pdf"><%=home.btn_telechargement_cv%></a></li>
+                    <!-- <li> <a title="lien profil linkedin" class="btn btn_icon btn_icon_linkedin"> </a></li>
                     <li> <a title="lien dépôt git" class="btn btn_icon btn_icon_git"> </a></li>
                     <li> <a title="lien chaine youtube"class="btn btn_icon btn_icon_youtube"> </a></li>
-                    <li> <a class="btn btn_icon"> </a></li>
+                    <li> <a class="btn btn_icon"> </a></li> -->
+                    <%home.social_media.forEach((media) => {%>
+                        <li> <a href="<%=media.url%>" title="<%=media.title%>" class="btn btn_icon" data-name="<%=media.name%>"> </a></li>
+                        <% })%>
                 </ul>
 
             </aside>
