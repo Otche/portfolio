@@ -112,13 +112,14 @@
 
   .profolio-photo-wrapper {
     float: right;
-    width: 40%;
+    width: 30%;
+    margin: 10vh 7%;
   }
 
   .profolio-presentation {
     float: left;
     width: 50%;
-    margin-top: 5vh;
+    margin-top: 20vh;
   }
 
   .profolio-presentation > *,
