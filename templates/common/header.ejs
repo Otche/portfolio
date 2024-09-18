@@ -1,17 +1,17 @@
 <header >
-    <h2 class="portfolio-title">AMINE</h2>
+    <h2 class="portfolio-title"><%=header_section.portfolio_title%></h2>
     <nav class="portfolio-navigation">
         <menu class="portfolio-navigation__items">
-            <% navPages.forEach(function(navPage){ %>
+            <% header_section.nav_pages.forEach(function(navPage){ %>
                 <li class="<%=navPage.className %>"><a  href="<%=navPage.url %>"><%=navPage.label%> </a></li>
               <% }); %>
         </menu>
     </nav>
 
-    <aside class="activity-bar">
+    <!-- <aside class="activity-bar">
         <form >
             <button class="btn " name="test" value="fr" type="submit">Francais (FR)</button>
             <button class="btn btn_active">English (US)</button>
         </form>
-    </aside>
+    </aside> -->
 </header>

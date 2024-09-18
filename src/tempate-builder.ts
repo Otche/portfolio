@@ -11,10 +11,7 @@ type PageNavType = {
 
 type TemplateDataType = {
   currentUrl: string
-  navPages: PageNavType[]
-  home: {
-    [k: string]: unknown
-  }
+  header_section: { nav_pages: PageNavType[] }
 }
 /**
  *
@@ -22,16 +19,12 @@ type TemplateDataType = {
  * @returns
  */
 export function templatingVars(url: string): TemplateDataType {
-  return {
-    currentUrl: url,
-    ...data,
-    navPages: data.navPages.map((pn) => {
-      return {
-        ...pn,
-        className: pn.url === url ? 'active' : '',
-      }
-    }),
-  }
+  const templateData = data as unknown as TemplateDataType
+  templateData.currentUrl = url
+  templateData.header_section.nav_pages.forEach((navPage) => {
+    navPage.className = navPage.url === url ? 'active' : ''
+  })
+  return templateData
 }
 
 /**
@@ -54,7 +47,7 @@ export async function buildPage(templatePath: string, url: string) {
  * @returns
  */
 export async function buildSite() {
-  const templates = ['home.ejs', 'career.ejs', 'services.ejs', 'contact.ejs']
+  const templates = ['home.ejs', 'career.ejs', 'services.ejs' /*'contact.ejs'*/]
 
   const pagesInfo = templates.map((template) => {
     return {

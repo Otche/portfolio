@@ -1,22 +1,21 @@
 {
-  "navPages": [
-    {
-      "url": "/home.html",
-      "label": "Accueil"
-    },
-    {
-      "url": "/services.html",
-      "label": "Services"
-    },
-    {
-      "url": "/career.html",
-      "label": "Carrière"
-    },
-    {
-      "url": "/contact.html",
-      "label": "Contact"
-    }
-  ],
+  "header_section": {
+    "portfolio_title": "AMINE",
+    "nav_pages": [
+      {
+        "url": "/home.html",
+        "label": "Accueil"
+      },
+      {
+        "url": "/services.html",
+        "label": "Services"
+      },
+      {
+        "url": "/career.html",
+        "label": "Carrière"
+      }
+    ]
+  },
   "home": {
     "presentation_header": "Développeur Full stack",
     "presentation_prefix": "Bonjour Je m'appelle",
