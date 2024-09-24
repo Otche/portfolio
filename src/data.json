@@ -21,7 +21,7 @@
     "presentation_prefix": "Bonjour Je m'appelle",
     "presentation_name": "Amine OUCHIHA",
     "presentation_image_src": "/public/assets/images/amine-photo-test.jpg",
-    "presentation_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perspiciatis quasi nesciunt accusantium, cumque velit!",
+    "presentation_description": "Titulaire d’un Master en Analyse et Conception de Systèmes d'Informations Sûrs, je suis intervenu dans différents projets de conseils et de développements, avec des contextes technologiques et organisationnels divers, notamment les écosystèmes Node.js et React.js.",
     "btn_telechargement_cv": "Télécharger CV",
     "social_media": [
       {
@@ -44,32 +44,15 @@
       }
     ],
     "experiences_summary": [
-      { "number": 12, "label": "Années d'éxperiences" },
-      { "number": 26, "label": "Prjets réalisés" },
-      { "number": 8, "label": "Technologies maitisées" },
-      { "number": 500, "label": "Codes commits" }
+      { "number": 8, "label": "Années d'éxperiences" },
+      { "number": 7, "label": "Projets réalisés" },
+      { "number": 5, "label": "Expértises Techniques" }
     ]
   },
   "services": [
     {
-      "service": "Développeur Web",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
-    },
-    {
-      "service": "Développeur Web",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
-    },
-    {
-      "service": "Développeur Web",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
-    },
-    {
-      "service": "Développeur Web",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
-    },
-    {
-      "service": "Développeur Web",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem ducimus maxime molestiae esse aspernatur est expedita perferendis amet deserunt delectus tenetur quasi ab, incidunt dignissimos."
+      "service": "Dévelopement JavaScript",
+      "description": "J'ai une éxpértise particuliére dans le développement JavaScript, et j'aprécie particuliérement de le faire avec du avec une trés bonne métrise des concepts du languages ainsi que de sont ecosystémes "
     }
   ],
   "career": {
@@ -86,34 +69,24 @@
         "presentation": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
         "cards": [
           {
-            "duration": "2020 - 2023",
-            "label": "Développeur Web",
+            "duration": "Juillet 2022 - Décembre 2023",
+            "label": "Développeur full stack",
+            "entity": "Europ Assistance"
+          },
+          {
+            "duration": "Janvier 2021 - Février 2022",
+            "label": "Développeur Node.js",
+            "entity": "ITNovem (SNCF)"
+          },
+          {
+            "duration": "Décembre 2019 - Décembre 2020",
+            "label": "Développeur Node.js et React.js",
             "entity": "Société général"
           },
           {
-            "duration": "2020 - 2023",
-            "label": "Développeur Web",
-            "entity": "Société général"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Développeur Web",
-            "entity": "Société général"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Développeur Web",
-            "entity": "Société général"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Développeur Web",
-            "entity": "Société général"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Développeur Web",
-            "entity": "Société général"
+            "duration": "Mars 2016 - Octobre 2019",
+            "label": "Développeur full stack",
+            "entity": "Edifixio"
           }
         ]
       },
@@ -123,29 +96,9 @@
         "presentaion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
         "cards": [
           {
-            "duration": "2020 - 2023",
-            "label": "Informatique",
-            "entity": "Université de Versaille"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Informatique",
-            "entity": "Université de Versaille"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Informatique",
-            "entity": "Université de Versaille"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Informatique",
-            "entity": "Université de Versaille"
-          },
-          {
-            "duration": "2020 - 2023",
-            "label": "Informatique",
-            "entity": "Université de Versaille"
+            "duration": "2013 - 2015",
+            "label": "Master en Analyse et conception de Systeme d'information Sûrs (ACSIS).",
+            "entity": "Université de Versaille (UVSQ)"
           },
           {
             "duration": "2020 - 2023",
@@ -155,39 +108,39 @@
         ]
       },
       {
-        "title": "Mes compétences",
+        "title": "Mes expértises",
         "htmlId": "career-competences",
         "presentaion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
         "cards": [
           {
-            "duration": "2020 - 2023",
-            "label": "Java",
-            "entity": "Société général"
+            "duration": "8 années",
+            "label": "ECMAS JavaScript",
+            "entity": ""
           },
           {
-            "duration": "2020 - 2023",
-            "label": "Java",
-            "entity": "Société général"
+            "duration": "5 années",
+            "label": "TypeScript",
+            "entity": ""
           },
           {
-            "duration": "2020 - 2023",
-            "label": "Java",
-            "entity": "Société général"
+            "duration": "8 années",
+            "label": "HTML5 / CSS3",
+            "entity": ""
           },
           {
-            "duration": "2020 - 2023",
-            "label": "Java",
-            "entity": "Société général"
+            "duration": "5 années",
+            "label": "React.js",
+            "entity": ""
           },
           {
-            "duration": "2020 - 2023",
-            "label": "Java",
-            "entity": "Société général"
+            "duration": "6 années",
+            "label": "Node.js",
+            "entity": ""
           },
           {
-            "duration": "2020 - 2023",
+            "duration": "5 années",
             "label": "Java",
-            "entity": "Société général"
+            "entity": ""
           }
         ]
       }
