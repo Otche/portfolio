@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts:build": "tsc",
     "site:build": "node ./dist/index.js",
-    "serve:site": "node ./dist/serve.js", 
-    "dev:build:site": "nodemon ./index.ts"
-    
+    "serve:site": "node ./dist/serve.js",
+    "dev:build:site": "nodemon ./index.ts",
+    "dev:serve:site": "ts-node ./src/serve.ts"
   },
   "repository": {
     "type": "git",
