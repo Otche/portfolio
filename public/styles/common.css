@@ -37,8 +37,13 @@ menu {
 }
 
 /* set the color of the header profile Name*/
-.portfolio-title {
+.portfolio-title,
+header .portfolio-title a {
   color: var(--clr-primary-sky-blue);
+}
+
+header .portfolio-title a {
+  text-decoration: none;
 }
 
 /**
