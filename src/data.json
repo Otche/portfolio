@@ -7,12 +7,16 @@
         "label": "Accueil"
       },
       {
-        "url": "/services.html",
+        "url": "/waiting-page.html",
         "label": "Services"
       },
       {
-        "url": "/career.html",
+        "url": "/waiting-page.html",
         "label": "Carrière"
+      },
+      {
+        "url": "/waiting-page.html",
+        "label": "Contact"
       }
     ]
   },
