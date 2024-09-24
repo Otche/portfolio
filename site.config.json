@@ -1,0 +1,6 @@
+{
+    "root-template" : "templates",
+    "public-dir": "public",
+    "ejs-include": ["home.ejs"],
+    "output-dir": "site"
+}
