@@ -1,14 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap"); /* "Reem Kufi Fun" */
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"); /* "Dosis" +++ main */
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"); /* "Dancing Script" */
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"); /* "Exo 2" ++ main */
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"); /* "Teko" */
-@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"); /* "Signika" ++ headers & main*/
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"); /* "Merienda" +++ headers*/
-@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"); /* "Saira" */
-@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"); /* "Unbounded" */
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"); /* "Caveat" */
-@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"); /* "SUSE" */
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=SUSE:wght@100..800&family=Dosis:wght@200..800&display=swap");
 
 /* init css vars*/
 :root {
@@ -52,3 +42,12 @@ textarea {
 textarea {
   overflow: auto;
 }
+
+/*
+@font-face {
+  font-family: "karla";
+  src: url("../assets/fonts/karla/Karla-VariableFont_wght.woff") format("woff");
+   src: url("../assets/fonts/karla/woff/Karla-VariableFont_wght.woff")
+    format("woff"); 
+  }
+*/
