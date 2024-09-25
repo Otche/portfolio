@@ -106,20 +106,16 @@
     clear: both;
   }
 
-  .user-links__items {
-    margin-top: 10vh;
-  }
-
   .profolio-photo-wrapper {
     float: right;
     width: 30%;
-    margin: 10vh 7%;
+    margin: 10vh 7% 0 7%;
   }
 
   .profolio-presentation {
     float: left;
     width: 50%;
-    margin-top: 20vh;
+    margin-top: 15vh;
   }
 
   .profolio-presentation > *,

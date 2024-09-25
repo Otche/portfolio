@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ts:build": "tsc",
+    "project:build": "tsc",
     "site:build": "node ./dist/index.js",
-    "serve:site": "node ./dist/serve.js",
-    "dev:build:site": "nodemon ./index.ts",
-    "dev:serve:site": "ts-node ./src/serve.ts"
+    "site:serve": "node ./dist/serve.js",
+    "project:build:dev": "nodemon ./index.ts",
+    "site:serve:dev": "ts-node ./src/serve.ts"
   },
   "repository": {
     "type": "git",
