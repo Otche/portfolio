@@ -196,7 +196,7 @@
     "localisation": {
       "label": "Address",
       "address": "180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France.",
-      "name": "adress",
+      "name": "address",
       "icon": "/public/assets/images/location-svgrepo-com.svg"
     }
   },
