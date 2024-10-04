@@ -4,7 +4,7 @@
     "nav_pages": [
       {
         "url": "/home.html",
-        "label": "Accueil"
+        "label": "$lang(header.nav.label.home)"
       },
       {
         "url": "/waiting-page.html",
@@ -12,7 +12,7 @@
       },
       {
         "url": "/waiting-page.html",
-        "label": "Carrière"
+        "label": "$lang(header.nav.label.career)"
       },
       {
         "url": "/waiting-page.html",
@@ -21,12 +21,12 @@
     ]
   },
   "home": {
-    "presentation_header": "Développeur Full stack",
-    "presentation_prefix": "Bonjour Je m'appelle",
+    "presentation_header": "$lang(home.presentation.header)",
+    "presentation_prefix": "$lang(home.presentation.prefix)",
     "presentation_name": "Amine OUCHIHA",
     "presentation_image_src": "/public/assets/images/amine-photo-test.jpg",
-    "presentation_description": "Titulaire d’un Master en Analyse et Conception de Systèmes d'Informations Sûrs, je suis intervenu dans différents projets de conseils et de développements, avec des contextes technologiques et organisationnels divers, notamment les écosystèmes Node.js et React.js.",
-    "btn_telechargement_cv": "Télécharger CV",
+    "presentation_description": "$lang(home.presentation.description)",
+    "btn_download_cv": "$lang(home.download.cv)",
     "social_media": [
       {
         "name": "linkedin",
@@ -48,9 +48,15 @@
       }
     ],
     "experiences_summary": [
-      { "number": 8, "label": "Années d'éxperiences" },
-      { "number": 7, "label": "Projets réalisés" },
-      { "number": 5, "label": "Expértises Techniques" }
+      { "number": 8, "label": "$lang(home.experiences.years)" },
+      {
+        "number": 7,
+        "label": "$lang(home.experiences.projects)"
+      },
+      {
+        "number": 5,
+        "label": "$lang(home.experiences.skills)"
+      }
     ]
   },
   "services": [
@@ -180,27 +186,27 @@
       }
     }
   },
-  "footerSection": {
+  "footer_section": {
     "email": {
-      "label": "Email",
+      "label": "E-mail",
       "email": "amineouchiha@gmail.com.",
       "name": "email",
       "icon": "/public/assets/images/mail-svgrepo-com.svg"
     },
     "phone": {
-      "label": "Téléphone",
+      "label": "$lang(footer.phone)",
       "phone": "+337 81 58 10 21.",
       "name": "phonec",
       "icon": "/public/assets/images/phonelegacy-svgrepo-com.svg"
     },
     "localisation": {
-      "label": "Adrèsse",
+      "label": "$lang(footer.address)",
       "address": "180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France.",
-      "name": "adress",
+      "name": "address",
       "icon": "/public/assets/images/location-svgrepo-com.svg"
     }
   },
   "waiting_page": {
-    "content": "page en réalisation ..."
+    "content": "$lang(waiting.content)"
   }
 }

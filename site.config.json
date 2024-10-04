@@ -2,5 +2,7 @@
   "root-template": "templates",
   "public-dir": "public",
   "ejs-include": ["home.ejs", "waiting-page.ejs"],
-  "output-dir": "site"
+  "output-dir": "site",
+  "fr-output-dir": "fr-site",
+  "en-output-dir": "en-site"
 }

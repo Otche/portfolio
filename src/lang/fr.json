@@ -1,0 +1,14 @@
+{
+  "header.nav.label.home": "Accueil",
+  "header.nav.label.career": "Carrière",
+  "home.presentation.header": "Développeur Full stack",
+  "home.presentation.prefix": "Bonjour Je m'appelle",
+  "home.presentation.description": "Titulaire d’un Master en Analyse et Conception de Systèmes d'Informations Sûrs, je suis intervenu dans différents projets de conseils et de développements, avec des contextes technologiques et organisationnels divers, notamment les écosystèmes Node.js et React.js.",
+  "home.download.cv": "Télécharger CV",
+  "home.experiences.years": "Années d'éxperiences",
+  "home.experiences.projects": "Projets réalisés",
+  "home.experiences.skills": "Expértises Techniques",
+  "footer.phone": "Téléphone",
+  "footer.address": "Adrèsse",
+  "waiting.content": "Page en réalisation ..."
+}

@@ -2,6 +2,8 @@ import path from 'path'
 import data from './data.json'
 import ejs from 'ejs'
 import fs from 'fs/promises'
+import frLabels from './lang/fr.json'
+import enLabels from './lang/en.json'
 
 type PageNavType = {
   url: string
@@ -19,7 +21,12 @@ type SiteConfigType = {
   'public-dir': string
   'ejs-include': string[]
   'output-dir': string
+  'fr-output-dir': string
+  'en-output-dir': string
 }
+
+type LangObjKeysType = keyof typeof frLabels
+
 /**
  *
  * @param url
@@ -72,9 +79,19 @@ export async function buildSite(config: SiteConfigType) {
     pagesInfo.map(async ({ tempaltePath, url }) => {
       try {
         const htmlStrPage = await buildPage(tempaltePath, url)
+        const objKeys = Object.keys(frLabels) as LangObjKeysType[]
+        let frHtmlStrPage = htmlStrPage
+        let enHtmlStrPage = htmlStrPage
+        objKeys.forEach((key) => {
+          const regex = new RegExp('\\$lang\\(' + `${key}` + '\\)', 'g')
+          frHtmlStrPage = frHtmlStrPage.replace(regex, frLabels[key])
+          enHtmlStrPage = enHtmlStrPage.replace(regex, enLabels[key])
+        })
         return {
           url,
           htmlStrPage,
+          frHtmlStrPage,
+          enHtmlStrPage,
         }
       } catch (e) {
         console.error('Fail to generate tempalte of ', tempaltePath)
@@ -89,15 +106,37 @@ export async function buildSite(config: SiteConfigType) {
   await fs.cp(path.resolve(publicDir), `${outputDir}/public`, {
     recursive: true,
   })
+  const frOutputDir = config['fr-output-dir']
+    ? config['fr-output-dir']
+    : 'fr-site'
+  await fs.mkdir(`${outputDir}/${frOutputDir}`, {
+    recursive: true,
+  })
+  const enOutputDir = config['en-output-dir']
+    ? config['en-output-dir']
+    : 'en-site'
+  await fs.mkdir(`${outputDir}/${enOutputDir}`, {
+    recursive: true,
+  })
 
   return Promise.all(
-    htmlPagesInfo.map(async ({ url, htmlStrPage }) => {
-      try {
-        await fs.writeFile(path.resolve(`${outputDir}/${url}`), htmlStrPage)
-      } catch (err) {
-        console.error('Error when creating template of ', url)
-        throw err
+    htmlPagesInfo.map(
+      async ({ url, htmlStrPage, frHtmlStrPage, enHtmlStrPage }) => {
+        try {
+          await fs.writeFile(path.resolve(`${outputDir}/${url}`), htmlStrPage)
+          await fs.writeFile(
+            path.resolve(`${outputDir}/${frOutputDir}/${url}`),
+            frHtmlStrPage
+          )
+          await fs.writeFile(
+            path.resolve(`${outputDir}/${enOutputDir}/${url}`),
+            enHtmlStrPage
+          )
+        } catch (err) {
+          console.error('Error when creating template of ', url)
+          throw err
+        }
       }
-    })
+    )
   )
 }
