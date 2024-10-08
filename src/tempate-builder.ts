@@ -21,7 +21,7 @@ type SiteConfigType = {
   'public-dir': string
   'ejs-include': string[]
   'output-dir': string
-  'lang-dir': string[]
+  langs: string[]
 }
 
 type LangObjKeysType = keyof typeof frLabels
@@ -110,7 +110,7 @@ export async function buildSite(config: SiteConfigType) {
     recursive: true,
   })
 
-  config['lang-dir'].forEach(async (lang) => {
+  config['langs'].forEach(async (lang) => {
     await fs.mkdir(`${outputDir}/${lang}`, {
       recursive: true,
     })
@@ -119,7 +119,7 @@ export async function buildSite(config: SiteConfigType) {
   return Promise.all(
     htmlPagesInfo.map(async ({ url, fr_HtmlStrPage, en_HtmlStrPage }) => {
       try {
-        config['lang-dir'].forEach(async (lang) => {
+        config['langs'].forEach(async (lang) => {
           if (lang.startsWith('fr') == true) {
             await fs.writeFile(
               path.resolve(`${outputDir}/${lang}/${url}`),

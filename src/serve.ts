@@ -25,7 +25,7 @@ staticFiles.get('*', (req, res) => {
 app.get('/*.html', async (req, res) => {
   return res.sendFile(
     path.resolve(
-      `${config['output-dir'] || 'site'}/${config['lang-dir'][0]}/${req.url}`
+      `${config['output-dir'] || 'site'}/${config['langs'][1]}/${req.url}`
     )
   )
 })
