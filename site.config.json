@@ -3,5 +3,5 @@
   "public-dir": "public",
   "ejs-include": ["home.ejs", "waiting-page.ejs"],
   "output-dir": "site",
-  "langs": ["fr-site", "en-site"]
+  "langs": ["fr", "en"]
 }
