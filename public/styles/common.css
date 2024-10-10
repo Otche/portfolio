@@ -1,4 +1,3 @@
-@import './fonts.css';
 @import './legacy-browser/styles.css';
 
 /** supports(not(display: grid)); */

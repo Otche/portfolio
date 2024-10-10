@@ -2,5 +2,6 @@
   "root-template": "templates",
   "public-dir": "public",
   "ejs-include": ["home.ejs", "waiting-page.ejs"],
-  "output-dir": "site"
+  "output-dir": "site",
+  "langs": ["fr", "en"]
 }

@@ -19,7 +19,9 @@ type SiteConfigType = {
   'public-dir': string
   'ejs-include': string[]
   'output-dir': string
+  langs: string[]
 }
+
 /**
  *
  * @param url
@@ -32,6 +34,20 @@ export function templatingVars(url: string): TemplateDataType {
     navPage.className = navPage.url === url ? 'active' : ''
   })
   return templateData
+}
+/**
+ *
+ * @returns
+ */
+function getTransKeys() {
+  const regexp = /(\$lang\((([a-z]|\.)*)\))/g
+  const dataStr = JSON.stringify(data)
+  const keys = []
+  while (true) {
+    const matchArray = regexp.exec(dataStr)
+    if (matchArray == null) return keys
+    keys.push(matchArray[2])
+  }
 }
 
 /**
@@ -48,6 +64,68 @@ export async function buildPage(templatePath: string, url: string) {
 
   return await ejs.renderFile(templatePath, templateData, ejsOptions)
 }
+/**
+ *
+ * @param langs
+ * @returns
+ */
+async function getLangsTranslateInfo(langs: string[]) {
+  const translateFilesPromises = langs.map(async (lang) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return new Promise<{ lang: string; translateData: any }>((resolve) => {
+      fs.readFile(path.resolve(`src/lang/${lang}.json`)).then((translateData) =>
+        resolve({
+          lang,
+          translateData: JSON.parse(translateData.toString()),
+        })
+      )
+    })
+  })
+  const tranlateInfo = await Promise.all(translateFilesPromises)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return tranlateInfo.reduce<{ [k: string]: any }>((cumul, currVal) => {
+    cumul[currVal.lang] = currVal.translateData
+    return cumul
+  }, {})
+}
+
+async function setupDirStruct(config: SiteConfigType, langs: string[]) {
+  const outputDir = config['output-dir'] ? config['output-dir'] : 'site'
+  await fs.mkdir(outputDir, { recursive: true })
+  const publicDir = config['public-dir'] ? config['public-dir'] : './public'
+  await fs.cp(path.resolve(publicDir), `${outputDir}/public`, {
+    recursive: true,
+  })
+
+  langs.forEach(async (lang) => {
+    await fs.mkdir(`${outputDir}/${lang}`, {
+      recursive: true,
+    })
+  })
+  return outputDir
+}
+
+async function translatePage(
+  langs: string[],
+  htmlpageInfo: string,
+  traslateKeys: string[]
+) {
+  const tranlateInfo = await getLangsTranslateInfo(langs)
+  return langs.map((lang) => {
+    let translatedPage = htmlpageInfo
+    const currentTransInfo = tranlateInfo[lang]
+    traslateKeys.forEach((k) => {
+      translatedPage = translatedPage.replace(
+        `$lang(${k})`,
+        currentTransInfo[k]
+      )
+    })
+    return {
+      lang,
+      tempHtmlStrPage: translatedPage,
+    }
+  })
+}
 
 /**
  *
@@ -57,47 +135,25 @@ export async function buildPage(templatePath: string, url: string) {
 export async function buildSite(config: SiteConfigType) {
   const templates = config['ejs-include']
   if (!templates || !templates.length) return
-  //, 'career.ejs', 'services.ejs', 'contact.ejs'
   const rootTemplateFile = config['root-template']
     ? path.resolve(config['root-template'])
     : 'template'
-  const pagesInfo = templates.map((template) => {
-    return {
-      tempaltePath: path.resolve(`${rootTemplateFile}/${template}`),
-      url: '/' + template.replace('ejs', 'html'),
-    }
-  })
-
-  const htmlPagesInfo = await Promise.all(
-    pagesInfo.map(async ({ tempaltePath, url }) => {
-      try {
-        const htmlStrPage = await buildPage(tempaltePath, url)
-        return {
-          url,
-          htmlStrPage,
-        }
-      } catch (e) {
-        console.error('Fail to generate tempalte of ', tempaltePath)
-        throw e
-      }
-    })
-  )
-
-  const outputDir = config['output-dir'] ? config['output-dir'] : 'site'
-  await fs.mkdir(outputDir, { recursive: true })
-  const publicDir = config['public-dir'] ? config['public-dir'] : './public'
-  await fs.cp(path.resolve(publicDir), `${outputDir}/public`, {
-    recursive: true,
-  })
-
-  return Promise.all(
-    htmlPagesInfo.map(async ({ url, htmlStrPage }) => {
-      try {
-        await fs.writeFile(path.resolve(`${outputDir}/${url}`), htmlStrPage)
-      } catch (err) {
-        console.error('Error when creating template of ', url)
-        throw err
-      }
-    })
-  )
+  const translateKeys = getTransKeys()
+  const { langs } = config
+  const outputDir = await setupDirStruct(config, langs)
+  for (const template of templates) {
+    const tempaltePath = path.resolve(`${rootTemplateFile}/${template}`)
+    const url = '/' + template.replace('ejs', 'html')
+    const htmlpageInfo = await buildPage(tempaltePath, url)
+    const siteInfo = await translatePage(langs, htmlpageInfo, translateKeys)
+    console.log(siteInfo)
+    Promise.all(
+      siteInfo.map(({ lang, tempHtmlStrPage }) => {
+        return fs.writeFile(
+          path.resolve(`${outputDir}/${lang}/${url}`),
+          tempHtmlStrPage
+        )
+      })
+    )
+  }
 }

@@ -1,12 +1,12 @@
 <style>
-  .info-list__item__icon[data-name='<%=footerSection.email.name%>'] {
-    background-image: url('<%=footerSection.email.icon%>');
+  .info-list__item__icon[data-name='<%=footer_section.email.name%>'] {
+    background-image: url('<%=footer_section.email.icon%>');
   }
-  .info-list__item__icon[data-name='<%=footerSection.phone.name%>'] {
-    background-image: url('<%=footerSection.phone.icon%>');
+  .info-list__item__icon[data-name='<%=footer_section.phone.name%>'] {
+    background-image: url('<%=footer_section.phone.icon%>');
   }
-  .info-list__item__icon[data-name='<%=footerSection.localisation.name%>'] {
-    background-image: url('<%=footerSection.localisation.icon%>');
+  .info-list__item__icon[data-name='<%=footer_section.localisation.name%>'] {
+    background-image: url('<%=footer_section.localisation.icon%>');
   }
 </style>
 
@@ -15,42 +15,44 @@
     <li class="info-list__item">
       <div
         class="info-list__item__icon"
-        data-name="<%=footerSection.email.name%>"
+        data-name="<%=footer_section.email.name%>"
         role="presentation"
       ></div>
       <span class="info-list__item__label"
-        ><%=footerSection.email.label%>
+        ><%=footer_section.email.label%>
       </span>
       <a
         class="info-list__item__info"
-        href="mailto:<%=footerSection.email.email%>"
-        ><%=footerSection.email.email%></a
+        href="mailto:<%=footer_section.email.email%>"
+        ><%=footer_section.email.email%></a
       >
     </li>
     <li class="info-list__item">
       <div
         class="info-list__item__icon"
-        data-name="<%=footerSection.phone.name%>"
+        data-name="<%=footer_section.phone.name%>"
         role="presentation"
       ></div>
       <span class="info-list__item__label"
-        ><%=footerSection.phone.label%>
+        ><%=footer_section.phone.label%>
       </span>
-      <a class="info-list__item__info" href="tel:<%=footerSection.phone.phone%>"
-        ><%=footerSection.phone.phone%></a
+      <a
+        class="info-list__item__info"
+        href="tel:<%=footer_section.phone.phone%>"
+        ><%=footer_section.phone.phone%></a
       >
     </li>
     <li class="info-list__item">
       <div
         class="info-list__item__icon"
-        data-name="<%=footerSection.localisation.name%>"
+        data-name="<%=footer_section.localisation.name%>"
         role="presentation"
       ></div>
       <span class="info-list__item__label"
-        ><%=footerSection.localisation.label%></span
+        ><%=footer_section.localisation.label%></span
       >
       <address class="info-list__item__info">
-        <%=footerSection.localisation.address%>
+        <%=footer_section.localisation.address%>
       </address>
     </li>
   </ul>

@@ -1,0 +1,14 @@
+{
+  "header.nav.label.home": "Home",
+  "header.nav.label.career": "Career",
+  "home.presentation.header": "Full stack developer",
+  "home.presentation.prefix": "Hello My name is",
+  "home.presentation.description": "Holder of a Master's degree in Analysis and Design of Secure Information Systems, I have been involved in various consulting and development projects, with diverse technological and organizational contexts, notably the Node.js and React.js ecosystems.",
+  "home.download.cv": "Download CV",
+  "home.experiences.years": "Years of experience",
+  "home.experiences.projects": "Projects completed",
+  "home.experiences.skills": "Technical Expertise",
+  "footer.phone": "Phone",
+  "footer.address": "Address",
+  "waiting.content": "Page in progress ..."
+}
