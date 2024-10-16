@@ -8,8 +8,8 @@
     "project:build": "tsc",
     "site:build": "node ./dist/index.js",
     "site:serve": "node ./dist/serve.js",
-    "project:build:dev": "nodemon ./index.ts",
-    "site:serve:dev": "ts-node ./src/serve.ts"
+    "project:build:dev": "nodemon ./src/index.ts",
+    "site:serve:dev": "nodemon ./src/serve.ts"
   },
   "repository": {
     "type": "git",
