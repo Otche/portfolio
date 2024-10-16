@@ -14,9 +14,13 @@
     </style>
     <%- include('/header.ejs') %>
      <main>
-        <figure class="profolio-photo-wrapper">
-            <img src="<%=home.presentation_image_src%>" alt="the image of the user presented in this portfolio"
-                title="Photo de Amine OUCHIA">
+        <figure class="profolio-photo-wrapper">            
+            <picture>
+                <source media="(max-width: 602px)" srcset="<%=home.presentation_image_src_402w%>" />
+                <source media="(max-width: 802px)" srcset="<%=home.presentation_image_src_602w%>" />
+                <source media="(min-width: 802px)" srcset="<%=home.presentation_image_src_802w%>" />
+                <img src="<%=home.presentation_image_src_802w%>" alt="the image of the user presented in this portfolio" title="Photo de Amine OUCHIA" />
+            </picture>
         </figure>
 
         <section class="profolio-presentation">
