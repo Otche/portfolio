@@ -20,13 +20,37 @@ staticFiles.get('*', (req, res) => {
 })
 
 /**
+ *
+ * @param headerLangOrder
+ * @returns
+ */
+function getLang(headerLangOrder: string | undefined) {
+  if (!headerLangOrder) {
+    return 'en'
+  }
+  const frindex = headerLangOrder?.indexOf('fr;')
+  const enindex = headerLangOrder?.indexOf('en;')
+  if (frindex < 0 || enindex < frindex) {
+    return 'en'
+  }
+
+  return 'fr'
+}
+app.get('/', async (req, res) => {
+  const lang = getLang(req.headers['accept-language'])
+  res.redirect(`/${lang}/home.html`)
+})
+/**
  * root router to intercept .html get request
  */
 app.get('/*.html', async (req, res) => {
+  if (!req.url.startsWith('/fr/') && !req.url.startsWith('/en/')) {
+    const lang = getLang(req.headers['accept-language'])
+    return res.redirect(`/${lang}${req.url}`)
+  }
+
   return res.sendFile(
-    path.resolve(
-      `${config['output-dir'] || 'site'}/${config.langs[1]}/${req.url}`
-    )
+    path.resolve(`${config['output-dir'] || 'site'}/${req.url}`)
   )
 })
 

@@ -3,19 +3,19 @@
     "portfolio_title": "AMINE",
     "nav_pages": [
       {
-        "url": "/home.html",
+        "url": "/$[lang]/home.html",
         "label": "$lang(header.nav.label.home)"
       },
       {
-        "url": "/waiting-page.html",
+        "url": "/$[lang]/waiting-page.html",
         "label": "Services"
       },
       {
-        "url": "/waiting-page.html",
+        "url": "/$[lang]/waiting-page.html",
         "label": "$lang(header.nav.label.career)"
       },
       {
-        "url": "/waiting-page.html",
+        "url": "/$[lang]/waiting-page.html",
         "label": "Contact"
       }
     ]
@@ -24,7 +24,9 @@
     "presentation_header": "$lang(home.presentation.header)",
     "presentation_prefix": "$lang(home.presentation.prefix)",
     "presentation_name": "Amine OUCHIHA",
-    "presentation_image_src": "/public/assets/images/amine-photo-test.jpg",
+    "presentation_image_src_802w": "/public/assets/images/amine-photo-802w.jpg",
+    "presentation_image_src_602w": "/public/assets/images/amine-photo-602w.jpg",
+    "presentation_image_src_402w": "/public/assets/images/amine-photo-402w.jpg",
     "presentation_description": "$lang(home.presentation.description)",
     "btn_download_cv": "$lang(home.download.cv)",
     "social_media": [
