@@ -31,7 +31,7 @@ export function templatingVars(url: string): TemplateDataType {
   const templateData = data as unknown as TemplateDataType
   templateData.currentUrl = url
   templateData.header_section.nav_pages.forEach((navPage) => {
-    navPage.className = navPage.url === url ? 'active' : ''
+    navPage.className = navPage.url === `/$[lang]${url}` ? 'active' : ''
   })
   return templateData
 }
@@ -120,9 +120,18 @@ async function translatePage(
         currentTransInfo[k]
       )
     })
+    if (lang === 'en') {
+      translatedPage = translatedPage.replace('btn_active', '$frbtn')
+      translatedPage = translatedPage.replace('$enbtn', 'btn_active')
+    }
+    if (lang === 'fr') {
+      translatedPage = translatedPage.replace('btn_active', '$enbtn')
+      translatedPage = translatedPage.replace('$frbtn', 'btn_active')
+    }
+
     return {
       lang,
-      tempHtmlStrPage: translatedPage,
+      tempHtmlStrPage: translatedPage.replaceAll('$[lang]', lang),
     }
   })
 }
@@ -146,7 +155,6 @@ export async function buildSite(config: SiteConfigType) {
     const url = '/' + template.replace('ejs', 'html')
     const htmlpageInfo = await buildPage(tempaltePath, url)
     const siteInfo = await translatePage(langs, htmlpageInfo, translateKeys)
-    console.log(siteInfo)
     Promise.all(
       siteInfo.map(({ lang, tempHtmlStrPage }) => {
         return fs.writeFile(
