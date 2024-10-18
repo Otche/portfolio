@@ -60,6 +60,8 @@ export async function buildPage(templatePath: string, url: string) {
   const templateData = templatingVars(url)
   const ejsOptions = {
     root: [path.resolve('templates/common/')],
+    escape: (str: string) => str,
+    escapeXML: (str: string) => str,
   }
 
   return await ejs.renderFile(templatePath, templateData, ejsOptions)
