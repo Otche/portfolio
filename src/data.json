@@ -7,15 +7,15 @@
         "label": "$lang(header.nav.label.home)"
       },
       {
-        "url": "/$[lang]/waiting-page.html",
+        "url": "/$[lang]/services.html",
         "label": "Services"
       },
       {
-        "url": "/$[lang]/waiting-page.html",
+        "url": "/$[lang]/career.html",
         "label": "$lang(header.nav.label.career)"
       },
       {
-        "url": "/$[lang]/waiting-page.html",
+        "url": "/$[lang]/contact.html",
         "label": "Contact"
       }
     ]
@@ -63,125 +63,216 @@
   },
   "services": [
     {
-      "service": "Dévelopement JavaScript",
-      "description": "J'ai une éxpértise particuliére dans le développement JavaScript, et j'aprécie particuliérement de le faire avec du avec une trés bonne métrise des concepts du languages ainsi que de sont ecosystémes "
+      "service": "$lang(service.conseil.architectur)",
+      "description": "$lang(description.conseil.architectur)"
+    },
+    {
+      "service": "$lang(service.conseil.solutions)",
+      "description": "$lang(description.conseil.solutions)"
+    },
+    {
+      "service": "$lang(service.developement.web)",
+      "description": "$lang(description.developement.web)"
+    },
+    {
+      "service": "$lang(service.developement.api)",
+      "description": "$lang(description.developement.api)"
+    },
+    {
+      "service": "$lang(service.developement.sas)",
+      "description": "$lang(description.developement.sas)"
+    },
+    {
+      "service": "$lang(service.developement.mql)",
+      "description": "$lang(description.developement.mql)"
     }
   ],
   "career": {
     "nav_menu": [
-      { "label": "Expériences", "htmlHref": "#career-experiences" },
-      { "label": "Education", "htmlHref": "#career-education" },
-      { "label": "Compétences", "htmlHref": "#career-competences" },
-      { "label": "A propos", "htmlHref": "#career-propos" }
+      {
+        "label": "$lang(career.navmenu.experiences)",
+        "htmlHref": "#career-experiences"
+      },
+      {
+        "label": "$lang(career.navmenu.education)",
+        "htmlHref": "#career-education"
+      },
+      {
+        "label": "$lang(career.navmenu.skills)",
+        "htmlHref": "#career-competences"
+      },
+      { "label": "$lang(career.navmenu.about)", "htmlHref": "#career-propos" }
     ],
     "sections": [
       {
-        "title": "Mes experiences",
+        "title": "$lang(career.section.experiences.title)",
         "htmlId": "career-experiences",
-        "presentation": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
+        "presentation": "$lang(career.section.experiences.presentation)",
         "cards": [
           {
-            "duration": "Juillet 2022 - Décembre 2023",
-            "label": "Développeur full stack",
-            "entity": "Europ Assistance"
+            "duration": "$lang(career.experience.card.tecinvest.duration)",
+            "label": "$lang(career.experience.card.tecinvest.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.tecinvest.entity)",
+            "project": "$lang(career.experience.card.tecinvest.project)"
           },
           {
-            "duration": "Janvier 2021 - Février 2022",
-            "label": "Développeur Node.js",
-            "entity": "ITNovem (SNCF)"
+            "duration": "$lang(career.experience.card.europassistance.duration)",
+            "label": "$lang(career.experience.card.europassistance.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.europassistance.entity)",
+            "project": "$lang(career.experience.card.europassistance.project)"
           },
           {
-            "duration": "Décembre 2019 - Décembre 2020",
-            "label": "Développeur Node.js et React.js",
-            "entity": "Société général"
+            "duration": "$lang(career.experience.card.sncf.duration)",
+            "label": "$lang(career.experience.card.sncf.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.sncf.entity)",
+            "project": "$lang(career.experience.card.sncf.project)"
           },
           {
-            "duration": "Mars 2016 - Octobre 2019",
-            "label": "Développeur full stack",
-            "entity": "Edifixio"
+            "duration": "$lang(career.experience.card.sg.duration)",
+            "label": "$lang(career.experience.card.sg.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.sg.entity)",
+            "project": "$lang(career.experience.card.sg.project)"
+          },
+          {
+            "duration": "$lang(career.experience.card.carrefour.duration)",
+            "label": "$lang(career.experience.card.carrefour.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.carrefour.entity)",
+            "project": "$lang(career.experience.card.carrefour.project)"
+          },
+          {
+            "duration": "$lang(career.experience.card.edifixiointerne.duration)",
+            "label": "$lang(career.experience.card.edifixiointerne.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.edifixiointerne.entity)",
+            "project": "$lang(career.experience.card.edifixiointerne.project)"
+          },
+          {
+            "duration": "$lang(career.experience.card.salesforce.duration)",
+            "label": "$lang(career.experience.card.salesforce.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.salesforce.entity)",
+            "project": "$lang(career.experience.card.salesforce.project)"
+          },
+          {
+            "duration": "$lang(career.experience.card.ima.duration)",
+            "label": "$lang(career.experience.card.ima.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.ima.entity)",
+            "project": "$lang(career.experience.card.ima.project)"
+          },
+          {
+            "duration": "$lang(career.experience.card.cofrend.duration)",
+            "label": "$lang(career.experience.card.cofrend.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.cofrend.entity)",
+            "project": "$lang(career.experience.card.cofrend.project)"
+          },
+          {
+            "duration": "$lang(career.experience.card.edifixiostage.duration)",
+            "label": "$lang(career.experience.card.edifixiostage.label)",
+            "link": "",
+            "entity": "$lang(career.experience.card.edifixiostage.entity)",
+            "project": "$lang(career.experience.card.edifixiostage.project)"
           }
         ]
       },
       {
-        "title": "Ma formation",
+        "title": "$lang(career.section.formation.title)",
         "htmlId": "career-education",
-        "presentaion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
         "cards": [
           {
-            "duration": "2013 - 2015",
-            "label": "Master en Analyse et conception de Systeme d'information Sûrs (ACSIS).",
-            "entity": "Université de Versaille (UVSQ)"
+            "duration": "$lang(career.formation.card.uvsq.duration)",
+            "label": "$lang(career.formation.card.uvsq.label)",
+            "link": "",
+            "entity": "$lang(career.formation.card.uvsq.entity)",
+            "project": "$lang(career.formation.card.uvsq.project)"
           },
           {
-            "duration": "2020 - 2023",
-            "label": "Informatique",
-            "entity": "Université de Versaille"
+            "duration": "$lang(career.formation.card.bejaia.duration)",
+            "label": "$lang(career.formation.card.bejaia.label)",
+            "link": "",
+            "entity": "$lang(career.formation.card.bejaia.entity)",
+            "project": "$lang(career.formation.card.bejaia.project)"
           }
         ]
       },
       {
-        "title": "Mes expértises",
+        "title": "$lang(career.section.skills.title)",
         "htmlId": "career-competences",
-        "presentaion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam neque, blanditiis ducimus tempore animi recusandae officia nemo laboriosam deleniti, aperiam non fuga porro velit debitis minima amet veritatis. Praesentium.",
         "cards": [
           {
-            "duration": "8 années",
-            "label": "ECMAS JavaScript",
-            "entity": ""
+            "duration": "$lang(career.skill.card.js.duration)",
+            "label": "$lang(career.skill.card.js.label)",
+            "link": "",
+            "details": ""
           },
           {
-            "duration": "5 années",
-            "label": "TypeScript",
-            "entity": ""
+            "duration": "$lang(career.skill.card.ts.duration)",
+            "label": "$lang(career.skill.card.ts.label)",
+            "link": "",
+            "details": ""
           },
           {
-            "duration": "8 années",
-            "label": "HTML5 / CSS3",
-            "entity": ""
+            "duration": "$lang(career.skill.card.htmlcss.duration)",
+            "label": "$lang(career.skill.card.htmlcss.label)",
+            "link": "",
+            "details": ""
           },
           {
-            "duration": "5 années",
-            "label": "React.js",
-            "entity": ""
+            "duration": "$lang(career.skill.card.react.duration)",
+            "label": "$lang(career.skill.card.react.label)",
+            "link": "",
+            "details": ""
           },
           {
-            "duration": "6 années",
-            "label": "Node.js",
-            "entity": ""
+            "duration": "$lang(career.skill.card.node.duration)",
+            "label": "$lang(career.skill.card.node.label)",
+            "link": "",
+            "details": ""
           },
           {
-            "duration": "5 années",
-            "label": "Java",
-            "entity": ""
+            "duration": "$lang(career.skill.card.java.duration)",
+            "label": "$lang(career.skill.card.java.label)",
+            "link": "",
+            "details": ""
           }
         ]
       }
     ]
   },
   "contact": {
-    "form_title": "Travaillons ensemble !",
-    "form_select_option_disableld": "Séléctionnez un service",
+    "form_title": "$lang(contact.form.title)",
+    "form_placeholder_firstname": "$lang(contact.form.placeholder.firstname)",
+    "form_placeholder_lastname": "$lang(contact.form.placeholder.lastname)",
+    "form_placeholder_email": "$lang(contact.form.placeholder.email)",
+    "form_placeholder_phone": "$lang(contact.form.placeholder.phone)",
+    "form_select_option_disableld": "$lang(contact.form.select.option.disabled)",
     "form_select_options": [
-      "Développement Web.",
-      "Développement Mobile.",
-      "Développement Mql5."
+      "$lang(contact.form.select.option.dev.web)",
+      "$lang(contact.form.select.option.dev.mobile)",
+      "$lang(contact.form.select.option.dev.mql)"
     ],
-    "form_btn_submit": "Envoyer",
+    "form_btn_submit": "$lang(contact.form.btn.submit)",
     "contact_info": {
       "email": {
-        "label": "Email",
-        "email": "amineouchiha@gmail.com.",
+        "label": "$lang(contact.info.email.label)",
+        "email": "amineouchiha@gmail.com",
         "name": "email",
         "icon": "/public/assets/images/mail-svgrepo-com.svg"
       },
       "phone": {
-        "label": "Téléphone",
+        "label": "$lang(contact.info.phone.label)",
         "phone": "+337 81 58 10 21.",
         "name": "phone",
         "icon": "/public/assets/images/phonelegacy-svgrepo-com.svg"
       },
       "localisation": {
-        "label": "Adrèsse",
+        "label": "$lang(contact.info.localisation.label)",
         "address": "180 Bvd Gabriel Péri, 93110 Rosny-sous-Bois, France.",
         "name": "adress",
         "icon": "/public/assets/images/location-svgrepo-com.svg"

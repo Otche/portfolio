@@ -21,17 +21,31 @@
           <div class="career-tab-container__cards-wrapper">
             <%section.cards.forEach(card => {%>
               <section class="card card_summary">
-              <h5 class="card__header card__header_float">
-                <div class="card__header__label" aria-label="de 2022 à 2023">
-                  <%=card.duration%>
-                </div>
-                <%=card.label%>
-              </h5>
-              <a class="card_link" href="#" title="plus de detail"></a>
-              <h6 class="card__sub-header">
-                <%=card.entity%>
-              </h6>
-            </section>
+                <h6 class="card__header card__header_float">
+                  <div class="card__header__label" aria-label="de 2022 à 2023">
+                    <%=card.duration%>
+                  </div>
+                  <%=card.label%>
+                </h6>
+                <%if(card.link){%>
+                    <a class="card_link" href="<%=card.link%>" title="plus de detail"></a>
+                <%} %>
+                <%if((card.entity)){%>
+                  <h6 class="card__sub-header">
+                    <%=card.entity%>
+                  </h6>
+                <%} %>
+                <%if((card.project)){%>
+                  <p class="card__sub-header">
+                    <%=card.project%>
+                  </p>
+                <%} %>
+                <%if((card.details)){%>
+                  <p class="card__sub-header">
+                    <%=card.details%>
+                  </p>
+                <%} %>
+              </section>
             <%})%>
           </div>
         </section>
