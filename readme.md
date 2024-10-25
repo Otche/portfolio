@@ -4,12 +4,13 @@
 - Check more fonts customization using variable font woff, for title, navigation, ...etc.
 - docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1
 
-# docker command
+# Docker command
 
 - docker build -t portfolio:0.1 -f porfolio.local.dev.dockerfile .
 - docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1
 
--var/www/html/portfolio
+# Location of site on remote server 
+- var/www/html/portfolio
 
 sudo chown www-data portfolio/
 ps aux | grep Nginx
@@ -21,3 +22,4 @@ sudo find / -type d -name "_nginx_" => find all Nginx directory
 
 first lang in acceprt-lang : (^fr|^en)\*(fr|en){1}
 check if uri : ^\/(fr|en)
+
