@@ -52,6 +52,8 @@ footer {
 
 .card_summary {
   width: 90%;
+  min-height: 15vh;
+  text-align: left;
 }
 
 .card:hover .card__header_hover-primary {
@@ -59,7 +61,8 @@ footer {
 }
 
 .card__header {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  width: min(60vw,80%);
 }
 
 .card__header_level-one {
@@ -138,6 +141,7 @@ footer {
   .card_summary {
     width: 30%;
     margin-right: 3%;
+    min-height: auto;
   }
 
   .card_summary:nth-child(3n + 1) {
