@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="22.508001mm"
+   height="14.059135mm"
+   viewBox="0 0 22.508001 14.059135"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="255.70912"
+       y="296.16028"
+       width="329.25931"
+       height="132.12407"
+       id="rect1" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-73.642,-60.721007)">
+    <text
+       xml:space="preserve"
+       id="text1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;line-height:1;font-family:Merienda;-inkscape-font-specification:'Merienda, @wght=700';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 700;letter-spacing:5.72721px;word-spacing:1.28123px;white-space:pre;shape-inside:url(#rect1);fill:#12b4e4;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.00157;stroke-miterlimit:0;stroke-dasharray:none"
+       transform="matrix(0.2768494,0,0,0.30545654,3.1444266,-28.654125)"><tspan
+         x="255.70898"
+         y="336.86189"
+         id="tspan3"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Merienda Bold'"
+           id="tspan2">AO</tspan></tspan></text>
+  </g>
+</svg>

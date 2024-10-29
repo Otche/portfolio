@@ -33,7 +33,7 @@
       {
         "name": "linkedin",
         "icon": "/public/assets/images/icons8-linkedin.svg",
-        "url": "https://fr.linkedin.com/",
+        "url": "https://fr.linkedin.com/in/amine-ouchiha-608808b3",
         "title": "lien profil linkedin"
       },
       {
@@ -112,70 +112,70 @@
           {
             "duration": "$lang(career.experience.card.tecinvest.duration)",
             "label": "$lang(career.experience.card.tecinvest.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.tecinvest.entity)",
             "project": "$lang(career.experience.card.tecinvest.project)"
           },
           {
             "duration": "$lang(career.experience.card.europassistance.duration)",
             "label": "$lang(career.experience.card.europassistance.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.europassistance.entity)",
             "project": "$lang(career.experience.card.europassistance.project)"
           },
           {
             "duration": "$lang(career.experience.card.sncf.duration)",
             "label": "$lang(career.experience.card.sncf.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.sncf.entity)",
             "project": "$lang(career.experience.card.sncf.project)"
           },
           {
             "duration": "$lang(career.experience.card.sg.duration)",
             "label": "$lang(career.experience.card.sg.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.sg.entity)",
             "project": "$lang(career.experience.card.sg.project)"
           },
           {
             "duration": "$lang(career.experience.card.carrefour.duration)",
             "label": "$lang(career.experience.card.carrefour.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.carrefour.entity)",
             "project": "$lang(career.experience.card.carrefour.project)"
           },
           {
             "duration": "$lang(career.experience.card.edifixiointerne.duration)",
             "label": "$lang(career.experience.card.edifixiointerne.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.edifixiointerne.entity)",
             "project": "$lang(career.experience.card.edifixiointerne.project)"
           },
           {
             "duration": "$lang(career.experience.card.salesforce.duration)",
             "label": "$lang(career.experience.card.salesforce.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.salesforce.entity)",
             "project": "$lang(career.experience.card.salesforce.project)"
           },
           {
             "duration": "$lang(career.experience.card.ima.duration)",
             "label": "$lang(career.experience.card.ima.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.ima.entity)",
             "project": "$lang(career.experience.card.ima.project)"
           },
           {
             "duration": "$lang(career.experience.card.cofrend.duration)",
             "label": "$lang(career.experience.card.cofrend.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.cofrend.entity)",
             "project": "$lang(career.experience.card.cofrend.project)"
           },
           {
             "duration": "$lang(career.experience.card.edifixiostage.duration)",
             "label": "$lang(career.experience.card.edifixiostage.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.experience.card.edifixiostage.entity)",
             "project": "$lang(career.experience.card.edifixiostage.project)"
           }
@@ -188,14 +188,14 @@
           {
             "duration": "$lang(career.formation.card.uvsq.duration)",
             "label": "$lang(career.formation.card.uvsq.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.formation.card.uvsq.entity)",
             "project": "$lang(career.formation.card.uvsq.project)"
           },
           {
             "duration": "$lang(career.formation.card.bejaia.duration)",
             "label": "$lang(career.formation.card.bejaia.label)",
-            "link": "",
+            "link": "ok",
             "entity": "$lang(career.formation.card.bejaia.entity)",
             "project": "$lang(career.formation.card.bejaia.project)"
           }
@@ -208,37 +208,37 @@
           {
             "duration": "$lang(career.skill.card.js.duration)",
             "label": "$lang(career.skill.card.js.label)",
-            "link": "",
+            "link": "ok",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.ts.duration)",
             "label": "$lang(career.skill.card.ts.label)",
-            "link": "",
+            "link": "ok",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.htmlcss.duration)",
             "label": "$lang(career.skill.card.htmlcss.label)",
-            "link": "",
+            "link": "ok",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.react.duration)",
             "label": "$lang(career.skill.card.react.label)",
-            "link": "",
+            "link": "ok",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.node.duration)",
             "label": "$lang(career.skill.card.node.label)",
-            "link": "",
+            "link": "ok",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.java.duration)",
             "label": "$lang(career.skill.card.java.label)",
-            "link": "",
+            "link": "ok",
             "details": ""
           }
         ]
