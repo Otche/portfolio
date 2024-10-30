@@ -98,6 +98,10 @@ async function setupDirStruct(config: SiteConfigType, langs: string[]) {
   await fs.cp(path.resolve(publicDir), `${outputDir}/public`, {
     recursive: true,
   })
+  await fs.cp(
+    path.resolve(`${publicDir}/assets/images/favicon.ico`),
+    `${outputDir}/favicon.ico`
+  )
 
   langs.forEach(async (lang) => {
     await fs.mkdir(`${outputDir}/${lang}`, {
