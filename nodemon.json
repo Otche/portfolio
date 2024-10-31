@@ -2,5 +2,5 @@
   "watch": ["src", "templates", "public"],
   "ext": "ts, json, ejs, css",
   "ignore": ["src/**/*.spec.ts"],
-  "exec": "ts-node"
+  "exec": "ts-node --project tsconfig.json "
 }
