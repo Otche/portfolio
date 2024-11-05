@@ -15,7 +15,7 @@
         "label": "$lang(header.nav.label.career)"
       },
       {
-        "url": "/$[lang]/waiting-page.html",
+        "url": "/$[lang]/contact.html",
         "label": "Contact"
       }
     ]
@@ -112,70 +112,70 @@
           {
             "duration": "$lang(career.experience.card.tecinvest.duration)",
             "label": "$lang(career.experience.card.tecinvest.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.tecinvest.link)",
             "entity": "$lang(career.experience.card.tecinvest.entity)",
             "project": "$lang(career.experience.card.tecinvest.project)"
           },
           {
             "duration": "$lang(career.experience.card.europassistance.duration)",
             "label": "$lang(career.experience.card.europassistance.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.europassistance.link)",
             "entity": "$lang(career.experience.card.europassistance.entity)",
             "project": "$lang(career.experience.card.europassistance.project)"
           },
           {
             "duration": "$lang(career.experience.card.sncf.duration)",
             "label": "$lang(career.experience.card.sncf.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.sncf.link)",
             "entity": "$lang(career.experience.card.sncf.entity)",
             "project": "$lang(career.experience.card.sncf.project)"
           },
           {
             "duration": "$lang(career.experience.card.sg.duration)",
             "label": "$lang(career.experience.card.sg.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.sg.link)",
             "entity": "$lang(career.experience.card.sg.entity)",
             "project": "$lang(career.experience.card.sg.project)"
           },
           {
             "duration": "$lang(career.experience.card.carrefour.duration)",
             "label": "$lang(career.experience.card.carrefour.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.carrefour.link)",
             "entity": "$lang(career.experience.card.carrefour.entity)",
             "project": "$lang(career.experience.card.carrefour.project)"
           },
           {
             "duration": "$lang(career.experience.card.edifixiointerne.duration)",
             "label": "$lang(career.experience.card.edifixiointerne.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.edifixiointerne.link)",
             "entity": "$lang(career.experience.card.edifixiointerne.entity)",
             "project": "$lang(career.experience.card.edifixiointerne.project)"
           },
           {
             "duration": "$lang(career.experience.card.salesforce.duration)",
             "label": "$lang(career.experience.card.salesforce.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.salesforce.link)",
             "entity": "$lang(career.experience.card.salesforce.entity)",
             "project": "$lang(career.experience.card.salesforce.project)"
           },
           {
             "duration": "$lang(career.experience.card.ima.duration)",
             "label": "$lang(career.experience.card.ima.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.ima.link)",
             "entity": "$lang(career.experience.card.ima.entity)",
             "project": "$lang(career.experience.card.ima.project)"
           },
           {
             "duration": "$lang(career.experience.card.cofrend.duration)",
             "label": "$lang(career.experience.card.cofrend.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.cofrend.link)",
             "entity": "$lang(career.experience.card.cofrend.entity)",
             "project": "$lang(career.experience.card.cofrend.project)"
           },
           {
             "duration": "$lang(career.experience.card.edifixiostage.duration)",
             "label": "$lang(career.experience.card.edifixiostage.label)",
-            "link": "ok",
+            "link": "$lang(career.experience.card.edifixiostage.link",
             "entity": "$lang(career.experience.card.edifixiostage.entity)",
             "project": "$lang(career.experience.card.edifixiostage.project)"
           }
@@ -188,14 +188,14 @@
           {
             "duration": "$lang(career.formation.card.uvsq.duration)",
             "label": "$lang(career.formation.card.uvsq.label)",
-            "link": "ok",
+            "link": "$lang(career.formation.card.uvsq.link)",
             "entity": "$lang(career.formation.card.uvsq.entity)",
             "project": "$lang(career.formation.card.uvsq.project)"
           },
           {
             "duration": "$lang(career.formation.card.bejaia.duration)",
             "label": "$lang(career.formation.card.bejaia.label)",
-            "link": "ok",
+            "link": "$lang(career.formation.card.bejaia.link)",
             "entity": "$lang(career.formation.card.bejaia.entity)",
             "project": "$lang(career.formation.card.bejaia.project)"
           }
@@ -208,37 +208,37 @@
           {
             "duration": "$lang(career.skill.card.js.duration)",
             "label": "$lang(career.skill.card.js.label)",
-            "link": "ok",
+            "link": "$lang(career.skill.card.js.link)",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.ts.duration)",
             "label": "$lang(career.skill.card.ts.label)",
-            "link": "ok",
+            "link": "$lang(career.skill.card.ts.link)",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.htmlcss.duration)",
             "label": "$lang(career.skill.card.htmlcss.label)",
-            "link": "ok",
+            "link": "$lang(career.skill.card.htmlcss.label)",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.react.duration)",
             "label": "$lang(career.skill.card.react.label)",
-            "link": "ok",
+            "link": "$lang(career.skill.card.react.link)",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.node.duration)",
             "label": "$lang(career.skill.card.node.label)",
-            "link": "ok",
+            "link": "$lang(career.skill.card.node.link)",
             "details": ""
           },
           {
             "duration": "$lang(career.skill.card.java.duration)",
             "label": "$lang(career.skill.card.java.label)",
-            "link": "ok",
+            "link": "$lang(career.skill.card.java.link)",
             "details": ""
           }
         ]
@@ -301,5 +301,9 @@
   },
   "waiting_page": {
     "content": "$lang(waiting.content)"
+  },
+  "data_form": {
+    "confirmation": "$lang(dataForm.confirmation)",
+    "content" : "$lang(dataForm.content)"
   }
 }

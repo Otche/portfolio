@@ -1,23 +1,26 @@
 import express from 'express'
 import nodemailer from 'nodemailer'
+import cors from 'cors'
+import path from 'path'
 
-const PORT = 3000
+const PORT = 5000
 const mailServer = express()
-
+mailServer.use(cors())
 /**
  * mail server
  */
-mailServer.post('/contact.html', (req, res) => {
-  const data = 'req.body'
-  console.log(data)
-  res.status(201).send('Hello')
+mailServer.post('/api/contact', (req, res) => {
+  //const data = req.body
+  console.log('test')
+  //res.status(201).redirect('/data-form.html')
+  res.sendFile(path.resolve('site/en/data-form.html'))
 })
 
 mailServer.listen(PORT, () => {
-  console.log('listen on  3000')
+  console.log('listen on  5000')
 })
 
-function sendMail() {
+export function sendMail() {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
