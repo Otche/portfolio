@@ -7,9 +7,7 @@
 # docker command
 
 - docker build -t portfolio:0.1 -f porfolio.local.dev.dockerfile .
-- docker run -tid -p 80:80 -p 443:443 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio -v ./ssl-certificate/localhost.cer:/etc/nginx/ssl/localhost.cer -v ./ssl-certificate/localhost.key:/etc/nginx/ssl/localhost.key portfolio:0.1
-
-- whithout detach : docker run -ti -p 80:80 -p 443:443 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio -v ./ssl-certificate/localhost.cer:/etc/nginx/ssl/localhost.cer -v ./ssl-certificate/localhost.key:/etc/nginx/ssl/localhost.key portfolio:0.1
+- docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1
 
 -var/www/html/portfolio
 
