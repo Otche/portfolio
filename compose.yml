@@ -10,14 +10,21 @@ services:
     volumes:
       - './nginx/nginx.conf:/etc/nginx/nginx.conf'
       - './site:/var/www/html/portfolio'
+    networks:
+      - api-network
   api-web-porfolio:
     image: node
     container_name: 'porfolio-api'
     expose:
       - 5000
-    ports:
-      - '3000:5000'
     volumes:
       - '.:/portfolio-project'
     working_dir: /portfolio-project
     command: npm run api:start:dev
+    networks:
+      - api-network
+    depends_on:
+      - web-portfolio
+networks:
+  api-network:
+    driver: bridge

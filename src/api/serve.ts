@@ -15,6 +15,18 @@ mailServer.post('/api/contact', (req, res) => {
   //res.status(201).redirect('/data-form.html')
   res.sendFile(path.resolve('site/en/data-form.html'))
 })
+mailServer.get('/api/test', (req, res) => {
+  //const data = req.body
+  console.log('test')
+  res.status(201).redirect('/career.html')
+})
+
+// mailServer.get('*', (req, res) => {
+//   //const data = req.body
+//   console.log('URL' + req.url)
+//   //res.status(201).redirect('/data-form.html')
+//   res.send('=====\n')
+// })
 
 mailServer.listen(PORT, () => {
   console.log('listen on  5000')

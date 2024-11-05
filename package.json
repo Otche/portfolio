@@ -25,8 +25,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "ejs": "^3.1.10",
-    "nodemailer": "^6.9.16",
-    "normalize.css": "^8.0.1"
+    "nodemailer": "^6.9.16"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
