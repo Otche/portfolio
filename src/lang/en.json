@@ -116,6 +116,7 @@
   "career.skill.card.java.link": "/en/waiting-page.html",
   "career.skill.card.java.details": "",
   "contact.form.title": "Let's work together !",
+  "contact.form.lang": "en",
   "contact.form.placeholder.firstname": "First Name",
   "contact.form.placeholder.lastname": "Last Name",
   "contact.form.placeholder.email": "E-mail",
@@ -128,6 +129,6 @@
   "contact.info.email.label": "E-mail",
   "contact.info.phone.label": "Phone",
   "contact.info.localisation.label": "Address",
-  "dataForm.confirmation": "Form sent !",
-  "dataForm.content": "Thank you for taking the time to contact us !"
+  "dataform.confirmation": "Form sent !",
+  "dataform.content": "Thank you for taking the time to contact us !"
 }

@@ -9,7 +9,8 @@
 - docker build -t portfolio:0.1 -f porfolio.local.dev.dockerfile .
 - docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1
 
-# Location of site on remote server 
+# Location of site on remote server
+
 - var/www/html/portfolio
 
 sudo chown www-data portfolio/
@@ -23,3 +24,12 @@ sudo find / -type d -name "_nginx_" => find all Nginx directory
 first lang in acceprt-lang : (^fr|^en)\*(fr|en){1}
 check if uri : ^\/(fr|en)
 
+# clés captcha
+
+Utilisez cette clé de site dans le code HTML de votre site destiné aux utilisateurs:
+
+- 6LcKF3cqAAAAACtYao6J1FffZfc-1cu-AEWl30eW
+
+Utilisez cette clé secrète pour la communication entre votre site et le service reCAPTCHA:
+
+- 6LcKF3cqAAAAANluiR-1QAgepSVXw2NVkeJaBMjW

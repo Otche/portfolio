@@ -247,6 +247,7 @@
   },
   "contact": {
     "form_title": "$lang(contact.form.title)",
+    "form_lang": "$lang(contact.form.lang)",
     "form_placeholder_firstname": "$lang(contact.form.placeholder.firstname)",
     "form_placeholder_lastname": "$lang(contact.form.placeholder.lastname)",
     "form_placeholder_email": "$lang(contact.form.placeholder.email)",
@@ -303,7 +304,7 @@
     "content": "$lang(waiting.content)"
   },
   "data_form": {
-    "confirmation": "$lang(dataForm.confirmation)",
-    "content" : "$lang(dataForm.content)"
+    "confirmation": "$lang(dataform.confirmation)",
+    "content" : "$lang(dataform.content)"
   }
 }
