@@ -19,9 +19,9 @@
     <main class="contact-main">
       <section class="card">
           <h1 class="card__header card__header_level-one card__header_primary">
-            <%=contact.form_title%>
-          </h1>
-          <form class="contact-form" action="http://localhost/api/contact" method="post" >
+            <%=contact.form_title%>                                                       
+          </h1>                                                                                                           
+          <form class="contact-form" action="/api/contact" method="post">                                                         
               <input type="text" name="lang" id="" hidden value="<%=contact.form_lang%>">
               <input type="text" name="firstname" id="" placeholder="<%=contact.form_placeholder_firstname%>" />
               <input type="text" name="lastname" id="" placeholder="<%=contact.form_placeholder_lastname%>" />
@@ -34,8 +34,7 @@
                   <%})%>
               </select>
               <textarea name="content" id="" placeholder="Insérez votre message ici." rows="7"></textarea>
-              <div class="g-recaptcha" data-sitekey="6LcKF3cqAAAAACtYao6J1FffZfc-1cu-AEWl30eW" data-action="LOGIN"></div>
-
+              <div class="g-recaptcha" data-sitekey="$[public-key]" data-action="LOGIN"></div>
               <button class="contact-from__btn btn" type="submit"><%=contact.form_btn_submit%></button>
           </form>
       </section>

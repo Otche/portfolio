@@ -1,10 +1,13 @@
 import express from 'express'
+import fetch from 'node-fetch'
+
 import nodemailer from 'nodemailer'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 const mailServer = express()
+
 mailServer.use(cors())
 mailServer.use(bodyParser.json()) // to support JSON-encoded bodies
 mailServer.use(
@@ -13,33 +16,81 @@ mailServer.use(
     extended: true,
   })
 )
+type RESTOKENCAPTCHATYPE = {
+  success: boolean
+  challenge_ts: string
+  hostname: string
+  action: string
+}
+
 /**
  * mail server
  */
+
+const captchaTokenVerif: (
+  captchaToken: string,
+  captchaPrivateKeyValue: string
+) => Promise<RESTOKENCAPTCHATYPE> = async (
+  captchaToken,
+  captchaPrivateKeyValue
+): Promise<RESTOKENCAPTCHATYPE> => {
+  const res = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${captchaPrivateKeyValue}&response=${captchaToken}`,
+    {
+      method: 'POST',
+    }
+  )
+  return (await res.json()) as Promise<RESTOKENCAPTCHATYPE>
+}
+
 mailServer.post('/api/contact', (req, res) => {
   const data = req.body
-  console.log(data)
-  sendMail(
-    data.firstname,
-    data.lastname,
-    data.email,
-    data.phone,
-    data.service,
-    data.content
+  const captchaPrivateKeyValue = process.env.PRIVATE_CAPTCHA_KEY
+  if (!captchaPrivateKeyValue) {
+    res.status(400).redirect(`/${data.lang}/contact.html`)
+    throw new Error('Privete key parameter is empty !')
+  }
+  if (captchaPrivateKeyValue.length < 30) {
+    res.status(400).redirect(`/${data.lang}/contact.html`)
+    throw new Error('Your Privete key is not valid !')
+  }
+  const captchaToken = data['g-recaptcha-response']
+  captchaTokenVerif(captchaToken, captchaPrivateKeyValue).then(
+    (result: RESTOKENCAPTCHATYPE) => {
+      //console.log(result)
+      if (result.success === false) {
+        return res.status(400).redirect(`/${data.lang}/contact.html`)
+      }
+      sendMail(
+        data.firstname,
+        data.lastname,
+        data.email,
+        data.phone,
+        data.service,
+        data.content
+      )
+      return res.status(201).redirect(`/${data.lang}/data-form.html`)
+    }
   )
-  res.status(201).redirect(`/${data.lang}/data-form.html`)
-  //res.status(200).send(req.body)
 })
-
-/*
-body: {"lang":"fr","firstname":"test","lastname":"test","email":"test@gmail.com","phone":"0123456789","service":"Développement Mobile","content":"test"}
-*/
 
 // mailServer.get('/api/test', (req, res) => {
 //   //const data = req.body
 //   console.log('test')
 //   res.status(201).redirect('/career.html')
 // })
+
+// https://www.google.com/recaptcha/api/siteverify
+// 'contact@amine-ouchiha.com'
+
+// mailServer.post(
+//   'https://www.google.com/recaptcha/api/siteverify',
+//   (req, res) => {
+//     const data = res.json
+//     res.status(200).send(data)
+//     //res.status(200).send(req.body)
+//   }
+// )
 
 mailServer.get('*', (req, res) => {
   console.log('URL: ' + req.url)

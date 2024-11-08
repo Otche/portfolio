@@ -21,6 +21,7 @@ services:
       - '.:/portfolio-project'
     working_dir: /portfolio-project
     command: npm run api:start:dev
+    env_file: ".env"
     networks:
       - api-network
     depends_on:
