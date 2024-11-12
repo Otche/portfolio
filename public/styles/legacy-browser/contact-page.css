@@ -23,6 +23,9 @@
   margin: 4vh auto 2vh auto;
   display: block;
 }
+.contact-form .g-recaptcha {
+  margin-top: 10px;
+}
 
 .contact-nav {
   width: 94%;

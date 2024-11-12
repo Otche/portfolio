@@ -1,0 +1,32 @@
+services:
+  web-portfolio:
+    #  image: portfolio-image
+    #  build:
+    #    dockerfile: ./porfolio.local.dev.dockerfile
+    image: nginx
+    container_name: 'portfolio'
+    ports:
+      - '80:80'
+    volumes:
+      - './nginx/nginx.${RUN_ENV}.conf:/etc/nginx/nginx.conf'
+      - './site:/var/www/html/portfolio'
+    networks:
+      - api-network
+  api-web-porfolio:
+    image: node
+    container_name: 'porfolio-api'
+    expose:
+      - 5000
+    volumes:
+      - '.:/portfolio-project'
+    working_dir: /portfolio-project
+    command: npm run api:start:dev
+    environment:
+      PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
+    networks:
+      - api-network
+    depends_on:
+      - web-portfolio
+networks:
+  api-network:
+    driver: bridge

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <%- include('/head.ejs') %>
+
+  <style>
+    .info-list__item__icon[data-name='<%=contact.contact_info.email.name%>'] {
+      background-image: url('<%=contact.contact_info.email.icon%>');
+    }
+    .info-list__item__icon[data-name='<%=contact.contact_info.phone.name%>'] {
+      background-image: url('<%=contact.contact_info.phone.icon%>');
+    }
+    .info-list__item__icon[data-name='<%=contact.contact_info.localisation.name%>'] {
+      background-image: url('<%=contact.contact_info.localisation.icon%>');
+    }
+  </style>
+
+  <body class="dark-theme">
+    <%- include('/header.ejs') %>
+    <main>
+        <h1><%=data_form.confirmation%></h1>
+        <p><%=data_form.content%></p>
+    </main>
+  </body>
+</html>

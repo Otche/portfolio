@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "project:build": "tsc",
-    "site:build": "node ./dist/index.js",
-    "site:serve": "node ./dist/serve.js",
-    "project:build:dev": "nodemon ./src/index.ts",
-    "site:serve:dev": "nodemon ./src/serve.ts"
+    "site-generator:build": "PUBLIC_CAPTCHA_KEY=PROD tsc --project src/site-generator/tsconfig.json",
+    "site-generator:start": "node dist/site-generator/index.js",
+    "api:build": "tsc --project src/api/tsconfig.json",
+    "api:start": "node dist/api/serve.js",
+    "site-generator:start:dev": "PUBLIC_CAPTCHA_KEY=6LfkMHcqAAAAAP5UJDH4oJli7uNansQ3G5iM7v5b nodemon src/site-generator/index.ts",
+    "api:start:dev": "nodemon src/api/serve.ts"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,21 @@
   },
   "homepage": "https://bitbucket.org/otche/portfolio#readme",
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
-    "normalize.css": "^8.0.1"
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.16"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
     "@types/ejs": "^3.1.5",
     "@types/express": "^4.17.21",
     "@types/node": "^22.5.4",
+    "@types/node-fetch": "^2.6.11",
+    "@types/nodemailer": "^6.4.16",
     "@typescript-eslint/eslint-plugin": "^8.5.0",
     "@typescript-eslint/parser": "^8.5.0",
     "eslint": "^8.57.0",

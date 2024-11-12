@@ -135,6 +135,18 @@ async function translatePage(
       translatedPage = translatedPage.replace('$frbtn', 'btn_active')
     }
 
+    if (!process.env.PUBLIC_CAPTCHA_KEY) {
+      throw new Error('Public key parameter is empty !')
+    }
+    if (process.env.PUBLIC_CAPTCHA_KEY.length < 30) {
+      console.log(process.env.PUBLIC_CAPTCHA_KEY)
+      throw new Error('Your public key is not valid !')
+    }
+    translatedPage = translatedPage.replace(
+      '$[public-key]',
+      process.env.PUBLIC_CAPTCHA_KEY
+    )
+
     return {
       lang,
       tempHtmlStrPage: translatedPage.replaceAll('$[lang]', lang),
