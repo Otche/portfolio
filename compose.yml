@@ -5,8 +5,9 @@ services:
     ports:
       - '80:80'
     volumes:
-      - './nginx/nginx.local.conf:/etc/nginx/nginx.conf'
+      - './nginx/nginx.${RUN_ENV}.conf:/etc/nginx/nginx.conf'
       - './site:/var/www/html/portfolio'
+      - './ssl:/etc/nginx/ssl/'
     networks:
       - api-network
     depends_on:
