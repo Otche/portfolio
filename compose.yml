@@ -8,7 +8,7 @@ services:
     ports:
       - '80:80'
     volumes:
-      - './nginx/nginx.conf:/etc/nginx/nginx.conf'
+      - './nginx/nginx.${RUN_ENV}.conf:/etc/nginx/nginx.conf'
       - './site:/var/www/html/portfolio'
     networks:
       - api-network
@@ -21,7 +21,8 @@ services:
       - '.:/portfolio-project'
     working_dir: /portfolio-project
     command: npm run api:start:dev
-    env_file: ".env"
+    environment:
+      PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
     networks:
       - api-network
     depends_on:
