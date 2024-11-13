@@ -4,6 +4,7 @@ services:
     container_name: 'portfolio'
     ports:
       - '80:80'
+      - '443:443'
     volumes:
       - './nginx/nginx.${RUN_ENV}.conf:/etc/nginx/nginx.conf'
       - './site:/var/www/html/portfolio'
