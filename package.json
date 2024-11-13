@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "site:build": "PUBLIC_CAPTCHA_KEY=6LcKF3cqAAAAACtYao6J1FffZfc-1cu-AEWl30eW  ts-node --project tsconfig.json src/site-generator/index.ts",
+    "site:build": "PUBLIC_CAPTCHA_KEY=6LfkMHcqAAAAAP5UJDH4oJli7uNansQ3G5iM7v5b  ts-node --project tsconfig.json src/site-generator/index.ts",
     "api:build": "tsc --project src/api/tsconfig.json",
     "api:start": "node dist/api/serve.js",
     "site:build:dev": "PUBLIC_CAPTCHA_KEY=6LfkMHcqAAAAAP5UJDH4oJli7uNansQ3G5iM7v5b nodemon src/site-generator/index.ts",

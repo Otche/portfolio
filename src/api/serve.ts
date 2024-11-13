@@ -74,11 +74,11 @@ mailServer.post('/api/contact', (req, res) => {
   )
 })
 
-// mailServer.get('/api/test', (req, res) => {
-//   //const data = req.body
-//   console.log('test')
-//   res.status(201).redirect('/career.html')
-// })
+mailServer.get('/test', (req, res) => {
+  //const data = req.body
+  console.log('test')
+  res.send('hello')
+})
 
 // https://www.google.com/recaptcha/api/siteverify
 // 'contact@amine-ouchiha.com'
@@ -92,11 +92,11 @@ mailServer.post('/api/contact', (req, res) => {
 //   }
 // )
 
-mailServer.get('*', (req, res) => {
-  console.log('URL: ' + req.url)
-  //res.status(201).redirect('/data-form.html')
-  res.send('=====x========\n')
-})
+// mailServer.get('*', (req, res) => {
+//   console.log('URL: ' + req.url)
+//   //res.status(201).redirect('/data-form.html')
+//   res.send('=====x========\n')
+// })
 
 mailServer.listen(PORT, () => {
   console.log('listen on  5000')
