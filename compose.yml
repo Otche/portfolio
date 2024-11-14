@@ -1,7 +1,7 @@
 services:
   web-portfolio:
     image: nginx
-    container_name: 'portfolio'
+    container_name: 'portfolio-nginx'
     ports:
       - '80:80'
       - '443:443'

@@ -306,5 +306,8 @@
   "data_form": {
     "confirmation": "$lang(dataform.confirmation)",
     "content" : "$lang(dataform.content)"
+  },
+  "not_found": {
+    "content" : "$lang(notfound.content)"
   }
 }

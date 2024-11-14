@@ -102,7 +102,7 @@ mailServer.listen(PORT, () => {
   console.log('listen on  5000')
 })
 
-export function sendMail(
+function sendMail(
   firstanme: string,
   lastname: string,
   email: string,
