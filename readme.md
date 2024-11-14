@@ -23,3 +23,8 @@ sudo find / -type d -name "_nginx_" => find all Nginx directory
 
 first lang in acceprt-lang : (^fr|^en)\*(fr|en){1}
 check if uri : ^\/(fr|en)
+
+# DOCKER COMPOSE WRITE AS ROOT PROBLEME TO FIXE
+
+- how setup default user on docker actions
+- sudo chmod 775 -R node_modules ssl site

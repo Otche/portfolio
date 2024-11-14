@@ -130,5 +130,6 @@
   "contact.info.phone.label": "Phone",
   "contact.info.localisation.label": "Address",
   "dataform.confirmation": "Form sent !",
-  "dataform.content": "Thank you for taking the time to contact us !"
+  "dataform.content": "Thank you for taking the time to contact us !",
+  "notfound.content": "Page not found !"
 }
