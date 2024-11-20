@@ -60,19 +60,21 @@ export function dataFormValidation(
   service: string,
   content: string
 ) {
-  if (labelNameValidation(firstanme)) throw 'invalid.firstname'
-  if (labelNameValidation(lastname)) throw 'invalid.lastname'
+  const errorsArray = []
+  if (labelNameValidation(firstanme)) errorsArray.push('firstname')
+  if (labelNameValidation(lastname)) errorsArray.push('lastname')
 
   const mailCharValidation = /([\w\.]{2,20}@[\w\.]{2,20}\.{1}[\w]{2,5})/
   const emailError = email.match(mailCharValidation) === null
-  if (emailError) throw 'invalid.email'
+  if (emailError) errorsArray.push('email')
   const phoneCharValidation =
     /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
   const phoneError = phone.match(phoneCharValidation) === null
-  if (phoneError) throw 'invalid.phone'
-  if (!service) throw 'invalid.service'
+  if (phoneError) errorsArray.push('phone')
+  if (!service) errorsArray.push('service')
   const contentError = content.length < 10
-  if (contentError) throw 'invalid.content'
+  if (contentError) errorsArray.push('content')
+  if (errorsArray.length > 0) throw errorsArray
 }
 
 export function sendEmail(
