@@ -126,6 +126,7 @@ async function translatePage(
         currentTransInfo[k]
       )
     })
+
     if (lang === 'en') {
       translatedPage = translatedPage.replace('btn_active', '$frbtn')
       translatedPage = translatedPage.replace('$enbtn', 'btn_active')

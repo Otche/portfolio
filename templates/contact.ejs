@@ -12,7 +12,49 @@
     .info-list__item__icon[data-name='<%=contact.contact_info.localisation.name%>'] {
       background-image: url('<%=contact.contact_info.localisation.icon%>');
     }
+    .invalid-input {
+      border: solid red 2px;
+    }
   </style>
+
+  <script defer>
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const errorParam = urlParams.get('error');
+      const lang = urlParams.get('lang')
+      if(!errorParam) return
+      const errorField = errorParam.split('.')
+      if(errorField.length !== 2 ) return
+      
+      if (errorField[1] === 'service') {
+        const select = document.querySelector(`select[name="${errorField[1]}"]`)
+        if(!select) return
+        select.setAttribute("class", "invalid-input")
+      }
+
+      if (errorField[1] === 'content') {
+        const textarea = document.querySelector(`textarea[name="${errorField[1]}"]`)
+        if(!textarea) return
+        textarea.setAttribute("class", "invalid-input")
+      }
+
+      if (errorField[1] === 'firstname' | errorField[1] === 'lastname' | errorField[1] === 'email' | errorField[1] === 'phone') {
+        const input = document.querySelector(`input[name="${errorField[1]}"]`)
+        if(!input) return
+        input.setAttribute("class", "invalid-input")
+      }
+      
+      urlParams.forEach((value,key)=>{
+        if (key !== errorField[1] && key === 'firstname') document.querySelector(`input[name="${key}"]`).value = value  
+        if (key !== errorField[1] && key === 'lastname') document.querySelector(`input[name="${key}"]`).value = value
+        if (key !== errorField[1] && key === 'email') document.querySelector(`input[name="${key}"]`).value = value
+        if (key !== errorField[1] && key === 'phone') document.querySelector(`input[name="${key}"]`).value = value
+        if (key !== errorField[1] && key === 'service') document.querySelector(`select[name="${key}"]`).value = value
+        if (key !== errorField[1] && key === 'content') document.querySelector(`textarea[name="${key}"]`).value = value
+      })
+      window.history.pushState({},document.title,"/" + `${lang}/contact.html`)
+    }
+  </script>
 
   <body class="dark-theme">
     <%- include('/header.ejs') %>
@@ -22,19 +64,19 @@
             <%=contact.form_title%>                                                       
           </h1>                                                                                                           
           <form class="contact-form" action="/api/contact" method="post">                                                         
-              <input type="text" name="lang" id="" hidden value="<%=contact.form_lang%>">
-              <input type="text" name="firstname" id="" placeholder="<%=contact.form_placeholder_firstname%>" />
-              <input type="text" name="lastname" id="" placeholder="<%=contact.form_placeholder_lastname%>" />
-              <input type="text" name="email" id="" placeholder="<%=contact.form_placeholder_email%>" />
-              <input type="text" name="phone" id="" placeholder="<%=contact.form_placeholder_phone%>" />
+              <input type="text" name="lang" id="" hidden value="<%=contact.form_lang%>" required>
+              <input type="text" name="firstname" id="" placeholder="<%=contact.form_placeholder_firstname%>" required/>
+              <input type="text" name="lastname" id="" placeholder="<%=contact.form_placeholder_lastname%>" required/>
+              <input type="email" name="email" id="" placeholder="<%=contact.form_placeholder_email%>" required/>
+              <input type="tel" name="phone" id="" placeholder="<%=contact.form_placeholder_phone%>" required/>
               <select name="service" id="" required>
-                  <option disabled selected><%=contact.form_select_option_disableld%></option>
-                  <%contact.form_select_options.forEach(element => {%>
-                    <option><%=element%></option>
-                  <%})%>
-              </select>
-              <textarea name="content" id="" placeholder="Insérez votre message ici." rows="7"></textarea>
-              <div class="g-recaptcha" data-sitekey="$[public-key]" data-action="LOGIN"></div>
+                <option disabled selected><%=contact.form_select_option_disableld%></option>
+                <%contact.form_select_options.forEach(element => {%>
+                  <option><%=element%></option>
+                <%})%>
+            </select>
+              <textarea name="content" id="content" placeholder="Insérez votre message ici." rows="7" required></textarea>
+              <div class="g-recaptcha" data-sitekey="$[public-key]" data-action="LOGIN" data-callback="formSubmit"></div>
               <button class="contact-from__btn btn" type="submit"><%=contact.form_btn_submit%></button>
           </form>
       </section>
