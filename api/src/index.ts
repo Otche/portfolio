@@ -58,24 +58,6 @@ mailServer.post('/api/contact', (req, res) => {
   )
 })
 
-// mailServer.get('/test', (req, res) => {
-//   const data = req.body
-//   console.log('test')
-//   res.send('hello')
-// })
-
-// https://www.google.com/recaptcha/api/siteverify
-// 'contact@amine-ouchiha.com'
-
-// mailServer.post(
-//   'https://www.google.com/recaptcha/api/siteverify',
-//   (req, res) => {
-//     const data = res.json
-//     res.status(200).send(data)
-//     //res.status(200).send(req.body)
-//   }
-// )
-
 mailServer.listen(PORT, () => {
   console.log('listen on  5000')
 })

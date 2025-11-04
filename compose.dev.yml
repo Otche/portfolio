@@ -4,11 +4,20 @@ services:
     container_name: 'portfolio-nginx'
     ports:
       - '80:80'
-      - '443:443'
     volumes:
-      - './nginx/nginx.${RUN_ENV}.conf:/etc/nginx/nginx.conf'
-      - './site:/var/www/html/portfolio'
-      - './ssl:/etc/nginx/ssl/'
+      - './nginx/nginx.dev.conf:/etc/nginx/nginx.conf'
+      - './site-generator/site:/var/www/html/portfolio'
+    networks:
+      - api-network
+    depends_on:
+      - api-web-porfolio
+  builder-web-portfolio:
+    image: node
+    container_name: 'portfolio-builder'
+    volumes:
+      - '.:/portfolio-project'
+    working_dir: /portfolio-project/site-generator
+    command: npm run build:dev
     networks:
       - api-network
     depends_on:
@@ -20,8 +29,8 @@ services:
       - 5000
     volumes:
       - '.:/portfolio-project'
-    working_dir: /portfolio-project
-    command: sh script/${RUN_ENV}.sh
+    working_dir: /portfolio-project/api
+    command: npm run dev
     environment:
       PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
     networks:
