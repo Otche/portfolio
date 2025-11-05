@@ -21,6 +21,10 @@ jobs:
         run: npm run build
         working-directory: ./api
 
+      - name: List directory contents after build
+        run: ls
+        working-directory: ./api
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -29,7 +33,9 @@ jobs:
           aws-region: eu-west-3
 
       - name: Copy package.json to S3
-        run: aws s3 cp ./api/package.json s3://your-bucket-name/
+        run: aws s3 cp package.json s3://amine-ouchiha-portfolio-server/
+        working-directory: ./api
 
       - name: Copy dist folder to S3
-        run: aws s3 cp ./api/dist s3://your-bucket-name/dist/ --recursive
+        run: aws s3 cp dist s3://amine-ouchiha-portfolio-server/dist/ --recursive
+        working-directory: ./api

@@ -1,15 +1,16 @@
-# @TODO
+# Portfolio Project
+
+## @TODO
 
 - Check vraible font and conversion fonts / when converting ttf to woff , the variation of with is lost
 - Check more fonts customization using variable font woff, for title, navigation, ...etc.
 - docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1
 
-# Docker command
+## Docker command
 
 - docker build -t portfolio:0.1 -f porfolio.local.dev.dockerfile .
-- docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1
 
-# Location of site on remote server
+## Location of site on remote server
 
 - var/www/html/portfolio
 
@@ -22,9 +23,12 @@ sudo nano /etc/nginx/sites-available/default
 sudo find / -type d -name "_nginx_" => find all Nginx directory
 
 first lang in acceprt-lang : (^fr|^en)\*(fr|en){1}
-check if uri : ^\/(fr|en)
 
-# DOCKER COMPOSE WRITE AS ROOT PROBLEME TO FIXE
+## DOCKER COMPOSE WRITE AS ROOT PROBLEME TO FIXE
 
 - how setup default user on docker actions
 - sudo chmod 775 -R node_modules ssl site
+
+## Test AWS
+
+ws s3 cp --recursive dist s3://amine-ouchiha-portfolio-server/dist
