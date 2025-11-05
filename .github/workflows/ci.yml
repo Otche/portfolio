@@ -21,10 +21,6 @@ jobs:
         run: npm run build
         working-directory: ./api
 
-      - name: List directory contents after build
-        run: ls
-        working-directory: ./api
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
