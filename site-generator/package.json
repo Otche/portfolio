@@ -8,8 +8,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "PUBLIC_CAPTCHA_KEY=6LfkMHcqAAAAAP5UJDH4oJli7uNansQ3G5iM7v5b tsx src/index.ts",
-    "build:dev": "PUBLIC_CAPTCHA_KEY=6LfkMHcqAAAAAP5UJDH4oJli7uNansQ3G5iM7v5b nodemon src/index.ts"
+    "generate": "PUBLIC_CAPTCHA_KEY=6LfkMHcqAAAAAP5UJDH4oJli7uNansQ3G5iM7v5b tsx src/index.ts",
+    "generate:dev": "PUBLIC_CAPTCHA_KEY=6LfkMHcqAAAAAP5UJDH4oJli7uNansQ3G5iM7v5b nodemon src/index.ts"
   },
   "dependencies": {
     "ejs": "^3.1.10"

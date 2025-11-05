@@ -11,13 +11,13 @@ services:
       - api-network
     depends_on:
       - api-web-porfolio
-  builder-web-portfolio:
+  generate-web-portfolio:
     image: node
-    container_name: 'portfolio-builder'
+    container_name: 'portfolio-generator'
     volumes:
       - '.:/portfolio-project'
     working_dir: /portfolio-project/site-generator
-    command: npm run build:dev
+    command: npm run generate:dev
     networks:
       - api-network
     depends_on:
