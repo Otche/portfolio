@@ -29,11 +29,11 @@ jobs:
           aws-region: eu-west-3
 
       - name: Copy package.json to S3
-        run: aws s3 sync package.json s3://amine-ouchiha-portfolio-server/
+        run: aws s3 cp package.json s3://amine-ouchiha-portfolio-server/
         working-directory: ./api
 
       - name: Copy dist folder to S3
-        run: aws s3 sync dist s3://amine-ouchiha-portfolio-server/dist/ --recursive
+        run: aws s3 cp dist s3://amine-ouchiha-portfolio-server/dist/ --recursive
         working-directory: ./api
   portfolio-site-generation-and-deploy:
     runs-on: ubuntu-latest
@@ -63,5 +63,5 @@ jobs:
           aws-region: eu-west-3
 
       - name: Deploy static site to S3
-        run: aws s3 sync ./site s3://amine-ouchiha-portfolio-site/ --recursive
+        run: aws s3 cp ./site s3://amine-ouchiha-portfolio-site/ --recursive
         working-directory: ./site-generator
