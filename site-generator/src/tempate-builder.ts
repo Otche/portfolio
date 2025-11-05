@@ -72,6 +72,7 @@ export async function buildPage(templatePath: string, url: string) {
  * @returns
  */
 async function getLangsTranslateInfo(langs: string[]) {
+  if (!langs || !langs.length) throw new Error('No languages defined !')
   const translateFilesPromises = langs.map(async (lang) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new Promise<{ lang: string; translateData: any }>((resolve) => {
@@ -90,11 +91,25 @@ async function getLangsTranslateInfo(langs: string[]) {
     return cumul
   }, {})
 }
-
+/**
+ *
+ * @param config
+ * @param langs
+ * @returns
+ */
 async function setupDirStruct(config: SiteConfigType, langs: string[]) {
-  const outputDir = config['output-dir'] ? config['output-dir'] : 'site'
+  if (!config) throw new Error('No config found !')
+  if (!langs || !langs.length)
+    throw new Error('No languages defined in config !')
+  if (!config['output-dir'])
+    throw new Error('No output directory defined in config !')
+  if (!config['public-dir'])
+    throw new Error('No public directory defined in config !')
+
+  const outputDir = config['output-dir']
+  const publicDir = config['public-dir']
   await fs.mkdir(outputDir, { recursive: true })
-  const publicDir = config['public-dir'] ? config['public-dir'] : './public'
+
   await fs.cp(path.resolve(publicDir), `${outputDir}/public`, {
     recursive: true,
   })
@@ -110,12 +125,24 @@ async function setupDirStruct(config: SiteConfigType, langs: string[]) {
   })
   return outputDir
 }
-
+/**
+ *
+ * @param langs
+ * @param htmlpageInfo
+ * @param traslateKeys
+ * @returns
+ */
 async function translatePage(
   langs: string[],
   htmlpageInfo: string,
   traslateKeys: string[]
 ) {
+  if (!langs || !langs.length)
+    throw new Error('No languages defined for translation !')
+  if (!htmlpageInfo || !htmlpageInfo.length)
+    throw new Error('No html page info to translate !')
+  if (!traslateKeys || !traslateKeys.length)
+    throw new Error('No translation keys defined !')
   const tranlateInfo = await getLangsTranslateInfo(langs)
   return langs.map((lang) => {
     let translatedPage = htmlpageInfo
@@ -157,18 +184,22 @@ async function translatePage(
 
 /**
  *
+ * @param config
  * @returns
  */
-
 export async function buildSite(config: SiteConfigType) {
   const templates = config['ejs-include']
-  if (!templates || !templates.length) return
-  const rootTemplateFile = config['root-template']
-    ? path.resolve(config['root-template'])
-    : 'template'
+  if (!templates || !templates.length)
+    throw new Error('No templates to build !')
+  if (!config['root-template'])
+    throw new Error('No root template defined in config !')
+  const rootTemplateFile = path.resolve(config['root-template'])
   const translateKeys = getTransKeys()
   const { langs } = config
   const outputDir = await setupDirStruct(config, langs)
+  /**
+   * Build each template
+   */
   for (const template of templates) {
     const tempaltePath = path.resolve(`${rootTemplateFile}/${template}`)
     const url = '/' + template.replace('ejs', 'html')

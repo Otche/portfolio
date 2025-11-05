@@ -1,0 +1,58 @@
+{
+  "folders": [
+    { "name": "@portfolio", "path": "../" },
+    { "name": "@portfolio/site-generator", "path": "../site-generator" },
+    { "name": "@portfolio/api", "path": "../api" },
+  ],
+  "settings": {
+    // TypeScript
+    "typescript.validate.enable": true,
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.suggest.autoImports": true,
+
+    // ESLint
+    "eslint.format.enable": true,
+    "eslint.useFlatConfig": false,
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto",
+      },
+    ],
+
+    // Formatage - Utiliser Prettier comme formateur principal mais ESLint pour les corrections
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": false,
+
+    // Actions à la sauvegarde - ESLint s'occupera des corrections de style
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit",
+    },
+
+    // Configuration par langage - ESLint gérera les règles pour TS/JS
+    "[typescript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+      },
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+      },
+    },
+    "[json]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+
+    // Autres
+    "files.autoSave": "onFocusChange",
+    "liveServer.settings.multiRootWorkspaceName": "@portfolio",
+  },
+}
