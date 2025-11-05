@@ -21,15 +21,15 @@ jobs:
         run: npm run build
         working-directory: ./api
 
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v4
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: us-east-1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-3
 
-      # - name: Copy package.json to S3
-      #   run: aws s3 cp ./api/package.json s3://your-bucket-name/
+      - name: Copy package.json to S3
+        run: aws s3 cp ./api/package.json s3://your-bucket-name/
 
-      # - name: Copy dist folder to S3
-      #   run: aws s3 cp ./api/dist s3://your-bucket-name/dist/ --recursive
+      - name: Copy dist folder to S3
+        run: aws s3 cp ./api/dist s3://your-bucket-name/dist/ --recursive
