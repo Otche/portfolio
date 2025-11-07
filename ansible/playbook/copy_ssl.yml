@@ -1,0 +1,13 @@
+- name: Docker Installation on Ubuntu
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Copy SSL directory to remote root user directory
+      copy:
+        src: ../ssl/
+        dest: "/home/{{ ansible_user }}/ssl/"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0600"
+        directory_mode: "0700"
