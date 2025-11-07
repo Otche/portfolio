@@ -1,10 +1,8 @@
 # Portfolio Project
 
-## @TODO
+## Installer  Docker
 
-- Check vraible font and conversion fonts / when converting ttf to woff , the variation of with is lost
-- Check more fonts customization using variable font woff, for title, navigation, ...etc.
-- docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1
+- ansible-playbook -i ./inventory/host.yml docker_install.yml
 
 ## Docker command
 
@@ -31,4 +29,10 @@ first lang in acceprt-lang : (^fr|^en)\*(fr|en){1}
 
 ## Test AWS
 
-ws s3 cp --recursive dist s3://amine-ouchiha-portfolio-server/dist
+ws s3 cp --recursive dist s3://bucket-name/dist
+
+## @TODO
+
+- Check vraible font and conversion fonts / when converting ttf to woff , the variation of with is lost
+- Check more fonts customization using variable font woff, for title, navigation, ...etc.
+- docker run -tid -p 80:80 -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./site:/var/www/html/portfolio portfolio:0.1

@@ -1,0 +1,78 @@
+---
+- name: Installation de Docker sur Ubuntu
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Mise à jour du cache APT
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Installation des paquets prérequis
+      apt:
+        name:
+          - ca-certificates
+          - curl
+        state: present
+
+    - name: Création du répertoire /etc/apt/keyrings
+      file:
+        path: /etc/apt/keyrings
+        state: directory
+        mode: '0755'
+
+    - name: Téléchargement de la clé GPG Docker
+      get_url:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        dest: /etc/apt/keyrings/docker.asc
+        mode: '0644'
+
+    - name: Récupération de l'architecture système
+      command: dpkg --print-architecture
+      register: system_arch
+      changed_when: false
+
+    - name: Récupération du nom de code Ubuntu
+      shell: . /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}"
+      register: ubuntu_codename
+      changed_when: false
+
+    - name: Ajout du dépôt Docker
+      apt_repository:
+        repo: "deb [arch={{ system_arch.stdout }} signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu {{ ubuntu_codename.stdout }} stable"
+        state: present
+        filename: docker
+
+    - name: Mise à jour du cache APT après ajout du dépôt
+      apt:
+        update_cache: yes
+    - name: Installation de Docker Engine et ses composants
+      apt:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-buildx-plugin
+          - docker-compose-plugin
+        state: present
+    - name: Création du groupe docker
+      group:
+        name: docker
+        state: present
+
+    - name: Ajout de l'utilisateur au groupe docker
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+
+    - name: Redémarrage du service Docker
+      service:
+        name: docker
+        state: restarted
+        enabled: yes
+
+    - name: Information sur l'application des permissions
+      debug:
+        msg: "L'utilisateur {{ ansible_user }} a été ajouté au groupe docker. Déconnexion/reconnexion nécessaire pour appliquer les changements."
