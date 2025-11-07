@@ -6,8 +6,8 @@
   --clr-secondary-dark: #232229;
   --clr-secondary-light: #8b8b8d;
   --clr-primary-light: white;
-  --clr-primary-sky-blue: red;
-  --clr-secondary-sky-blue: red;
+  --clr-primary-sky-blue: #12b4e4;
+  --clr-secondary-sky-blue: #6495ed;
   --border-radius-btn: 5px;
   --border-radius-card: 10px;
   --gradiant-background: linear-gradient(90deg, #8b8b8d 0%, #8b8b8d 100%);
