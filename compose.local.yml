@@ -7,9 +7,11 @@ services:
     container_name: 'portfolio-nginx'
     ports:
       - '80:80'
+      - '443:443'
     volumes:
       - './nginx/nginx.local.conf:/etc/nginx/nginx.conf'
       - './site-generator/site:/var/www/html/portfolio'
+      - './ansible/ssl:/etc/nginx/ssl'
     networks:
       - api-network
     depends_on:

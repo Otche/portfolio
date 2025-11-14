@@ -29,7 +29,7 @@ first lang in acceprt-lang : (^fr|^en)\*(fr|en){1}
 
 ## Test AWS
 
-ws s3 cp --recursive dist s3://bucket-name/dist
+aws s3 cp --recursive dist s3://bucket-name/dist
 
 ## @TODO
 
