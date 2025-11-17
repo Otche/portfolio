@@ -1,5 +1,9 @@
 # Portfolio Project
 
+## Terraform resource
+
+- set -a && source ./aws-auth.env && set +a && terraform apply
+
 ## Installer  Docker
 
 - ansible-playbook -i ./inventory/host.yml playbook/docker_install.yml
