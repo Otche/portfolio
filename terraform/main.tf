@@ -44,3 +44,22 @@ module "web_instance" {
   # L'ASSOCIATION : On passe l'output du module 'sg' en input au module 'web_instance'
   security_group_id   = module.sg.security_group_id 
 }
+
+
+# -----------------
+# 4. APPEL DU MODULE S3 BUCKET
+# -----------------
+module "data_storage_bucket" {
+  # Chemin relatif vers le répertoire du module
+  source  = "./modules/s3_bucket" 
+
+  # Valeurs à passer aux variables du module
+  bucket_name          = "amine-ouchiha-portfolio-bucket" # REMPLACER PAR UN NOM UNIQUE GLOBAL
+  environment          = "prod"
+  versioning_enabled   = true
+}
+
+# Output pour afficher l'ARN du nouveau bucket
+output "storage_arn" {
+  value = module.data_storage_bucket.bucket_arn
+}
