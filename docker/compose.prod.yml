@@ -24,7 +24,7 @@ services:
     volumes:
       - '../:/portfolio-project'
     working_dir: /portfolio-project/api
-    command: npm run start
+    command: npm i && npm run start
     environment:
       PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
     networks:
