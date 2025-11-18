@@ -12,18 +12,18 @@ services:
       - '443:443'
     networks:
       - api-network
-    depends_on:
-      - api-web-portfolio
-  api-web-portfolio:
-    build:
-      context: ..
-      dockerfile: ./docker/api.dockerfile
-    container_name: 'portfolio-api'
-    expose:
-      - 5000
-    working_dir: /app
-    command: npm run start
-    environment:
-      PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
-    networks:
-      - api-network
+    # depends_on:
+    #   - api-web-portfolio
+  # api-web-portfolio:
+  #   build:
+  #     context: ..
+  #     dockerfile: ./docker/api.dockerfile
+  #   container_name: 'portfolio-api'
+  #   expose:
+  #     - 5000
+  #   working_dir: /app
+  #   command: npm run start
+  #   environment:
+  #     PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
+  #   networks:
+  #     - api-network
