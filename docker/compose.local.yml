@@ -9,9 +9,9 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - './nginx/nginx.local.conf:/etc/nginx/nginx.conf'
-      - './site-generator/site:/var/www/html/portfolio'
-      - './ansible/ssl:/etc/nginx/ssl'
+      - '../nginx/nginx.local.conf:/etc/nginx/nginx.conf'
+      - '../site-generator/site:/var/www/html/portfolio'
+      - '../ansible/ssl:/etc/nginx/ssl'
     networks:
       - api-network
     depends_on:
@@ -20,20 +20,20 @@ services:
     image: node
     container_name: 'portfolio-generator'
     volumes:
-      - '.:/portfolio-project'
+      - '../:/portfolio-project'
     working_dir: /portfolio-project/site-generator
     command: npm run generate:dev
     networks:
       - api-network
     depends_on:
-      - api-web-porfolio
-  api-web-porfolio:
+      - api-web-portfolio
+  api-web-portfolio:
     image: node
-    container_name: 'porfolio-api'
+    container_name: 'portfolio-api'
     expose:
       - 5000
     volumes:
-      - '.:/portfolio-project'
+      - '../:/portfolio-project'
     working_dir: /portfolio-project/api
     command: npm run dev
     environment:

@@ -22,3 +22,8 @@ variable "security_group_id" {
   description = "L'ID du Security Group à attacher à l'instance. (LE LIEN CRUCIAL)"
   type        = string
 }
+
+variable "ami_id" {
+  description = "L'ID de l'AMI à utiliser pour l'instance EC2."
+  type        = string
+}

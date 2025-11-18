@@ -5,8 +5,8 @@
   tasks:
     - name: Copy SSL directory to remote root user directory
       copy:
-        src: ../ssl/
-        dest: "/home/{{ ansible_user }}/ssl/"
+        src: ../../ssl/
+        dest: "/home/{{ ansible_user }}/portfolio/ssl/"
         owner: "{{ ansible_user }}"
         group: "{{ ansible_user }}"
         mode: "0600"

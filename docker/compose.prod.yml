@@ -1,0 +1,31 @@
+networks:
+  api-network:
+    driver: bridge
+services:
+  web-portfolio:
+    image: nginx
+    container_name: 'portfolio-nginx'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - '../nginx/nginx.prod.conf:/etc/nginx/nginx.conf'
+      - '../site-generator/site:/var/www/html/portfolio'
+      - '../ansible/ssl:/etc/nginx/ssl'
+    networks:
+      - api-network
+    depends_on:
+      - api-web-portfolio
+  api-web-portfolio:
+    image: node
+    container_name: 'portfolio-api'
+    expose:
+      - 5000
+    volumes:
+      - '../:/portfolio-project'
+    working_dir: /portfolio-project/api
+    command: npm run start
+    environment:
+      PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
+    networks:
+      - api-network

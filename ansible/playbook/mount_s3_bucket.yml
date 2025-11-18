@@ -1,0 +1,64 @@
+---
+- name: Installer et monter un bucket S3 avec Mountpoint sur Ubuntu
+  hosts: all # Remplacez par le groupe d'inventaire ou le nom de votre hôte
+  become: yes # Exécuter les tâches nécessitant des privilèges root (sudo)
+
+  vars:
+    s3_bucket_api: "amine-ouchiha-portfolio-api" # <== MODIFIEZ CECI
+    mount_path_api: "/home/{{ ansible_user }}/portfolio/api"
+    s3_bucket_site: "amine-ouchiha-portfolio-site" # <== MODIFIEZ CECI
+    mount_path_site: "/home/{{ ansible_user }}/portfolio/site"
+    s3_bucket_nginx: "amine-ouchiha-portfolio-nginx" #
+    mount_path_nginx: "/home/{{ ansible_user }}/portfolio/nginx"
+    s3_bucket_docker: "amine-ouchiha-portfolio-docker" #
+    mount_path_docker: "/home/{{ ansible_user }}/portfolio/docker"
+
+  tasks:
+    - name: Installer les prérequis FUSE
+      ansible.builtin.apt:
+        name: fuse
+        state: present
+        update_cache: yes
+
+    - name: Déterminer l'architecture (amd64 ou arm64)
+      ansible.builtin.setup:
+        filter: ansible_architecture
+
+    - name: Définir l'URL de téléchargement du package .deb
+      ansible.builtin.set_fact:
+        mountpoint_deb_url: "https://s3.amazonaws.com/mountpoint-s3-release/latest/{{ 'x86_64' if ansible_architecture == 'x86_64' else 'arm64' }}/mount-s3.deb"
+
+    - name: Télécharger le paquet Mountpoint S3
+      ansible.builtin.get_url:
+        url: "{{ mountpoint_deb_url }}"
+        dest: "/tmp/mount-s3.deb"
+        mode: "0644"
+
+    - name: Installer le paquet Mountpoint S3
+      ansible.builtin.apt:
+        deb: "/tmp/mount-s3.deb"
+        state: present
+
+    - name: Créer les répertoires de montage s'ils n'existent pas
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0755"
+      loop:
+        - "{{ mount_path_api }}"
+        - "{{ mount_path_site }}"
+        - "{{ mount_path_nginx }}"
+        - "{{ mount_path_docker }}"
+
+    - name: Monter les buckets S3 en tant qu'utilisateur ubuntu
+      ansible.builtin.command: >
+        sudo -u {{ ansible_user }} mount-s3 {{ item.bucket }} {{ item.path }}
+      args:
+        creates: "{{ item.path }}/.s3-mountpoint"
+      loop:
+        - { bucket: "{{ s3_bucket_api }}", path: "{{ mount_path_api }}" }
+        - { bucket: "{{ s3_bucket_site }}", path: "{{ mount_path_site }}" }
+        - { bucket: "{{ s3_bucket_nginx }}", path: "{{ mount_path_nginx }}" }
+        - { bucket: "{{ s3_bucket_docker }}", path: "{{ mount_path_docker }}" }

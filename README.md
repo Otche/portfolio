@@ -6,7 +6,7 @@
 
 ## Installer  Docker
 
-- ansible-playbook -i ./inventory/host.yml playbook/docker_install.yml
+- set -a && source .env && ansible-playbook -i ./inventory/host.yml playbook/docker_install.yml
 
 ## Docker command
 

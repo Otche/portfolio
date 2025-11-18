@@ -1,7 +1,7 @@
 name: CI Build and Test
 on: [push] # The event that triggers the workflow
 jobs:
-  server-build-and-deploy:
+  api-build-in-s3:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,13 +29,13 @@ jobs:
           aws-region: eu-west-3
 
       - name: Copy package.json to S3
-        run: aws s3 cp package.json s3://amine-ouchiha-portfolio-server/
+        run: aws s3 cp package.json s3://amine-ouchiha-portfolio-api/
         working-directory: ./api
 
       - name: Copy dist folder to S3
-        run: aws s3 cp dist s3://amine-ouchiha-portfolio-server/dist/ --recursive
+        run: aws s3 cp dist s3://amine-ouchiha-portfolio-api/dist/ --recursive
         working-directory: ./api
-  portfolio-site-generation-and-deploy:
+  site-generation-in-s3:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -65,3 +65,21 @@ jobs:
       - name: Deploy static site to S3
         run: aws s3 cp ./site s3://amine-ouchiha-portfolio-site/ --recursive
         working-directory: ./site-generator
+  copy-dockerfile-and-nginx-to-s3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-3
+
+      - name: Copy Dockerfile to S3
+        run: aws s3 cp ./docker s3://amine-ouchiha-portfolio-docker/ --recursive
+
+      - name: Copy nginx.conf to S3
+        run: aws s3 cp ./nginx s3://amine-ouchiha-portfolio-nginx/ --recursive
