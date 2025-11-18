@@ -3,15 +3,13 @@ networks:
     driver: bridge
 services:
   web-portfolio:
-    image: nginx
+    build:
+      context: ..
+      dockerfile: ./docker/nginx.dockerfile
     container_name: 'portfolio-nginx'
     ports:
       - '80:80'
       - '443:443'
-    volumes:
-      - '../nginx/nginx.prod.conf:/etc/nginx/nginx.conf:ro' 
-      - '../site-generator/site:/var/www/html/portfolio:ro'
-      - '../ansible/ssl:/etc/nginx/ssl:ro'
     networks:
       - api-network
     depends_on:
