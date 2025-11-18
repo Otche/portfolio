@@ -18,8 +18,8 @@ services:
       - api-web-portfolio
   api-web-portfolio:
     build:
-      context: .
-      dockerfile: ./api.dockerfile
+      context: ..
+      dockerfile: ./docker/api.dockerfile
     container_name: 'portfolio-api'
     expose:
       - 5000
