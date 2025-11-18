@@ -17,14 +17,14 @@ services:
     depends_on:
       - api-web-portfolio
   api-web-portfolio:
-    image: node
+    build:
+      context: .
+      dockerfile: ./api.dockerfile
     container_name: 'portfolio-api'
     expose:
       - 5000
-    volumes:
-      - '../:/portfolio-project'
-    working_dir: /portfolio-project/api
-    command: npm i && npm run start
+    working_dir: /app
+    command: npm run start
     environment:
       PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
     networks:
