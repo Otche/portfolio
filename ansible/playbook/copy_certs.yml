@@ -1,0 +1,13 @@
+- name: Copy SSL Certificates to Remote Servers
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Copy Certs directory to remote root user directory
+      copy:
+        src: ../../certs/
+        dest: "/etc/nginx/certs/"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0600"
+        directory_mode: "0700"
