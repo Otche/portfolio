@@ -1,0 +1,28 @@
+---
+- name: Install and start Nginx web server
+  hosts: all # Specify the group or hosts defined in your inventory
+  become: yes # Required to run tasks with elevated privileges (sudo)
+
+  tasks:
+    - name: Update apt cache (Optional, but recommended for apt)
+      ansible.builtin.apt:
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Install Nginx package
+      ansible.builtin.apt:
+        name: nginx
+        state: latest
+      when: ansible_os_family == "Debian"
+
+    - name: Install Nginx package (for RedHat/CentOS)
+      ansible.builtin.yum:
+        name: nginx
+        state: latest
+      when: ansible_os_family == "RedHat"
+
+    - name: Ensure Nginx service is running and enabled at boot
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
