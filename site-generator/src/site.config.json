@@ -1,7 +1,7 @@
 {
   "root-template": "templates",
   "public-dir": "public",
-  "ejs-include": ["home.ejs", "services.ejs", "career.ejs", "waiting-page.ejs", "data-form.ejs", "not-found.ejs"],
+  "ejs-include": ["home.ejs", "services.ejs", "career.ejs", "contact.ejs", "waiting-page.ejs", "data-form.ejs", "not-found.ejs"],
   "output-dir": "site",
   "langs": ["fr", "en"]
 }

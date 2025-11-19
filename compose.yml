@@ -1,0 +1,42 @@
+networks:
+  api-network:
+    driver: bridge
+services:
+  web-portfolio:
+    image: nginx
+    container_name: 'portfolio-nginx'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - './nginx/nginx.local.conf:/etc/nginx/nginx.conf'
+      - './site-generator/site:/var/www/html/portfolio'
+      - './certs:/etc/nginx/certs:ro'
+    networks:
+      - api-network
+    # depends_on:
+    #   - api-web-porfolio
+  generate-web-portfolio:
+    image: node
+    container_name: 'portfolio-generator'
+    volumes:
+      - './:/portfolio-project'
+    working_dir: /portfolio-project/site-generator
+    command: npm run generate:dev
+    networks:
+      - api-network
+    # depends_on:
+    #   - api-web-portfolio
+  # api-web-portfolio:
+  #   image: node
+  #   container_name: 'portfolio-api'
+  #   expose:
+  #     - 5000
+  #   volumes:
+  #     - '../:/portfolio-project'
+  #   working_dir: /portfolio-project/api
+  #   command: npm run dev
+  #   environment:
+  #     PRIVATE_CAPTCHA_KEY: ${PRIVATE_CAPTCHA_KEY}
+  #   networks:
+  #     - api-network
