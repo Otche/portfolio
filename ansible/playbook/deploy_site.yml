@@ -1,0 +1,60 @@
+- name: Execute npm commands locally (on the control node)
+  hosts: all # Can target any group, but the task will be executed locally
+  gather_facts: no # No need to gather facts for this task
+  become: no # No privilege escalation needed
+
+  tasks:
+    - name: Install NPM dependencies (npm install)
+      ansible.builtin.command: npm install
+      args:
+        # Specify the path to the directory where package.json is located
+        chdir: ../../site-generator
+      delegate_to: localhost
+      register: npm_install_output
+
+    - name: Display installation result
+      ansible.builtin.debug:
+        var: npm_install_output.stdout_lines
+
+    - name: Execute another NPM command (for example, build the application)
+      ansible.builtin.command: npm run generate
+      args:
+        chdir: ../../site-generator
+      delegate_to: localhost
+      register: npm_build_output
+
+    - name: Display build result
+      ansible.builtin.debug:
+        var: npm_build_output.stdout_lines
+
+    - name: Copy Site Files to Remote Servers
+      become: yes
+      copy:
+        src: ../../site-generator/site/
+        dest: "/var/www/html/portfolio/"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0644"
+        directory_mode: "0755"
+
+    - name: Copy nginx config file
+      become: yes
+      copy:
+        src: ../../nginx/nginx.prod.conf
+        dest: /etc/nginx/nginx.conf
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: "0644"
+
+    - name: Restart nginx to apply new configuration
+      become: yes
+      ansible.builtin.systemd:
+        name: nginx
+        state: restarted
+        enabled: yes
+      notify:
+        - nginx restarted
+  handlers:
+    - name: nginx restarted
+      ansible.builtin.debug:
+        msg: "Nginx has been restarted to apply the new configuration."
